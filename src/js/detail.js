@@ -5,10 +5,59 @@ import { renderCards } from "./cards.js";
 
 let galleryIndex = 0;
 
-export function openDetail(id) {
+// Touch swipe support
+let swipeOccurred = false;
+function addSwipe(el, onLeft, onRight) {
+  let startX = 0;
+  let startY = 0;
+  el.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+    swipeOccurred = false;
+  }, { passive: true });
+  el.addEventListener("touchend", (e) => {
+    const dx = e.changedTouches[0].clientX - startX;
+    const dy = e.changedTouches[0].clientY - startY;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
+      swipeOccurred = true;
+      if (dx < 0) onLeft();
+      else onRight();
+    }
+  }, { passive: true });
+}
+
+addSwipe(
+  document.getElementById("detailGallery"),
+  () => galleryNext(),
+  () => galleryPrev()
+);
+
+addSwipe(
+  document.getElementById("lightbox"),
+  () => { lightboxNext(); },
+  () => { lightboxPrev(); }
+);
+
+export function openDetail(id, preserveGallery = false) {
   state.currentDetailId = id;
-  galleryIndex = 0;
+  if (!preserveGallery) galleryIndex = 0;
   const h = state.houses.find((x) => x.id === id);
+  if (!h) return;
+
+  // Show detail page, hide card grid and toolbar
+  document.getElementById("detailPage").style.display = "";
+  document.getElementById("cardGrid").style.display = "none";
+  const rejSec = document.getElementById("rejectedSection");
+  if (rejSec) rejSec.style.display = "none";
+  document.querySelector(".toolbar").style.display = "none";
+
+  // Update hash without triggering hashchange
+  const expected = `#property/${id}`;
+  if (location.hash !== expected) {
+    history.pushState(null, "", expected);
+  }
+
+  if (!preserveGallery) window.scrollTo(0, 0);
 
   document.getElementById("detailStatusSelect").value = h.status;
   document.getElementById("galleryMainImg").src = h.images[0];
@@ -136,15 +185,17 @@ export function openDetail(id) {
     </div>
   `;
 
-  document.getElementById("detailOverlay").classList.add("open");
-  document.getElementById("detailPanel").classList.add("open");
-  document.body.style.overflow = "hidden";
 }
 
 export function closeDetail() {
-  document.getElementById("detailOverlay").classList.remove("open");
-  document.getElementById("detailPanel").classList.remove("open");
-  document.body.style.overflow = "";
+  document.getElementById("detailPage").style.display = "none";
+  document.getElementById("cardGrid").style.display = "";
+  const rejSec = document.getElementById("rejectedSection");
+  if (rejSec) rejSec.style.display = "";
+  document.querySelector(".toolbar").style.display = "";
+  if (location.hash.startsWith("#property/")) {
+    history.pushState(null, "", location.pathname + location.search);
+  }
   state.currentDetailId = null;
 }
 
@@ -202,6 +253,7 @@ export function openLightbox(src) {
 }
 
 export function closeLightbox() {
+  if (swipeOccurred) { swipeOccurred = false; return; }
   document.getElementById("lightbox").classList.remove("open");
 }
 
@@ -263,12 +315,12 @@ function renderSidewalks(h) {
 export async function setSidewalks(id, value) {
   state.houses.find((x) => x.id === id).sidewalks = value;
   patchState(id, { sidewalks: value }).catch(console.error);
-  if (state.currentDetailId === id) openDetail(id);
+  if (state.currentDetailId === id) openDetail(id, true);
 }
 
 export function toggleSidewalksEdit(id) {
   state.houses.find((x) => x.id === id).sidewalks = null;
-  if (state.currentDetailId === id) openDetail(id);
+  if (state.currentDetailId === id) openDetail(id, true);
 }
 
 function renderStreetTrees(h) {
@@ -288,12 +340,12 @@ function renderStreetTrees(h) {
 export async function setStreetTrees(id, value) {
   state.houses.find((x) => x.id === id).streetTrees = value;
   patchState(id, { streetTrees: value }).catch(console.error);
-  if (state.currentDetailId === id) openDetail(id);
+  if (state.currentDetailId === id) openDetail(id, true);
 }
 
 export function toggleStreetTreesEdit(id) {
   state.houses.find((x) => x.id === id).streetTrees = null;
-  if (state.currentDetailId === id) openDetail(id);
+  if (state.currentDetailId === id) openDetail(id, true);
 }
 
 // Corner Lot
@@ -314,12 +366,12 @@ function renderCorner(h) {
 export async function setCorner(id, value) {
   state.houses.find((x) => x.id === id).corner = value;
   patchState(id, { corner: value }).catch(console.error);
-  if (state.currentDetailId === id) openDetail(id);
+  if (state.currentDetailId === id) openDetail(id, true);
 }
 
 export function toggleCornerEdit(id) {
   state.houses.find((x) => x.id === id).corner = null;
-  if (state.currentDetailId === id) openDetail(id);
+  if (state.currentDetailId === id) openDetail(id, true);
 }
 
 // Road Noise
@@ -340,12 +392,12 @@ function renderRoadNoise(h) {
 export async function setRoadNoise(id, value) {
   state.houses.find((x) => x.id === id).roadNoise = value;
   patchState(id, { roadNoise: value }).catch(console.error);
-  if (state.currentDetailId === id) openDetail(id);
+  if (state.currentDetailId === id) openDetail(id, true);
 }
 
 export function toggleRoadNoiseEdit(id) {
   state.houses.find((x) => x.id === id).roadNoise = null;
-  if (state.currentDetailId === id) openDetail(id);
+  if (state.currentDetailId === id) openDetail(id, true);
 }
 
 // Stories
@@ -366,12 +418,12 @@ function renderStories(h) {
 export async function setStories(id, value) {
   state.houses.find((x) => x.id === id).stories = value;
   patchState(id, { stories: value }).catch(console.error);
-  if (state.currentDetailId === id) openDetail(id);
+  if (state.currentDetailId === id) openDetail(id, true);
 }
 
 export function toggleStoriesEdit(id) {
   state.houses.find((x) => x.id === id).stories = null;
-  if (state.currentDetailId === id) openDetail(id);
+  if (state.currentDetailId === id) openDetail(id, true);
 }
 
 // Condition
@@ -401,7 +453,7 @@ export async function setCondition(id, value) {
   h.condition = value;
   if (value !== "work") h.workNeeded = [];
   patchState(id, { condition: value, workNeeded: value === "work" ? (h.workNeeded || []) : [] }).catch(console.error);
-  if (state.currentDetailId === id) openDetail(id);
+  if (state.currentDetailId === id) openDetail(id, true);
 }
 
 export async function toggleWorkItem(id, item, checked) {
@@ -418,7 +470,7 @@ export function toggleConditionEdit(id) {
   const h = state.houses.find((x) => x.id === id);
   h.condition = null;
   h.workNeeded = [];
-  if (state.currentDetailId === id) openDetail(id);
+  if (state.currentDetailId === id) openDetail(id, true);
 }
 
 // Backyard
@@ -439,12 +491,12 @@ function renderBackyard(h) {
 export async function setBackyard(id, value) {
   state.houses.find((x) => x.id === id).backyard = value;
   patchState(id, { backyard: value }).catch(console.error);
-  if (state.currentDetailId === id) openDetail(id);
+  if (state.currentDetailId === id) openDetail(id, true);
 }
 
 export function toggleBackyardEdit(id) {
   state.houses.find((x) => x.id === id).backyard = null;
-  if (state.currentDetailId === id) openDetail(id);
+  if (state.currentDetailId === id) openDetail(id, true);
 }
 
 // Studio Space
@@ -465,12 +517,12 @@ function renderStudio(h) {
 export async function setStudio(id, value) {
   state.houses.find((x) => x.id === id).studio = value;
   patchState(id, { studio: value }).catch(console.error);
-  if (state.currentDetailId === id) openDetail(id);
+  if (state.currentDetailId === id) openDetail(id, true);
 }
 
 export function toggleStudioEdit(id) {
   state.houses.find((x) => x.id === id).studio = null;
-  if (state.currentDetailId === id) openDetail(id);
+  if (state.currentDetailId === id) openDetail(id, true);
 }
 
 // Two Sinks
@@ -491,12 +543,12 @@ function renderTwoSinks(h) {
 export async function setTwoSinks(id, value) {
   state.houses.find((x) => x.id === id).twoSinks = value;
   patchState(id, { twoSinks: value }).catch(console.error);
-  if (state.currentDetailId === id) openDetail(id);
+  if (state.currentDetailId === id) openDetail(id, true);
 }
 
 export function toggleTwoSinksEdit(id) {
   state.houses.find((x) => x.id === id).twoSinks = null;
-  if (state.currentDetailId === id) openDetail(id);
+  if (state.currentDetailId === id) openDetail(id, true);
 }
 
 // Wall Ovens
@@ -517,12 +569,12 @@ function renderWallOvens(h) {
 export async function setWallOvens(id, value) {
   state.houses.find((x) => x.id === id).wallOvens = value;
   patchState(id, { wallOvens: value }).catch(console.error);
-  if (state.currentDetailId === id) openDetail(id);
+  if (state.currentDetailId === id) openDetail(id, true);
 }
 
 export function toggleWallOvensEdit(id) {
   state.houses.find((x) => x.id === id).wallOvens = null;
-  if (state.currentDetailId === id) openDetail(id);
+  if (state.currentDetailId === id) openDetail(id, true);
 }
 
 // Pool
@@ -543,10 +595,10 @@ function renderPool(h) {
 export async function setPool(id, value) {
   state.houses.find((x) => x.id === id).pool = value;
   patchState(id, { pool: value }).catch(console.error);
-  if (state.currentDetailId === id) openDetail(id);
+  if (state.currentDetailId === id) openDetail(id, true);
 }
 
 export function togglePoolEdit(id) {
   state.houses.find((x) => x.id === id).pool = null;
-  if (state.currentDetailId === id) openDetail(id);
+  if (state.currentDetailId === id) openDetail(id, true);
 }

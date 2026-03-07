@@ -26,12 +26,8 @@ export function getFilteredSortedHouses() {
   return h;
 }
 
-export function renderCards() {
-  const grid = document.getElementById("cardGrid");
-  const filtered = getFilteredSortedHouses();
-  document.getElementById("houseCount").textContent = filtered.length;
-
-  grid.innerHTML = filtered.map((h) => `
+function renderCard(h) {
+  return `
     <div class="house-card" onclick="openDetail(${h.id})" data-id="${h.id}">
       <div class="card-image-wrap">
         <img src="${h.images[0]}" alt="${h.address}" loading="lazy">
@@ -67,7 +63,31 @@ export function renderCards() {
 
       </div>
     </div>
-  `).join("");
+  `;
+}
+
+export function renderCards() {
+  const grid = document.getElementById("cardGrid");
+  const filtered = getFilteredSortedHouses();
+  const active = filtered.filter((h) => h.status !== "rejected");
+  const rejected = filtered.filter((h) => h.status === "rejected");
+  document.getElementById("houseCount").textContent = filtered.length;
+
+  grid.innerHTML = active.map(renderCard).join("");
+
+  let rejectedEl = document.getElementById("rejectedSection");
+  if (rejected.length) {
+    if (!rejectedEl) {
+      rejectedEl = document.createElement("div");
+      rejectedEl.id = "rejectedSection";
+      rejectedEl.className = "rejected-section";
+      grid.after(rejectedEl);
+    }
+    rejectedEl.innerHTML = `<div class="rejected-section-inner"><div class="rejected-section-label">Rejected</div><div class="rejected-section-grid">${rejected.map(renderCard).join("")}</div></div>`;
+    rejectedEl.style.display = "";
+  } else if (rejectedEl) {
+    rejectedEl.style.display = "none";
+  }
 }
 
 export async function toggleFav(id) {

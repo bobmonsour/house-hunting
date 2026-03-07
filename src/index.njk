@@ -2,7 +2,7 @@
 <html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Back to Pasadena</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,7 +37,7 @@
     <div class="header-actions">
       <button class="add-property-btn" onclick="openAddModal()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        Add Property
+        <span>Add Property</span>
       </button>
       <div class="header-stat"><strong id="houseCount">0</strong> properties</div>
       <button class="icon-btn" onclick="openMapView()" title="Map view">
@@ -84,7 +84,6 @@
     <option value="interested">Status: Interested</option>
     <option value="visited">Status: Visited</option>
     <option value="offer">Status: Offer Made</option>
-    <option value="rejected">Status: Rejected</option>
   </select>
   <div class="filter-tags" id="activeFilters"></div>
 </div>
@@ -92,13 +91,12 @@
 <!-- Card Grid -->
 <div class="card-grid" id="cardGrid"></div>
 
-<!-- DETAIL PANEL -->
-<div class="detail-overlay" id="detailOverlay" onclick="closeDetail()"></div>
-<div class="detail-panel" id="detailPanel">
-  <div class="detail-close">
+<!-- DETAIL PAGE -->
+<div class="detail-page" id="detailPage" style="display:none">
+  <div class="detail-page-topbar">
     <button class="detail-close-btn" onclick="closeDetail()">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      Close
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Back
     </button>
     <div class="detail-status-select">
       <label>Status</label>
@@ -111,20 +109,20 @@
       </select>
     </div>
   </div>
-
-  <div class="detail-gallery" id="detailGallery">
-    <img id="galleryMainImg" src="" alt="">
-    <button class="gallery-nav prev" onclick="galleryPrev()" style="display:none" id="galleryPrev">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-    </button>
-    <button class="gallery-nav next" onclick="galleryNext()" style="display:none" id="galleryNext">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-    </button>
-    <div class="gallery-dots" id="galleryDots"></div>
-    <div class="gallery-counter" id="galleryCounter" style="display:none"></div>
+  <div class="detail-page-inner">
+    <div class="detail-gallery" id="detailGallery">
+      <img id="galleryMainImg" src="" alt="">
+      <button class="gallery-nav prev" onclick="galleryPrev()" style="display:none" id="galleryPrev">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="gallery-nav next" onclick="galleryNext()" style="display:none" id="galleryNext">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+      <div class="gallery-dots" id="galleryDots"></div>
+      <div class="gallery-counter" id="galleryCounter" style="display:none"></div>
+    </div>
+    <div class="detail-content" id="detailContent"></div>
   </div>
-
-  <div class="detail-content" id="detailContent"></div>
 </div>
 
 <!-- COMPARISON VIEW -->

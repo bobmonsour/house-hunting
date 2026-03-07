@@ -118,16 +118,33 @@ async function loadHouses() {
   const bakedState = window.__MUTABLE_STATE__ || {};
   mergeHouses(bakedState);
   renderCards();
+  handleHashRoute();
 
   // Then refresh from live KV in the background
   try {
     const liveState = await fetchMutableState();
     mergeHouses(liveState);
     renderCards();
+    // Re-render detail if one is open
+    if (state.currentDetailId) openDetail(state.currentDetailId, true);
   } catch (err) {
     console.error("Failed to fetch live mutable state (using build-time data):", err);
   }
 }
+
+function handleHashRoute() {
+  const match = location.hash.match(/^#property\/(\d+)$/);
+  if (match) {
+    const id = Number(match[1]);
+    if (state.houses.some((h) => h.id === id)) {
+      openDetail(id);
+    }
+  } else if (state.currentDetailId) {
+    closeDetail();
+  }
+}
+
+window.addEventListener("popstate", handleHashRoute);
 
 // Global event listeners
 document.addEventListener("click", (e) => {
@@ -143,15 +160,15 @@ document.addEventListener("keydown", (e) => {
     if (document.getElementById("addModalOverlay").classList.contains("open")) return closeAddModal();
     if (document.getElementById("lightbox").classList.contains("open")) return closeLightbox();
     if (document.getElementById("comparisonOverlay").classList.contains("open")) return closeComparison();
-    if (document.getElementById("detailPanel").classList.contains("open")) return closeDetail();
+    if (document.getElementById("detailPage").style.display !== "none") return closeDetail();
   }
   // Arrow keys for lightbox navigation
   if (document.getElementById("lightbox").classList.contains("open")) {
     if (e.key === "ArrowLeft") return lightboxPrev();
     if (e.key === "ArrowRight") return lightboxNext();
   }
-  // Arrow keys for gallery navigation when detail panel is open
-  if (document.getElementById("detailPanel").classList.contains("open") && !e.target.closest("textarea, input, select")) {
+  // Arrow keys for gallery navigation when detail page is open
+  if (document.getElementById("detailPage").style.display !== "none" && !e.target.closest("textarea, input, select")) {
     if (e.key === "ArrowLeft") return galleryPrev();
     if (e.key === "ArrowRight") return galleryNext();
   }
