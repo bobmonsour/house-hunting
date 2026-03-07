@@ -204,6 +204,7 @@ export function closeDetail() {
     history.pushState(null, "", location.pathname + location.search);
   }
   state.currentDetailId = null;
+  window.scrollTo(0, 0);
 }
 
 export async function updateStatus(val) {
