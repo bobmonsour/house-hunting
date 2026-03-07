@@ -205,6 +205,18 @@ export function closeLightbox() {
   document.getElementById("lightbox").classList.remove("open");
 }
 
+export function lightboxPrev() {
+  galleryPrev();
+  const h = state.houses.find((x) => x.id === state.currentDetailId);
+  if (h) document.getElementById("lightboxImg").src = h.images[galleryIndex];
+}
+
+export function lightboxNext() {
+  galleryNext();
+  const h = state.houses.find((x) => x.id === state.currentDetailId);
+  if (h) document.getElementById("lightboxImg").src = h.images[galleryIndex];
+}
+
 // Map overlay
 export function openMapOverlay(origin, destination) {
   const key = window.__MAPS_KEY__;

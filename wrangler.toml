@@ -6,9 +6,6 @@ compatibility_date = "2025-01-01"
 directory = "_site"
 run_worker_first = ["/api/*"]
 
-[vars]
-APP_PASSWORD = "b2pas93"
-
 [[kv_namespaces]]
 binding = "HOUSES"
 id = "874e14376c774259bd63768e4996d3cc"

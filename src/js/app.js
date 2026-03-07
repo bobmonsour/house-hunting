@@ -1,7 +1,7 @@
 import { authenticate, hasToken, fetchMutableState } from "./api.js";
 import { toggleTheme, restoreTheme } from "./utils.js";
 import { renderCards, toggleFav, toggleCompare, toggleFavFilter, setStatusFilter, filterCards, toggleSortDropdown, sortBy } from "./cards.js";
-import { openDetail, closeDetail, updateStatus, saveNotes, deleteProperty, galleryPrev, galleryNext, galleryGo, openLightbox, closeLightbox, openMapOverlay, closeMapOverlay, setSidewalks, toggleSidewalksEdit, setStreetTrees, toggleStreetTreesEdit, setCorner, toggleCornerEdit, setRoadNoise, toggleRoadNoiseEdit, setStories, toggleStoriesEdit, setCondition, toggleConditionEdit, toggleWorkItem, setBackyard, toggleBackyardEdit, setStudio, toggleStudioEdit, setTwoSinks, toggleTwoSinksEdit, setWallOvens, toggleWallOvensEdit, setPool, togglePoolEdit } from "./detail.js";
+import { openDetail, closeDetail, updateStatus, saveNotes, deleteProperty, galleryPrev, galleryNext, galleryGo, openLightbox, closeLightbox, lightboxPrev, lightboxNext, openMapOverlay, closeMapOverlay, setSidewalks, toggleSidewalksEdit, setStreetTrees, toggleStreetTreesEdit, setCorner, toggleCornerEdit, setRoadNoise, toggleRoadNoiseEdit, setStories, toggleStoriesEdit, setCondition, toggleConditionEdit, toggleWorkItem, setBackyard, toggleBackyardEdit, setStudio, toggleStudioEdit, setTwoSinks, toggleTwoSinksEdit, setWallOvens, toggleWallOvensEdit, setPool, togglePoolEdit } from "./detail.js";
 import { openComparison, closeComparison } from "./comparison.js";
 import { openMapView, closeMapView } from "./map-view.js";
 import { openAddModal, closeAddModal, addProperty } from "./add-property.js";
@@ -144,6 +144,11 @@ document.addEventListener("keydown", (e) => {
     if (document.getElementById("lightbox").classList.contains("open")) return closeLightbox();
     if (document.getElementById("comparisonOverlay").classList.contains("open")) return closeComparison();
     if (document.getElementById("detailPanel").classList.contains("open")) return closeDetail();
+  }
+  // Arrow keys for lightbox navigation
+  if (document.getElementById("lightbox").classList.contains("open")) {
+    if (e.key === "ArrowLeft") return lightboxPrev();
+    if (e.key === "ArrowRight") return lightboxNext();
   }
   // Arrow keys for gallery navigation when detail panel is open
   if (document.getElementById("detailPanel").classList.contains("open") && !e.target.closest("textarea, input, select")) {
