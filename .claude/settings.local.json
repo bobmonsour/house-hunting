@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:developers.cloudflare.com)",
+      "WebFetch(domain:hono.dev)",
+      "mcp__claude_ai_Cloudflare_Developer_Platform__search_cloudflare_documentation",
+      "mcp__claude_ai_Context7__resolve-library-id",
+      "mcp__claude_ai_Context7__query-docs",
+      "mcp__claude_ai_Cloudflare_Developer_Platform__accounts_list",
+      "mcp__claude_ai_Cloudflare_Developer_Platform__set_active_account",
+      "mcp__claude_ai_Cloudflare_Developer_Platform__kv_namespace_create",
+      "Bash(npm install:*)",
+      "Bash(npx:*)",
+      "Bash(npm run:*)",
+      "Bash(pkill:*)",
+      "Bash(sqlite3:*)",
+      "Bash(node:*)",
+      "Bash(ls:*)",
+      "Bash(file:*)",
+      "Bash(curl:*)",
+      "Bash(do echo:*)",
+      "Bash(python3:*)",
+      "WebFetch(domain:services.gis.ca.gov)",
+      "WebFetch(domain:hazards.fema.gov)",
+      "Bash(grep:*)",
+      "Bash(git:*)"
+    ]
+  }
+}

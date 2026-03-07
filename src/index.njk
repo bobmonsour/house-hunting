@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Back to Pasadena</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<!-- PASSWORD SCREEN -->
+<div class="password-screen" id="passwordScreen">
+  <button class="icon-btn password-theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+    <svg id="pwThemeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+  </button>
+  <div class="password-card">
+    <div class="password-logo"><em>Back</em> to Pasadena</div>
+    <div class="password-subtitle">Private Property Search</div>
+    <div class="password-input-wrap">
+      <input type="password" id="passwordInput" placeholder="Enter password" onkeydown="if(event.key==='Enter')checkPassword()">
+    </div>
+    <button class="password-btn" onclick="checkPassword()">Continue</button>
+    <div class="password-error" id="passwordError">Incorrect password. Please try again.</div>
+  </div>
+</div>
+
+<!-- MAIN APP -->
+<header class="app-header">
+  <div class="header-inner">
+    <div class="header-brand">
+      <h1><em>Back</em> to Pasadena</h1>
+      <span>Pasadena &amp; Beyond</span>
+    </div>
+    <div class="header-actions">
+      <button class="add-property-btn" onclick="openAddModal()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        Add Property
+      </button>
+      <div class="header-stat"><strong id="houseCount">0</strong> properties</div>
+      <button class="icon-btn" onclick="openMapView()" title="Map view">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </button>
+      <button class="icon-btn" id="compareBtn" onclick="openComparison()" title="Compare selected">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        <span class="compare-count" id="compareCount">0</span>
+      </button>
+      <button class="icon-btn" onclick="toggleFavFilter()" id="favFilterBtn" title="Show favorites">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </button>
+      <button class="icon-btn" onclick="toggleTheme()" title="Toggle theme">
+        <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Toolbar -->
+<div class="toolbar">
+  <div class="search-wrap">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input type="text" placeholder="Search by address, city, or zip..." id="searchInput" oninput="filterCards()">
+  </div>
+  <div style="position:relative">
+    <button class="sort-btn" onclick="toggleSortDropdown()" id="sortBtn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="14" y2="12"/><line x1="4" y1="18" x2="8" y2="18"/></svg>
+      <span id="sortLabel">Sort: Price</span>
+    </button>
+    <div class="sort-dropdown" id="sortDropdown">
+      <button class="sort-option active" onclick="sortBy('price')">Price <span class="dir">Low to High</span></button>
+      <button class="sort-option" onclick="sortBy('sqft')">Square Feet <span class="dir">High to Low</span></button>
+      <button class="sort-option" onclick="sortBy('beds')">Bedrooms <span class="dir">High to Low</span></button>
+      <button class="sort-option" onclick="sortBy('baths')">Bathrooms <span class="dir">High to Low</span></button>
+      <button class="sort-option" onclick="sortBy('age')">Year Built <span class="dir">Newest First</span></button>
+      <button class="sort-option" onclick="sortBy('listed')">Date Listed <span class="dir">Most Recent</span></button>
+      <button class="sort-option" onclick="sortBy('dom')">Days on Market <span class="dir">Fewest First</span></button>
+    </div>
+  </div>
+  <select class="filter-btn" id="statusFilterSelect" onchange="setStatusFilter(this.value)" style="appearance:none;cursor:pointer;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%239C978C' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:right 12px center;padding-right:32px">
+    <option value="all">Status: All</option>
+    <option value="new">Status: New</option>
+    <option value="interested">Status: Interested</option>
+    <option value="visited">Status: Visited</option>
+    <option value="offer">Status: Offer Made</option>
+    <option value="rejected">Status: Rejected</option>
+  </select>
+  <div class="filter-tags" id="activeFilters"></div>
+</div>
+
+<!-- Card Grid -->
+<div class="card-grid" id="cardGrid"></div>
+
+<!-- DETAIL PANEL -->
+<div class="detail-overlay" id="detailOverlay" onclick="closeDetail()"></div>
+<div class="detail-panel" id="detailPanel">
+  <div class="detail-close">
+    <button class="detail-close-btn" onclick="closeDetail()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      Close
+    </button>
+    <div class="detail-status-select">
+      <label>Status</label>
+      <select id="detailStatusSelect" onchange="updateStatus(this.value)">
+        <option value="new">New</option>
+        <option value="interested">Interested</option>
+        <option value="visited">Visited</option>
+        <option value="offer">Offer Made</option>
+        <option value="rejected">Rejected</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="detail-gallery" id="detailGallery">
+    <img id="galleryMainImg" src="" alt="">
+    <button class="gallery-nav prev" onclick="galleryPrev()" style="display:none" id="galleryPrev">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="gallery-nav next" onclick="galleryNext()" style="display:none" id="galleryNext">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+    <div class="gallery-dots" id="galleryDots"></div>
+    <div class="gallery-counter" id="galleryCounter" style="display:none"></div>
+  </div>
+
+  <div class="detail-content" id="detailContent"></div>
+</div>
+
+<!-- COMPARISON VIEW -->
+<div class="comparison-overlay" id="comparisonOverlay">
+  <div class="comparison-header">
+    <div class="comparison-title">Compare Properties</div>
+    <button class="detail-close-btn" onclick="closeComparison()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      Close
+    </button>
+  </div>
+  <div class="comparison-body" id="comparisonBody"></div>
+</div>
+
+<!-- ADD PROPERTY MODAL -->
+<div class="add-modal-overlay" id="addModalOverlay">
+  <div class="add-modal">
+    <h2>Add Property</h2>
+    <p>Paste a Redfin listing URL for the property.</p>
+    <input type="url" class="add-modal-input" id="addUrlInput" placeholder="e.g. https://www.redfin.com/CA/Pasadena/1234-Oak-St-91101/home/12345" onkeydown="if(event.key==='Enter')addProperty()">
+    <div class="add-modal-actions">
+      <button class="add-modal-cancel" onclick="closeAddModal()">Cancel</button>
+      <button class="add-modal-submit" onclick="addProperty()">Add Property</button>
+    </div>
+  </div>
+</div>
+
+<!-- MAP VIEW OVERLAY -->
+<div class="map-view-overlay" id="mapViewOverlay">
+  <div class="map-view-header">
+    <div class="map-view-title">All Properties</div>
+    <button class="detail-close-btn" onclick="closeMapView()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      Close
+    </button>
+  </div>
+  <div class="map-view-body" id="mapViewCanvas"></div>
+</div>
+
+<!-- MAP OVERLAY -->
+<div class="map-overlay" id="mapOverlay">
+  <button class="map-overlay-close" onclick="closeMapOverlay()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <iframe id="mapIframe" src="" allowfullscreen></iframe>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<script>
+  window.__HOUSES__ = {{ houses | dump | safe }};
+  window.__MUTABLE_STATE__ = {{ mutableState | dump | safe }};
+  window.__MAPS_KEY__ = "{{ googleMapsKey }}";
+</script>
+<script type="module" src="/js/app.js"></script>
+</body>
+</html>

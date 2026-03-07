@@ -1,0 +1,105 @@
+{
+  "id": 1772819120889,
+  "address": "577 N Chester Ave",
+  "city": "Pasadena, CA 91106",
+  "price": 1880000,
+  "beds": 6,
+  "baths": 4,
+  "sqft": 2944,
+  "yearBuilt": 1911,
+  "images": [
+    "/images/1772819120889/photo-1.jpg",
+    "/images/1772819120889/photo-2.jpg",
+    "/images/1772819120889/photo-3.jpg",
+    "/images/1772819120889/photo-4.jpg",
+    "/images/1772819120889/photo-5.jpg",
+    "/images/1772819120889/photo-6.jpg",
+    "/images/1772819120889/photo-7.jpg",
+    "/images/1772819120889/photo-8.jpg",
+    "/images/1772819120889/photo-9.jpg",
+    "/images/1772819120889/photo-10.jpg",
+    "/images/1772819120889/photo-11.jpg",
+    "/images/1772819120889/photo-12.jpg",
+    "/images/1772819120889/photo-13.jpg",
+    "/images/1772819120889/photo-14.jpg",
+    "/images/1772819120889/photo-15.jpg",
+    "/images/1772819120889/photo-16.jpg",
+    "/images/1772819120889/photo-17.jpg",
+    "/images/1772819120889/photo-18.jpg",
+    "/images/1772819120889/photo-19.jpg",
+    "/images/1772819120889/photo-20.jpg"
+  ],
+  "neighborhood": "<cite index=\"4-7,4-8\">Catalina Villas is an excellent neighborhood for renters seeking a central location in Pasadena. This beautiful neighborhood with palm trees and mountain views is convenient to some of the city's most popular attractions and destinations.</cite> <cite index=\"3-2\">Catalina Villas is the 10th most walkable neighborhood in Pasadena with a neighborhood Walk Score of 77.</cite>",
+  "parkProximity": "<cite index=\"15-16,17-14\">Five parks are within 5.2 miles, including Huntington Botanical Gardens, Kidspace Children's Museum, and Eaton Canyon Nature Center.</cite>",
+  "floodRisk": "Low — Zone X, minimal flood hazard (FEMA NFHL)",
+  "fireRisk": "Low — not in a fire hazard severity zone (CAL FIRE FHSZ)",
+  "crimeRating": "<cite index=\"21-11,21-12\">The D grade indicates that the rate of crime is higher than that of the average US city. Pasadena ranks in the 19th percentile for safety, meaning it is safer than 19% of cities but less safe than 81%.</cite>",
+  "distances": [
+    {
+      "name": "Whole Foods Market",
+      "miles": "2.9 mi",
+      "time": "9 min"
+    },
+    {
+      "name": "Trader Joe's",
+      "miles": "1.8 mi",
+      "time": "9 min"
+    },
+    {
+      "name": "Costco",
+      "miles": "6.2 mi",
+      "time": "10 min"
+    },
+    {
+      "name": "Target",
+      "miles": "1.2 mi",
+      "time": "6 min"
+    },
+    {
+      "name": "Home Depot",
+      "miles": "5.1 mi",
+      "time": "12 min"
+    },
+    {
+      "name": "Republik Coffee",
+      "miles": "3.4 mi",
+      "time": "8 min"
+    }
+  ],
+  "agent": {
+    "name": "Pauline Cheng",
+    "phone": "+16264005414",
+    "email": "—"
+  },
+  "dateListed": "2026-02-11",
+  "priceHistory": [
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Feb 11, 2026",
+      "amount": 1880000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Oct 8, 2008",
+      "amount": 635000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Sep 1, 1987",
+      "amount": 154000
+    }
+  ],
+  "lastSold": {
+    "date": "Oct 8, 2008",
+    "price": 635000
+  },
+  "estimates": {
+    "redfin": 1880902
+  },
+  "listingUrl": "https://www.redfin.com/CA/Pasadena/577-N-Chester-Ave-91106/home/7198980",
+  "listingSource": "redfin",
+  "redfinUrl": "https://www.redfin.com/CA/Pasadena/577-N-Chester-Ave-91106/home/7198980"
+}

@@ -1,0 +1,15 @@
+name = "back-to-pasadena"
+main = "worker/index.js"
+compatibility_date = "2025-01-01"
+
+[assets]
+directory = "_site"
+run_worker_first = ["/api/*"]
+
+[vars]
+APP_PASSWORD = "b2pas93"
+
+[[kv_namespaces]]
+binding = "HOUSES"
+id = "874e14376c774259bd63768e4996d3cc"
+preview_id = "8e4fb8fa338343e49bf03e16b414b904"

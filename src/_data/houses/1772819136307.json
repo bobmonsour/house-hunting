@@ -1,0 +1,135 @@
+{
+  "id": 1772819136307,
+  "address": "1217 Moncado Dr",
+  "city": "Glendale, CA 91207",
+  "price": 2399000,
+  "beds": 4,
+  "baths": 4,
+  "sqft": 2359,
+  "yearBuilt": 1928,
+  "images": [
+    "/images/1772819136307/photo-1.jpg",
+    "/images/1772819136307/photo-2.jpg",
+    "/images/1772819136307/photo-3.jpg",
+    "/images/1772819136307/photo-4.jpg",
+    "/images/1772819136307/photo-5.jpg",
+    "/images/1772819136307/photo-6.jpg",
+    "/images/1772819136307/photo-7.jpg",
+    "/images/1772819136307/photo-8.jpg",
+    "/images/1772819136307/photo-9.jpg",
+    "/images/1772819136307/photo-10.jpg",
+    "/images/1772819136307/photo-11.jpg",
+    "/images/1772819136307/photo-12.jpg",
+    "/images/1772819136307/photo-13.jpg",
+    "/images/1772819136307/photo-14.jpg",
+    "/images/1772819136307/photo-15.jpg",
+    "/images/1772819136307/photo-16.jpg",
+    "/images/1772819136307/photo-17.jpg",
+    "/images/1772819136307/photo-18.jpg",
+    "/images/1772819136307/photo-19.jpg",
+    "/images/1772819136307/photo-20.jpg"
+  ],
+  "neighborhood": "Located in the historic Rossmoyne area of Glendale, this property sits on a quiet semi-circle street in one of the city's most sought-after neighborhoods featuring Spanish Revival and Tudor architectural homes. The area offers a small-town charm with walkability score of 47/100, requiring a car for most errands but providing character homes from the 1920s-1930s.",
+  "parkProximity": "1-minute walk to Nibley Park (2.4 acres with playground, tennis courts, and basketball court)",
+  "floodRisk": "Low — Zone X, minimal flood hazard (FEMA NFHL)",
+  "fireRisk": "Low — not in a fire hazard severity zone (CAL FIRE FHSZ)",
+  "crimeRating": "D+ Grade — 91207 zip code has Grade A safety (very low crime), though city overall rates lower (CrimeGrade.org)",
+  "distances": [
+    {
+      "name": "Whole Foods Market",
+      "miles": "7.4 mi",
+      "time": "13 min"
+    },
+    {
+      "name": "Trader Joe's",
+      "miles": "8.0 mi",
+      "time": "15 min"
+    },
+    {
+      "name": "Costco",
+      "miles": "14.1 mi",
+      "time": "18 min"
+    },
+    {
+      "name": "Target",
+      "miles": "8.1 mi",
+      "time": "13 min"
+    },
+    {
+      "name": "Home Depot",
+      "miles": "8.7 mi",
+      "time": "16 min"
+    },
+    {
+      "name": "Republik Coffee",
+      "miles": "6.5 mi",
+      "time": "11 min"
+    }
+  ],
+  "agent": {
+    "name": "Vahe Parsekhian",
+    "phone": "+16264005414",
+    "email": "—"
+  },
+  "dateListed": "2026-03-02",
+  "priceHistory": [
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Mar 2, 2026",
+      "amount": 2399000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (MLS)",
+      "date": "Jul 16, 2015",
+      "amount": 952000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Jul 16, 2015",
+      "amount": 952000
+    },
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Jun 2, 2015",
+      "amount": 848000
+    },
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Sep 30, 2014",
+      "amount": 848000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (MLS)",
+      "date": "Aug 28, 2000",
+      "amount": 422000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Aug 3, 2000",
+      "amount": 422000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Aug 6, 1980",
+      "amount": 163000
+    }
+  ],
+  "lastSold": {
+    "date": "Jul 16, 2015",
+    "price": 952000
+  },
+  "estimates": {
+    "redfin": 2422153
+  },
+  "listingUrl": "https://www.redfin.com/CA/Glendale/1217-Moncado-Dr-91207/home/7162315",
+  "listingSource": "redfin",
+  "redfinUrl": "https://www.redfin.com/CA/Glendale/1217-Moncado-Dr-91207/home/7162315"
+}

@@ -1,0 +1,105 @@
+{
+  "id": 1772819085573,
+  "address": "1625 Pegfair Estates Dr",
+  "city": "Pasadena, CA 91103",
+  "price": 2450000,
+  "beds": 3,
+  "baths": 2.5,
+  "sqft": 2516,
+  "yearBuilt": 1965,
+  "images": [
+    "/images/1772819085573/photo-1.jpg",
+    "/images/1772819085573/photo-2.jpg",
+    "/images/1772819085573/photo-3.jpg",
+    "/images/1772819085573/photo-4.jpg",
+    "/images/1772819085573/photo-5.jpg",
+    "/images/1772819085573/photo-6.jpg",
+    "/images/1772819085573/photo-7.jpg",
+    "/images/1772819085573/photo-8.jpg",
+    "/images/1772819085573/photo-9.jpg",
+    "/images/1772819085573/photo-10.jpg",
+    "/images/1772819085573/photo-11.jpg",
+    "/images/1772819085573/photo-12.jpg",
+    "/images/1772819085573/photo-13.jpg",
+    "/images/1772819085573/photo-14.jpg",
+    "/images/1772819085573/photo-15.jpg",
+    "/images/1772819085573/photo-16.jpg",
+    "/images/1772819085573/photo-17.jpg",
+    "/images/1772819085573/photo-18.jpg",
+    "/images/1772819085573/photo-19.jpg",
+    "/images/1772819085573/photo-20.jpg"
+  ],
+  "neighborhood": "Pegfair Estates is a prestigious historic district within Linda Vista known for its mid-century Contemporary Ranch homes with Asian and Polynesian influences, offering exceptional privacy and seclusion in one of Pasadena's wealthiest areas. The neighborhood features winding roads, mature landscaping, and architecturally significant homes from the 1950s-60s that blend indoor-outdoor living with sophisticated design.",
+  "parkProximity": "0.5 miles to Linda Vista Park (1200 block of Linda Vista Avenue) and walking distance to Rose Bowl",
+  "floodRisk": "Low — Zone X, minimal flood hazard (FEMA NFHL)",
+  "fireRisk": "Very High — very high fire hazard severity zone (CAL FIRE FHSZ)",
+  "crimeRating": "Very Low — Crime Score 1 out of 10 (CAP Index), well below national average",
+  "distances": [
+    {
+      "name": "Whole Foods Market",
+      "miles": "4.1 mi",
+      "time": "13 min"
+    },
+    {
+      "name": "Trader Joe's",
+      "miles": "4.7 mi",
+      "time": "15 min"
+    },
+    {
+      "name": "Costco",
+      "miles": "10.8 mi",
+      "time": "17 min"
+    },
+    {
+      "name": "Target",
+      "miles": "4.9 mi",
+      "time": "12 min"
+    },
+    {
+      "name": "Home Depot",
+      "miles": "5.4 mi",
+      "time": "16 min"
+    },
+    {
+      "name": "Republik Coffee",
+      "miles": "3.4 mi",
+      "time": "10 min"
+    }
+  ],
+  "agent": {
+    "name": "Evangelyn Lin",
+    "phone": "+16264005414",
+    "email": "—"
+  },
+  "dateListed": "2026-02-24",
+  "priceHistory": [
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Feb 24, 2026",
+      "amount": 2450000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Sep 22, 1995",
+      "amount": 439000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Aug 17, 1973",
+      "amount": 70000
+    }
+  ],
+  "lastSold": {
+    "date": "Sep 22, 1995",
+    "price": 439000
+  },
+  "estimates": {
+    "redfin": 2775844
+  },
+  "listingUrl": "https://www.redfin.com/CA/Pasadena/1625-Pegfair-Estates-Dr-91103/home/7183386",
+  "listingSource": "redfin",
+  "redfinUrl": "https://www.redfin.com/CA/Pasadena/1625-Pegfair-Estates-Dr-91103/home/7183386"
+}
