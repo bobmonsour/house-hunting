@@ -15,6 +15,7 @@ export const state = {
   statusFilter: "all",
   compareSet: new Set(),
   currentDetailId: null,
+  cardsDirty: false,
 };
 
 // Wire all functions to window for onclick compatibility

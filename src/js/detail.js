@@ -188,6 +188,10 @@ export function openDetail(id, preserveGallery = false) {
 }
 
 export function closeDetail() {
+  if (state.cardsDirty) {
+    renderCards();
+    state.cardsDirty = false;
+  }
   document.getElementById("detailPage").style.display = "none";
   document.getElementById("cardGrid").style.display = "";
   const rejSec = document.getElementById("rejectedSection");
@@ -203,7 +207,7 @@ export async function updateStatus(val) {
   if (!state.currentDetailId) return;
   const h = state.houses.find((x) => x.id === state.currentDetailId);
   h.status = val;
-  renderCards();
+  state.cardsDirty = true;
   patchState(state.currentDetailId, { status: val }).catch(console.error);
 }
 
