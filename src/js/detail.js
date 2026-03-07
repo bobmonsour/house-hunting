@@ -110,6 +110,7 @@ export function openDetail(id, preserveGallery = false) {
     <div class="detail-section">
       <h3 class="detail-section-title">Property Details</h3>
       <div class="info-grid">
+        <div class="info-item"><span class="info-item-label">Character Home</span><span class="info-item-value">${renderCharacterHome(h)}</span></div>
         <div class="info-item"><span class="info-item-label">Sidewalks</span><span class="info-item-value">${renderSidewalks(h)}</span></div>
         <div class="info-item"><span class="info-item-label">Street Trees</span><span class="info-item-value">${renderStreetTrees(h)}</span></div>
         <div class="info-item"><span class="info-item-label">Corner Lot</span><span class="info-item-value">${renderCorner(h)}</span></div>
@@ -119,8 +120,10 @@ export function openDetail(id, preserveGallery = false) {
         <div class="info-item"><span class="info-item-label">Suitable Backyard</span><span class="info-item-value">${renderBackyard(h)}</span></div>
         <div class="info-item"><span class="info-item-label">Studio Space</span><span class="info-item-value">${renderStudio(h)}</span></div>
         <div class="info-item"><span class="info-item-label">2 Sinks</span><span class="info-item-value">${renderTwoSinks(h)}</span></div>
+        <div class="info-item"><span class="info-item-label">Master Walk-in Shower</span><span class="info-item-value">${renderWalkInShower(h)}</span></div>
         <div class="info-item"><span class="info-item-label">Wall Ovens</span><span class="info-item-value">${renderWallOvens(h)}</span></div>
         <div class="info-item"><span class="info-item-label">Pool</span><span class="info-item-value">${renderPool(h)}</span></div>
+        <div class="info-item"><span class="info-item-label">Garage</span><span class="info-item-value">${renderGarage(h)}</span></div>
         <div class="info-item"><span class="info-item-label">Parks Nearby</span><span class="info-item-value">${h.parkProximity}</span></div>
         <div class="info-item"><span class="info-item-label">Flood Risk</span><span class="info-item-value ${riskClass(h.floodRisk)}">${h.floodRisk}</span></div>
         <div class="info-item"><span class="info-item-label">Fire Risk</span><span class="info-item-value ${riskClass(h.fireRisk)}">${h.fireRisk} <a href="https://egis.fire.ca.gov/FHSZ/" target="_blank" style="color:var(--accent);text-decoration:underline;font-size:0.82rem;margin-left:4px">CAL FIRE Map</a></span></div>
@@ -299,6 +302,32 @@ export async function deleteProperty(id) {
   closeDetail();
   renderCards();
   patchState(id, { status: "deleted" }).catch(console.error);
+}
+
+// Character Home
+function renderCharacterHome(h) {
+  const editIcon = `<button class="street-trees-edit-btn" onclick="event.stopPropagation(); toggleCharacterHomeEdit(${h.id})" title="Change"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>`;
+  if (h.characterHome === true) {
+    return `Yes ${editIcon}`;
+  } else if (h.characterHome === false) {
+    return `No ${editIcon}`;
+  } else {
+    return `<div class="street-trees-toggle">
+      <label onclick="setCharacterHome(${h.id}, true)"><input type="radio" name="characterHome${h.id}"> Yes</label>
+      <label onclick="setCharacterHome(${h.id}, false)"><input type="radio" name="characterHome${h.id}"> No</label>
+    </div>`;
+  }
+}
+
+export async function setCharacterHome(id, value) {
+  state.houses.find((x) => x.id === id).characterHome = value;
+  patchState(id, { characterHome: value }).catch(console.error);
+  if (state.currentDetailId === id) openDetail(id, true);
+}
+
+export function toggleCharacterHomeEdit(id) {
+  state.houses.find((x) => x.id === id).characterHome = null;
+  if (state.currentDetailId === id) openDetail(id, true);
 }
 
 // Sidewalks / Street Trees
@@ -604,5 +633,60 @@ export async function setPool(id, value) {
 
 export function togglePoolEdit(id) {
   state.houses.find((x) => x.id === id).pool = null;
+  if (state.currentDetailId === id) openDetail(id, true);
+}
+
+// Master Walk-in Shower
+function renderWalkInShower(h) {
+  const editIcon = `<button class="street-trees-edit-btn" onclick="event.stopPropagation(); toggleWalkInShowerEdit(${h.id})" title="Change"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>`;
+  if (h.walkInShower === true) {
+    return `Yes ${editIcon}`;
+  } else if (h.walkInShower === false) {
+    return `No ${editIcon}`;
+  } else {
+    return `<div class="street-trees-toggle">
+      <label onclick="setWalkInShower(${h.id}, true)"><input type="radio" name="walkInShower${h.id}"> Yes</label>
+      <label onclick="setWalkInShower(${h.id}, false)"><input type="radio" name="walkInShower${h.id}"> No</label>
+    </div>`;
+  }
+}
+
+export async function setWalkInShower(id, value) {
+  state.houses.find((x) => x.id === id).walkInShower = value;
+  patchState(id, { walkInShower: value }).catch(console.error);
+  if (state.currentDetailId === id) openDetail(id, true);
+}
+
+export function toggleWalkInShowerEdit(id) {
+  state.houses.find((x) => x.id === id).walkInShower = null;
+  if (state.currentDetailId === id) openDetail(id, true);
+}
+
+// Garage
+function renderGarage(h) {
+  const editIcon = `<button class="street-trees-edit-btn" onclick="event.stopPropagation(); toggleGarageEdit(${h.id})" title="Change"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>`;
+  if (h.garage === "1car") {
+    return `Yes — 1 car ${editIcon}`;
+  } else if (h.garage === "2car") {
+    return `Yes — 2 car ${editIcon}`;
+  } else if (h.garage === "no") {
+    return `No ${editIcon}`;
+  } else {
+    return `<div class="street-trees-toggle">
+      <label onclick="setGarage(${h.id}, 'no')"><input type="radio" name="garage${h.id}"> No</label>
+      <label onclick="setGarage(${h.id}, '1car')"><input type="radio" name="garage${h.id}"> 1 car</label>
+      <label onclick="setGarage(${h.id}, '2car')"><input type="radio" name="garage${h.id}"> 2 car</label>
+    </div>`;
+  }
+}
+
+export async function setGarage(id, value) {
+  state.houses.find((x) => x.id === id).garage = value;
+  patchState(id, { garage: value }).catch(console.error);
+  if (state.currentDetailId === id) openDetail(id, true);
+}
+
+export function toggleGarageEdit(id) {
+  state.houses.find((x) => x.id === id).garage = null;
   if (state.currentDetailId === id) openDetail(id, true);
 }

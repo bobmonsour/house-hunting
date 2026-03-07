@@ -18,10 +18,19 @@ if (!address || !city || !id) {
 
 const DESTINATIONS = [
   { name: "Whole Foods Market", address: "465 S Arroyo Pkwy, Pasadena, CA 91105" },
+  { name: "Whole Foods Market", address: "3751 E Foothill Blvd, Pasadena, CA 91107" },
+  { name: "Whole Foods Market", address: "331 N Glendale Ave, Glendale, CA 91206" },
   { name: "Trader Joe's", address: "345 S Lake Ave, Pasadena, CA 91101" },
+  { name: "Trader Joe's", address: "467 N Rosemead Blvd, Pasadena, CA 91107" },
+  { name: "Trader Joe's", address: "613 Mission St, South Pasadena, CA 91030" },
+  { name: "Trader Joe's", address: "103 E Glenoaks Blvd, Glendale, CA 91207" },
+  { name: "Trader Joe's", address: "2462 Honolulu Ave, Montrose, CA 91020" },
   { name: "Costco", address: "3972 Costco Dr, Arcadia, CA 91006" },
   { name: "Target", address: "777 E Colorado Blvd, Pasadena, CA 91101" },
-  { name: "Home Depot", address: "1115 Fair Oaks Ave, South Pasadena, CA 91030" },
+  { name: "Target", address: "3121 E Colorado Blvd, Pasadena, CA 91107" },
+  { name: "Target", address: "2195 Glendale Galleria, Glendale, CA 91210" },
+  { name: "Home Depot", address: "2881 E Walnut St, Pasadena, CA 91107" },
+  { name: "Home Depot", address: "5040 San Fernando Rd, Glendale, CA 91204" },
   { name: "Republik Coffee", address: "48 W Green St, Pasadena, CA 91105" },
 ];
 
@@ -346,7 +355,8 @@ After searching, respond with ONLY a JSON code block. No other text.
 async function getDistances() {
   if (!process.env.GOOGLE_MAPS_API_KEY || process.env.GOOGLE_MAPS_API_KEY === "your-key-here") {
     console.log("  Skipping Google Maps (no API key). Using placeholder distances.");
-    return DESTINATIONS.map((d) => ({ name: d.name, address: d.address, miles: "—", time: "—" }));
+    const seen = new Set();
+    return DESTINATIONS.filter((d) => !seen.has(d.name) && seen.add(d.name)).map((d) => ({ name: d.name, address: d.address, miles: "—", time: "—" }));
   }
 
   const maps = new Client({});
@@ -360,15 +370,25 @@ async function getDistances() {
   });
 
   const elements = result.data.rows[0]?.elements || [];
-  return DESTINATIONS.map((dest, i) => {
+  const allResults = DESTINATIONS.map((dest, i) => {
     const el = elements[i];
     if (el?.status === "OK") {
       const miles = (el.distance.value / 1609.34).toFixed(1) + " mi";
       const time = el.duration.text.replace("mins", "min");
-      return { name: dest.name, address: dest.address, miles, time };
+      return { name: dest.name, address: dest.address, miles, time, meters: el.distance.value };
     }
-    return { name: dest.name, address: dest.address, miles: "—", time: "—" };
+    return { name: dest.name, address: dest.address, miles: "—", time: "—", meters: Infinity };
   });
+
+  // Keep only the closest location per store name
+  const closest = new Map();
+  for (const r of allResults) {
+    const existing = closest.get(r.name);
+    if (!existing || r.meters < existing.meters) {
+      closest.set(r.name, r);
+    }
+  }
+  return [...closest.values()].map(({ name, address, miles, time }) => ({ name, address, miles, time }));
 }
 
 // --- Image Download ---

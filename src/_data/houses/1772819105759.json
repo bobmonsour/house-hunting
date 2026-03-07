@@ -37,31 +37,37 @@
   "distances": [
     {
       "name": "Whole Foods Market",
+      "address": "3751 E Foothill Blvd, Pasadena, CA 91107",
       "miles": "3.7 mi",
-      "time": "12 min"
+      "time": "11 min"
     },
     {
       "name": "Trader Joe's",
+      "address": "345 S Lake Ave, Pasadena, CA 91101",
       "miles": "3.2 mi",
       "time": "10 min"
     },
     {
       "name": "Costco",
+      "address": "3972 Costco Dr, Arcadia, CA 91006",
       "miles": "5.0 mi",
       "time": "13 min"
     },
     {
       "name": "Target",
-      "miles": "3.7 mi",
-      "time": "13 min"
+      "address": "3121 E Colorado Blvd, Pasadena, CA 91107",
+      "miles": "3.0 mi",
+      "time": "8 min"
     },
     {
       "name": "Home Depot",
-      "miles": "3.9 mi",
-      "time": "11 min"
+      "address": "2881 E Walnut St, Pasadena, CA 91107",
+      "miles": "2.9 mi",
+      "time": "8 min"
     },
     {
       "name": "Republik Coffee",
+      "address": "48 W Green St, Pasadena, CA 91105",
       "miles": "4.4 mi",
       "time": "16 min"
     }

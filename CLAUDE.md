@@ -88,7 +88,7 @@ scripts/
 
 ### Mutable State (KV `state:{id}`)
 ```json
-{ "notes": "", "status": "new", "favorite": false, "sidewalks": null, "streetTrees": null, "corner": null, "roadNoise": null, "stories": null, "condition": null, "backyard": null, "studio": null, "twoSinks": null, "wallOvens": null, "pool": null }
+{ "notes": "", "status": "new", "favorite": false, "sidewalks": null, "streetTrees": null, "corner": null, "roadNoise": null, "stories": null, "condition": null, "backyard": null, "studio": null, "twoSinks": null, "wallOvens": null, "pool": null, "walkInShower": null, "characterHome": null, "garage": null }
 ```
 
 ### KV Stub Format (KV `stub:{id}`)
@@ -114,7 +114,7 @@ scripts/
 - **Deferred card re-render**: Status/note changes on the detail page set `state.cardsDirty = true` instead of immediately re-rendering. Grid re-renders only when closing the detail view via `closeDetail()`.
 - **Rejected properties**: Cards with status "Rejected" are separated into a distinct section below active cards with reduced opacity and a darker background. Rejected card images show a diagonal red strikethrough. "Rejected" is excluded from the status filter dropdown.
 - **Risk display**: `riskClass()` in `detail.js` maps risk strings to CSS classes (`risk-low`, `risk-medium`, `risk-high`) based on prefix matching
-- **Inline-editable fields**: Sidewalks, street trees, corner lot, road noise, stories, condition, backyard, studio, two sinks, wall ovens, pool — toggle between display/edit mode, persist to KV. Gallery position preserved during inline edits.
+- **Inline-editable fields**: Sidewalks, street trees, corner lot, road noise, stories, condition, backyard, studio, two sinks, wall ovens, pool, walk-in shower, character home, garage — toggle between display/edit mode, persist to KV. Gallery position preserved during inline edits.
 - **Auth**: Simple shared password, token stored in localStorage as `btp_token`
 - **Redfin URL parsing**: Worker extracts address/city from URL path pattern `/CA/City-Name/123-Street-Name-91030/home/12345`
 - **Image gallery**: Detail view shows prev/next nav + counter for multi-image listings (dots shown for ≤10 images). Arrow key navigation in both gallery and lightbox. Touch swipe support for gallery and lightbox.
@@ -127,7 +127,7 @@ scripts/
 - **US Census Geocoder**: `https://geocoding.geo.census.gov/geocoder/locations/onelineaddress` (fallback when no Google Maps key)
 
 ## Destinations for Distance Calculations
-Whole Foods (Pasadena), Trader Joe's (Pasadena), Costco (Arcadia), Target (Pasadena), Home Depot (South Pasadena), Republik Coffee (Pasadena)
+Multiple locations per store across Pasadena, South Pasadena, Glendale, Montrose, and Arcadia. The research script calculates driving distance to all locations and keeps only the closest per store name. Stores: Whole Foods Market, Trader Joe's, Costco, Target, Home Depot, Republik Coffee.
 
 ## Environment Variables (`.env`)
 - `ANTHROPIC_API_KEY` — For Claude research

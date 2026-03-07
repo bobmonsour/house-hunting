@@ -37,31 +37,37 @@
   "distances": [
     {
       "name": "Whole Foods Market",
-      "miles": "7.4 mi",
-      "time": "13 min"
+      "address": "331 N Glendale Ave, Glendale, CA 91206",
+      "miles": "1.1 mi",
+      "time": "5 min"
     },
     {
       "name": "Trader Joe's",
-      "miles": "8.0 mi",
-      "time": "15 min"
+      "address": "103 E Glenoaks Blvd, Glendale, CA 91207",
+      "miles": "1.2 mi",
+      "time": "5 min"
     },
     {
       "name": "Costco",
+      "address": "3972 Costco Dr, Arcadia, CA 91006",
       "miles": "14.1 mi",
       "time": "18 min"
     },
     {
       "name": "Target",
-      "miles": "8.1 mi",
-      "time": "13 min"
+      "address": "2195 Glendale Galleria, Glendale, CA 91210",
+      "miles": "2.5 mi",
+      "time": "11 min"
     },
     {
       "name": "Home Depot",
-      "miles": "8.7 mi",
-      "time": "16 min"
+      "address": "5040 San Fernando Rd, Glendale, CA 91204",
+      "miles": "3.5 mi",
+      "time": "10 min"
     },
     {
       "name": "Republik Coffee",
+      "address": "48 W Green St, Pasadena, CA 91105",
       "miles": "6.5 mi",
       "time": "11 min"
     }

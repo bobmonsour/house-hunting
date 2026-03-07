@@ -37,31 +37,37 @@
   "distances": [
     {
       "name": "Whole Foods Market",
+      "address": "465 S Arroyo Pkwy, Pasadena, CA 91105",
       "miles": "4.1 mi",
       "time": "13 min"
     },
     {
       "name": "Trader Joe's",
+      "address": "345 S Lake Ave, Pasadena, CA 91101",
       "miles": "4.7 mi",
       "time": "15 min"
     },
     {
       "name": "Costco",
+      "address": "3972 Costco Dr, Arcadia, CA 91006",
       "miles": "10.8 mi",
       "time": "17 min"
     },
     {
       "name": "Target",
+      "address": "777 E Colorado Blvd, Pasadena, CA 91101",
       "miles": "4.9 mi",
       "time": "12 min"
     },
     {
       "name": "Home Depot",
-      "miles": "5.4 mi",
-      "time": "16 min"
+      "address": "2881 E Walnut St, Pasadena, CA 91107",
+      "miles": "7.0 mi",
+      "time": "14 min"
     },
     {
       "name": "Republik Coffee",
+      "address": "48 W Green St, Pasadena, CA 91105",
       "miles": "3.4 mi",
       "time": "10 min"
     }
