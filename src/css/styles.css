@@ -790,6 +790,21 @@ body {
   opacity: 0.7;
 }
 
+.rejected-section .card-image-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top right,
+    transparent calc(50% - 5px),
+    #c0392b calc(50% - 5px),
+    #c0392b calc(50% + 5px),
+    transparent calc(50% + 5px)
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
 .rejected-section .house-card:hover {
   opacity: 1;
 }
