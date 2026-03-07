@@ -45,7 +45,7 @@ src/
     api.js              — API client (auth, state CRUD, URL submission)
     add-property.js     — Add property modal logic (Redfin URL input)
     cards.js            — Card grid rendering, sorting, filtering
-    detail.js           — Detail panel, gallery, inline-editable fields
+    detail.js           — Full-page detail view, gallery/lightbox, inline-editable fields
     comparison.js       — Side-by-side comparison view (2-3 properties)
     utils.js            — formatPrice, getDaysOnMarket, theme toggle
   css/styles.css        — All styles (CSS custom properties, light/dark themes)
@@ -88,7 +88,7 @@ scripts/
 
 ### Mutable State (KV `state:{id}`)
 ```json
-{ "notes": "", "status": "new", "favorite": false, "sidewalks": null, "streetTrees": null, "corner": null, "roadNoise": null, "stories": null, "condition": null }
+{ "notes": "", "status": "new", "favorite": false, "sidewalks": null, "streetTrees": null, "corner": null, "roadNoise": null, "stories": null, "condition": null, "backyard": null, "studio": null, "twoSinks": null, "wallOvens": null, "pool": null }
 ```
 
 ### KV Stub Format (KV `stub:{id}`)
@@ -109,11 +109,15 @@ scripts/
 - **No bundler**: Client JS uses native ES modules with `import`/`export`
 - **Window bindings**: All functions exposed via `window.functionName` in `app.js` for `onclick` handlers
 - **IDs are timestamps**: `Date.now()` used as property IDs
+- **Hash routing**: Detail view opens at `#property/{id}`, enabling browser back/forward navigation between grid and detail views. `popstate` listener in `app.js` handles navigation. Direct URLs work after auth.
+- **Full-page detail view**: Detail view is a full-page layout (not a slide-in panel), toggling `#detailPage` / `#cardGrid` visibility. Uses native document scrolling (fixes iOS scroll issues). Sticky topbar with back button and status selector.
+- **Deferred card re-render**: Status/note changes on the detail page set `state.cardsDirty = true` instead of immediately re-rendering. Grid re-renders only when closing the detail view via `closeDetail()`.
+- **Rejected properties**: Cards with status "Rejected" are separated into a distinct section below active cards with reduced opacity and a darker background. Rejected card images show a diagonal red strikethrough. "Rejected" is excluded from the status filter dropdown.
 - **Risk display**: `riskClass()` in `detail.js` maps risk strings to CSS classes (`risk-low`, `risk-medium`, `risk-high`) based on prefix matching
-- **Inline-editable fields**: Sidewalks, street trees, corner lot, road noise, stories, condition — toggle between display/edit mode, persist to KV
+- **Inline-editable fields**: Sidewalks, street trees, corner lot, road noise, stories, condition, backyard, studio, two sinks, wall ovens, pool — toggle between display/edit mode, persist to KV. Gallery position preserved during inline edits.
 - **Auth**: Simple shared password, token stored in localStorage as `btp_token`
 - **Redfin URL parsing**: Worker extracts address/city from URL path pattern `/CA/City-Name/123-Street-Name-91030/home/12345`
-- **Image gallery**: Detail panel shows prev/next nav + counter for multi-image listings (dots shown for ≤10 images), arrow key navigation supported
+- **Image gallery**: Detail view shows prev/next nav + counter for multi-image listings (dots shown for ≤10 images). Arrow key navigation in both gallery and lightbox. Touch swipe support for gallery and lightbox.
 - **Native fetch()**: research.js uses Node's built-in `fetch()` instead of `https.get` to avoid interference from the Anthropic SDK's HTTP stack
 
 ## External APIs (no keys required)
