@@ -1,4 +1,4 @@
-import { formatPrice, getDaysOnMarket } from "./utils.js";
+import { formatPrice, formatLotSize, getDaysOnMarket } from "./utils.js";
 import { patchState } from "./api.js";
 import { state } from "./app.js";
 import { renderCards } from "./cards.js";
@@ -98,6 +98,7 @@ export function openDetail(id, preserveGallery = false) {
       <div class="detail-key-stat"><div class="detail-key-stat-value">${h.beds}</div><div class="detail-key-stat-label">Bedrooms</div></div>
       <div class="detail-key-stat"><div class="detail-key-stat-value">${h.baths}</div><div class="detail-key-stat-label">Bathrooms</div></div>
       <div class="detail-key-stat"><div class="detail-key-stat-value">${h.sqft.toLocaleString()}</div><div class="detail-key-stat-label">Square Feet</div></div>
+      <div class="detail-key-stat"><div class="detail-key-stat-value">${formatLotSize(h.lotSize)}</div><div class="detail-key-stat-label">Lot Size</div></div>
       <div class="detail-key-stat"><div class="detail-key-stat-value">${h.yearBuilt}</div><div class="detail-key-stat-label">Year Built</div></div>
       <div class="detail-key-stat"><div class="detail-key-stat-value">${getDaysOnMarket(h.dateListed)}</div><div class="detail-key-stat-label">Days on Market</div></div>
     </div>

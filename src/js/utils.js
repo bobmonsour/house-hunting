@@ -4,6 +4,12 @@ export function formatPrice(p) {
   return "$" + p.toLocaleString();
 }
 
+export function formatLotSize(sqft) {
+  if (!sqft) return "—";
+  if (sqft >= 43560) return (sqft / 43560).toFixed(2).replace(/\.?0+$/, "") + " ac";
+  return sqft.toLocaleString();
+}
+
 export function getDaysOnMarket(dateListed) {
   const listed = new Date(dateListed);
   const today = new Date();

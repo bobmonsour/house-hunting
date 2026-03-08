@@ -159,6 +159,7 @@ function scrapeRedfinListing(html) {
         if (prop.numberOfBathroomsTotal) data.baths = Number(prop.numberOfBathroomsTotal);
         if (prop.floorSize?.value) data.sqft = Number(prop.floorSize.value);
         if (prop.yearBuilt) data.yearBuilt = Number(prop.yearBuilt);
+        if (prop.lotSize?.value) data.lotSize = Number(prop.lotSize.value);
 
         // All listing images
         if (prop.image && Array.isArray(prop.image)) {
@@ -199,6 +200,18 @@ function scrapeRedfinListing(html) {
   if (!data.yearBuilt) {
     const m = html.match(/(?:Year Built|Built in)[:\s]*(\d{4})/i);
     if (m) data.yearBuilt = Number(m[1]);
+  }
+  if (!data.lotSize) {
+    // Match "X,XXX Sq. Ft. Lot" or "X.XX Acres"
+    const m = html.match(/([\d,]+)\s*(?:Sq\.?\s*Ft\.?\s*Lot)/i)
+      || html.match(/([\d.]+)\s*Acres?/i);
+    if (m) {
+      if (/acres?/i.test(m[0])) {
+        data.lotSize = Math.round(Number(m[1]) * 43560); // convert acres to sqft
+      } else {
+        data.lotSize = Number(m[1].replace(/,/g, ""));
+      }
+    }
   }
 
   // --- Agent info ---
@@ -464,10 +477,10 @@ async function main() {
   // Step 2: Geocode address and look up fire/flood risk
   let fireRisk = "Unknown";
   let floodRisk = "Unknown";
+  let coords = null;
   console.log("  Geocoding address...");
   try {
     // Use Redfin JSON-LD coordinates if available, otherwise geocode
-    let coords;
     if (redfinData.lat && redfinData.lon) {
       coords = { lat: redfinData.lat, lon: redfinData.lon };
       console.log(`  Using Redfin coordinates: ${coords.lat.toFixed(5)}, ${coords.lon.toFixed(5)}`);
@@ -530,6 +543,7 @@ async function main() {
     beds: redfinData.beds || 0,
     baths: redfinData.baths || 0,
     sqft: redfinData.sqft || 0,
+    lotSize: redfinData.lotSize || 0,
     yearBuilt: redfinData.yearBuilt || 0,
     images,
     neighborhood: claudeData.neighborhood || "Pending research",
@@ -546,8 +560,8 @@ async function main() {
     listingUrl: redfinUrl || "#",
     listingSource: redfinUrl ? "redfin" : "",
     redfinUrl: redfinUrl || "#",
-    lat: coords.lat,
-    lon: coords.lon,
+    lat: coords?.lat || redfinData.lat || 0,
+    lon: coords?.lon || redfinData.lon || 0,
   };
 
   // Write to src/_data/houses/{id}.json

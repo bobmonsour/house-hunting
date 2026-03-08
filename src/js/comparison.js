@@ -1,4 +1,4 @@
-import { formatPrice, getDaysOnMarket } from "./utils.js";
+import { formatPrice, formatLotSize, getDaysOnMarket } from "./utils.js";
 import { state } from "./app.js";
 
 export function openComparison() {
@@ -11,6 +11,7 @@ export function openComparison() {
     ["Bedrooms", (h) => h.beds, "max"],
     ["Bathrooms", (h) => h.baths, "max"],
     ["Square Feet", (h) => h.sqft.toLocaleString(), "max", (h) => h.sqft],
+    ["Lot Size", (h) => formatLotSize(h.lotSize), "max", (h) => h.lotSize || 0],
     ["Year Built", (h) => h.yearBuilt, "max"],
     ["Days on Market", (h) => getDaysOnMarket(h.dateListed), "min"],
     ["Sidewalks", (h) => h.sidewalks === true ? "Present" : h.sidewalks === false ? "Not Present" : "Unknown"],

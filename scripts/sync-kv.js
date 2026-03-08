@@ -199,30 +199,32 @@ async function main() {
 
   console.log("Checking for new address stubs...");
 
-  let stubs = [];
-  let useRemote = false;
+  // Collect stubs from both local and remote sources
+  const localStubs = getLocalStubs();
+  let remoteStubs = [];
 
-  // Try local KV first
-  stubs = getLocalStubs();
-
-  // Fall back to remote API if no local stubs found
-  if (stubs.length === 0 && WORKER_URL && APP_PASSWORD && !WORKER_URL.includes("your-subdomain")) {
+  if (WORKER_URL && APP_PASSWORD && !WORKER_URL.includes("your-subdomain")) {
     try {
-      stubs = await getRemoteStubs();
-      useRemote = true;
+      remoteStubs = await getRemoteStubs();
     } catch (err) {
       console.log(`Could not reach remote API: ${err.message}`);
     }
   }
 
-  if (!stubs || stubs.length === 0) {
+  // Deduplicate by id (remote wins if both exist)
+  const stubMap = new Map();
+  for (const s of localStubs) stubMap.set(String(s.id), { stub: s, source: "local" });
+  for (const s of remoteStubs) stubMap.set(String(s.id), { stub: s, source: "remote" });
+
+  if (stubMap.size === 0) {
     console.log("No new addresses. Nothing to do.");
     return;
   }
 
-  console.log(`Found ${stubs.length} new address stub(s) in ${useRemote ? "remote" : "local"} KV.`);
+  const sources = [...new Set([...stubMap.values()].map((e) => e.source))];
+  console.log(`Found ${stubMap.size} new address stub(s) from ${sources.join(" + ")} KV.`);
 
-  for (const stub of stubs) {
+  for (const [, { stub, source }] of stubMap) {
     console.log(`\nResearching: ${stub.address}, ${stub.city} (id: ${stub.id})`);
     try {
       const urlArg = stub.url ? `"${stub.url}"` : '""';
@@ -231,7 +233,7 @@ async function main() {
         { stdio: "inherit", cwd: process.cwd() }
       );
 
-      if (useRemote) {
+      if (source === "remote") {
         await deleteRemoteStub(stub.id);
       } else {
         deleteLocalStub(stub.id);

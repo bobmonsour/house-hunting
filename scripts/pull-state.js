@@ -105,20 +105,40 @@ async function getRemoteState() {
 
 // --- Main ---
 
+function seedLocalKV(stateMap) {
+  let seeded = 0;
+  for (const [id, state] of Object.entries(stateMap)) {
+    try {
+      const value = JSON.stringify(state);
+      execSync(
+        `npx wrangler kv key put --binding HOUSES --local --preview "state:${id}" '${value.replace(/'/g, "'\\''")}'`,
+        { encoding: "utf-8", stdio: "pipe" }
+      );
+      seeded++;
+    } catch (err) {
+      console.warn(`  Failed to seed local KV for state:${id}: ${err.message}`);
+    }
+  }
+  return seeded;
+}
+
 async function main() {
   console.log("Pulling mutable state...");
 
-  // Try local KV first, fall back to remote
-  let stateMap = getLocalState();
-  let source = "local";
+  // Prefer remote state (source of truth for mobile-added properties),
+  // fall back to local KV
+  let stateMap = null;
+  let source = "remote";
+
+  try {
+    stateMap = await getRemoteState();
+  } catch (err) {
+    console.log(`Could not reach remote API: ${err.message}`);
+  }
 
   if (!stateMap || Object.keys(stateMap).length === 0) {
-    try {
-      stateMap = await getRemoteState();
-      source = "remote";
-    } catch (err) {
-      console.log(`Could not reach remote API: ${err.message}`);
-    }
+    stateMap = getLocalState();
+    source = "local";
   }
 
   if (!stateMap) stateMap = {};
@@ -128,6 +148,13 @@ async function main() {
   writeFileSync(outPath, JSON.stringify(stateMap, null, 2));
 
   console.log(`Wrote ${count} property state(s) from ${source} KV to src/_data/mutableState.json`);
+
+  // Seed local wrangler KV so runtime /api/state returns correct data
+  if (source === "remote" && count > 0) {
+    console.log("Seeding local wrangler KV with remote state...");
+    const seeded = seedLocalKV(stateMap);
+    console.log(`Seeded ${seeded}/${count} state entries into local KV.`);
+  }
 }
 
 main().catch((err) => {

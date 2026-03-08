@@ -1,4 +1,4 @@
-import { formatPrice, getDaysOnMarket } from "./utils.js";
+import { formatPrice, formatLotSize, getDaysOnMarket } from "./utils.js";
 import { patchState } from "./api.js";
 import { state } from "./app.js";
 
@@ -49,6 +49,7 @@ function renderCard(h) {
           <div class="card-stat"><span class="card-stat-value">${h.beds}</span><span class="card-stat-label">Beds</span></div>
           <div class="card-stat"><span class="card-stat-value">${h.baths}</span><span class="card-stat-label">Baths</span></div>
           <div class="card-stat"><span class="card-stat-value">${h.sqft.toLocaleString()}</span><span class="card-stat-label">Sq Ft</span></div>
+          <div class="card-stat"><span class="card-stat-value">${formatLotSize(h.lotSize)}</span><span class="card-stat-label">Lot</span></div>
           <div class="card-stat"><span class="card-stat-value">${h.yearBuilt}</span><span class="card-stat-label">Built</span></div>
           <div class="card-stat"><span class="card-stat-value">${getDaysOnMarket(h.dateListed)}</span><span class="card-stat-label">DOM</span></div>
         </div>

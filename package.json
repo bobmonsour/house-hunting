@@ -9,7 +9,6 @@
     "deploy": "npm run build && npx wrangler deploy",
     "research": "node scripts/research.js",
     "sync": "node scripts/sync-kv.js",
-    "prebuild": "node scripts/sync-kv.js && node scripts/pull-state.js",
     "migrate": "node scripts/migrate-kv.js"
   },
   "dependencies": {

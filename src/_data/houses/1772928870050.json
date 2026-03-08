@@ -1,0 +1,108 @@
+{
+  "id": 1772928870050,
+  "address": "503 E Mendocino St",
+  "city": "Altadena, CA 91001",
+  "price": 1899000,
+  "beds": 5,
+  "baths": 4,
+  "sqft": 3046,
+  "yearBuilt": 1919,
+  "images": [
+    "/images/1772928870050/photo-1.jpg",
+    "/images/1772928870050/photo-2.jpg",
+    "/images/1772928870050/photo-3.jpg",
+    "/images/1772928870050/photo-4.jpg",
+    "/images/1772928870050/photo-5.jpg",
+    "/images/1772928870050/photo-6.jpg",
+    "/images/1772928870050/photo-7.jpg",
+    "/images/1772928870050/photo-8.jpg",
+    "/images/1772928870050/photo-9.jpg",
+    "/images/1772928870050/photo-10.jpg",
+    "/images/1772928870050/photo-11.jpg",
+    "/images/1772928870050/photo-12.jpg",
+    "/images/1772928870050/photo-13.jpg",
+    "/images/1772928870050/photo-14.jpg",
+    "/images/1772928870050/photo-15.jpg",
+    "/images/1772928870050/photo-16.jpg",
+    "/images/1772928870050/photo-17.jpg",
+    "/images/1772928870050/photo-18.jpg",
+    "/images/1772928870050/photo-19.jpg",
+    "/images/1772928870050/photo-20.jpg"
+  ],
+  "neighborhood": "<cite index=\"1-4,1-14,2-7,2-8\">This estate is centrally located in one of the community's most cherished pockets that feels remarkably secluded, in a neighborhood defined by resilience and renewal where Altadena is exemplified by its slower-paced atmosphere with very quiet areas and generally low levels of noise from traffic.</cite>",
+  "parkProximity": "<cite index=\"11-4\">0.5 miles to Farnsworth Park and nearby Rubio Canyon Open Space, with about 10 parks close by including Loma Alta County Park.</cite>",
+  "floodRisk": "Low — Zone X, minimal flood hazard (FEMA NFHL)",
+  "fireRisk": "Low — not in a fire hazard severity zone (CAL FIRE FHSZ)",
+  "crimeRating": "<cite index=\"21-1,21-3\">Below Average — Grade D+ (CrimeGrade.org) — Altadena ranks in the 29th percentile for safety, with the D+ grade indicating that the rate of crime is higher than that of the average US city.</cite>",
+  "distances": [
+    {
+      "name": "Whole Foods Market",
+      "address": "465 S Arroyo Pkwy, Pasadena, CA 91105",
+      "miles": "4.0 mi",
+      "time": "14 min"
+    },
+    {
+      "name": "Trader Joe's",
+      "address": "345 S Lake Ave, Pasadena, CA 91101",
+      "miles": "4.0 mi",
+      "time": "13 min"
+    },
+    {
+      "name": "Costco",
+      "address": "3972 Costco Dr, Arcadia, CA 91006",
+      "miles": "9.7 mi",
+      "time": "18 min"
+    },
+    {
+      "name": "Target",
+      "address": "777 E Colorado Blvd, Pasadena, CA 91101",
+      "miles": "3.7 mi",
+      "time": "13 min"
+    },
+    {
+      "name": "Home Depot",
+      "address": "2881 E Walnut St, Pasadena, CA 91107",
+      "miles": "5.7 mi",
+      "time": "15 min"
+    },
+    {
+      "name": "Republik Coffee",
+      "address": "48 W Green St, Pasadena, CA 91105",
+      "miles": "4.9 mi",
+      "time": "12 min"
+    }
+  ],
+  "agent": {
+    "name": "Carol Bush",
+    "phone": "+16264005414",
+    "email": "—"
+  },
+  "dateListed": "2026-02-27",
+  "priceHistory": [
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Feb 27, 2026",
+      "amount": 1899000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Jul 25, 2023",
+      "amount": 1050000
+    }
+  ],
+  "lastSold": {
+    "date": "Jul 25, 2023",
+    "price": 1050000
+  },
+  "estimates": {
+    "redfin": 1905654
+  },
+  "listingUrl": "https://www.redfin.com/CA/Altadena/503-E-Mendocino-St-91001/home/7258218",
+  "listingSource": "redfin",
+  "redfinUrl": "https://www.redfin.com/CA/Altadena/503-E-Mendocino-St-91001/home/7258218",
+  "lat": 34.1888239,
+  "lon": -118.1383861,
+  "lotSize": 1786
+}

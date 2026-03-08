@@ -20,8 +20,8 @@ A password-protected house hunting web app for comparing properties in the Pasad
 
 ### Data Flow
 1. User adds property via "Add Property" modal (Redfin URL input) → POST `/api/addresses` → worker parses address/city from URL path → saves stub to KV
-2. `npm run sync` (prebuild) reads stubs from KV → runs `scripts/research.js` per stub → writes JSON to `src/_data/houses/{id}.json` + downloads images to `src/images/{id}/`
-3. `npm run build` (Eleventy) reads `src/_data/houses.js` (loads all JSON files) → bakes data into `window.__HOUSES__` in `index.njk`
+2. Eleventy `before` event runs `sync-kv.js` (processes stubs from both local + remote KV → runs research per stub → writes JSON + images) then `pull-state.js` (pulls mutable state from remote KV → writes `src/_data/mutableState.json`)
+3. Eleventy reads `src/_data/houses.js` (loads all JSON files) → bakes data into `window.__HOUSES__` in `index.njk`
 4. At runtime, static data merges with mutable state fetched from `/api/state`
 
 ### Research Pipeline (`scripts/research.js`)
