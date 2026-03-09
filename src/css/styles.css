@@ -1782,6 +1782,18 @@ body {
 .lightbox-close:hover { background: rgba(255,255,255,0.25); }
 .lightbox-close svg { width: 20px; height: 20px; }
 
+.lightbox-counter {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 4px 10px;
+  border-radius: 100px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 0.84rem;
+  font-weight: 500;
+}
+
 /* ═══════════════════════════════════════════
    MAP VIEW OVERLAY
    ═══════════════════════════════════════════ */

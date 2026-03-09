@@ -249,9 +249,15 @@ export function galleryGo(i) {
 }
 
 // Lightbox
+function updateLightboxCounter() {
+  const h = state.houses.find((x) => x.id === state.currentDetailId);
+  if (h) document.getElementById("lightboxCounter").textContent = `${galleryIndex + 1} / ${h.images.length}`;
+}
+
 export function openLightbox(src) {
   document.getElementById("lightboxImg").src = src;
   document.getElementById("lightbox").classList.add("open");
+  updateLightboxCounter();
 }
 
 export function closeLightbox() {
@@ -263,12 +269,14 @@ export function lightboxPrev() {
   galleryPrev();
   const h = state.houses.find((x) => x.id === state.currentDetailId);
   if (h) document.getElementById("lightboxImg").src = h.images[galleryIndex];
+  updateLightboxCounter();
 }
 
 export function lightboxNext() {
   galleryNext();
   const h = state.houses.find((x) => x.id === state.currentDetailId);
   if (h) document.getElementById("lightboxImg").src = h.images[galleryIndex];
+  updateLightboxCounter();
 }
 
 // Map overlay
