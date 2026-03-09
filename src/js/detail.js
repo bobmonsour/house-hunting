@@ -157,13 +157,6 @@ export function openDetail(id, preserveGallery = false) {
             <div class="price-event-amount">${formatPrice(e.amount)}</div>
           </div>
         `).join("")}
-        ${h.lastSold ? `
-          <div class="price-event">
-            <div class="price-event-dot sold"></div>
-            <div class="price-event-info"><div class="price-event-label">Last Sold</div><div class="price-event-date">${h.lastSold.date}</div></div>
-            <div class="price-event-amount">${formatPrice(h.lastSold.price)}</div>
-          </div>
-        ` : ""}
       </div>
     </div>
 

@@ -202,14 +202,21 @@ function scrapeRedfinListing(html) {
     if (m) data.yearBuilt = Number(m[1]);
   }
   if (!data.lotSize) {
-    // Match "X,XXX Sq. Ft. Lot" or "X.XX Acres"
-    const m = html.match(/([\d,]+)\s*(?:Sq\.?\s*Ft\.?\s*Lot)/i)
-      || html.match(/([\d.]+)\s*Acres?/i);
-    if (m) {
-      if (/acres?/i.test(m[0])) {
-        data.lotSize = Math.round(Number(m[1]) * 43560); // convert acres to sqft
-      } else {
-        data.lotSize = Number(m[1].replace(/,/g, ""));
+    // Try embedded JSON first (more reliable than regex on page text)
+    const lotJsonMatch = html.match(/"lotSize"\s*:\s*(\d+)/)
+      || html.match(/"lotSqFt"\s*:\s*(\d+)/);
+    if (lotJsonMatch) {
+      data.lotSize = Number(lotJsonMatch[1]);
+    } else {
+      // Fallback: match "X,XXX Sq. Ft. Lot" or "X.XX Acres"
+      const m = html.match(/([\d,]+)\s*(?:Sq\.?\s*Ft\.?\s*Lot)/i)
+        || html.match(/([\d.]+)\s*Acres?/i);
+      if (m) {
+        if (/acres?/i.test(m[0])) {
+          data.lotSize = Math.round(Number(m[1]) * 43560); // convert acres to sqft
+        } else {
+          data.lotSize = Number(m[1].replace(/,/g, ""));
+        }
       }
     }
   }
@@ -278,6 +285,7 @@ function scrapeRedfinListing(html) {
               label: e.eventDescription || "Listed",
               date: dateStr,
               amount: price,
+              _ts: e.eventDate || 0,
             });
 
             // Track most recent sale for lastSold
@@ -290,6 +298,9 @@ function scrapeRedfinListing(html) {
       }
     }
   }
+  // Sort price history by date descending and remove temp timestamp
+  data.priceHistory.sort((a, b) => b._ts - a._ts);
+  data.priceHistory.forEach((e) => delete e._ts);
 
   return data;
 }
@@ -423,7 +434,7 @@ async function downloadListingImages(imageUrls) {
 
   if (imageUrls && imageUrls.length > 0) {
     const localPaths = [];
-    const maxImages = Math.min(imageUrls.length, 20);
+    const maxImages = imageUrls.length;
     console.log(`  Downloading ${maxImages} listing images...`);
 
     for (let i = 0; i < maxImages; i++) {

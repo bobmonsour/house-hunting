@@ -1,0 +1,161 @@
+{
+  "id": 1772988884712,
+  "address": "1500 Oxley St",
+  "city": "South Pasadena, CA 91030",
+  "price": 2250000,
+  "beds": 3,
+  "baths": 2,
+  "sqft": 2196,
+  "lotSize": 9621,
+  "yearBuilt": 1904,
+  "images": [
+    "/images/1772988884712/photo-1.jpg",
+    "/images/1772988884712/photo-2.jpg",
+    "/images/1772988884712/photo-3.jpg",
+    "/images/1772988884712/photo-4.jpg",
+    "/images/1772988884712/photo-5.jpg",
+    "/images/1772988884712/photo-6.jpg",
+    "/images/1772988884712/photo-7.jpg",
+    "/images/1772988884712/photo-8.jpg",
+    "/images/1772988884712/photo-9.jpg",
+    "/images/1772988884712/photo-10.jpg",
+    "/images/1772988884712/photo-11.jpg",
+    "/images/1772988884712/photo-12.jpg",
+    "/images/1772988884712/photo-13.jpg",
+    "/images/1772988884712/photo-14.jpg",
+    "/images/1772988884712/photo-15.jpg",
+    "/images/1772988884712/photo-16.jpg",
+    "/images/1772988884712/photo-17.jpg",
+    "/images/1772988884712/photo-18.jpg",
+    "/images/1772988884712/photo-19.jpg",
+    "/images/1772988884712/photo-20.jpg",
+    "/images/1772988884712/photo-21.jpg",
+    "/images/1772988884712/photo-22.jpg",
+    "/images/1772988884712/photo-23.jpg",
+    "/images/1772988884712/photo-24.jpg",
+    "/images/1772988884712/photo-25.jpg",
+    "/images/1772988884712/photo-26.jpg",
+    "/images/1772988884712/photo-27.jpg",
+    "/images/1772988884712/photo-28.jpg",
+    "/images/1772988884712/photo-29.jpg",
+    "/images/1772988884712/photo-30.jpg",
+    "/images/1772988884712/photo-31.jpg",
+    "/images/1772988884712/photo-32.jpg",
+    "/images/1772988884712/photo-33.jpg",
+    "/images/1772988884712/photo-34.jpg",
+    "/images/1772988884712/photo-35.jpg",
+    "/images/1772988884712/photo-36.jpg",
+    "/images/1772988884712/photo-37.jpg",
+    "/images/1772988884712/photo-38.jpg",
+    "/images/1772988884712/photo-39.jpg",
+    "/images/1772988884712/photo-40.jpg",
+    "/images/1772988884712/photo-41.jpg",
+    "/images/1772988884712/photo-42.jpg",
+    "/images/1772988884712/photo-43.jpg",
+    "/images/1772988884712/photo-44.jpg",
+    "/images/1772988884712/photo-45.jpg",
+    "/images/1772988884712/photo-46.jpg",
+    "/images/1772988884712/photo-47.jpg",
+    "/images/1772988884712/photo-48.jpg",
+    "/images/1772988884712/photo-49.jpg",
+    "/images/1772988884712/photo-50.jpg",
+    "/images/1772988884712/photo-51.jpg",
+    "/images/1772988884712/photo-52.jpg",
+    "/images/1772988884712/photo-53.jpg",
+    "/images/1772988884712/photo-54.jpg",
+    "/images/1772988884712/photo-55.jpg"
+  ],
+  "neighborhood": "South Pasadena is a charming small-town community with tree-lined streets, historic character homes including Craftsmans and bungalows, and a highly walkable downtown core near shops, restaurants, and Metro Rail. The neighborhood combines small-town intimacy with big-city accessibility, featuring excellent schools and a strong sense of community.",
+  "parkProximity": "0.3 miles to Orange Grove Park on Mission Street",
+  "floodRisk": "Low — Zone X, minimal flood hazard (FEMA NFHL)",
+  "fireRisk": "Low — not in a fire hazard severity zone (CAL FIRE FHSZ)",
+  "crimeRating": "C- — Moderate Safety (CrimeGrade.org)",
+  "distances": [
+    {
+      "name": "Whole Foods Market",
+      "address": "465 S Arroyo Pkwy, Pasadena, CA 91105",
+      "miles": "2.0 mi",
+      "time": "9 min"
+    },
+    {
+      "name": "Trader Joe's",
+      "address": "613 Mission St, South Pasadena, CA 91030",
+      "miles": "0.8 mi",
+      "time": "4 min"
+    },
+    {
+      "name": "Costco",
+      "address": "3972 Costco Dr, Arcadia, CA 91006",
+      "miles": "10.3 mi",
+      "time": "17 min"
+    },
+    {
+      "name": "Target",
+      "address": "777 E Colorado Blvd, Pasadena, CA 91101",
+      "miles": "4.4 mi",
+      "time": "12 min"
+    },
+    {
+      "name": "Home Depot",
+      "address": "2881 E Walnut St, Pasadena, CA 91107",
+      "miles": "6.5 mi",
+      "time": "14 min"
+    },
+    {
+      "name": "Republik Coffee",
+      "address": "48 W Green St, Pasadena, CA 91105",
+      "miles": "2.4 mi",
+      "time": "10 min"
+    }
+  ],
+  "agent": {
+    "name": "Henry Blackham",
+    "phone": "+16264005414",
+    "email": "—"
+  },
+  "dateListed": "2026-03-03",
+  "priceHistory": [
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Mar 2, 2026",
+      "amount": 2250000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Apr 25, 1995",
+      "amount": 53000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Apr 25, 1995",
+      "amount": 53000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Apr 25, 1995",
+      "amount": 53000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Apr 25, 1995",
+      "amount": 212000
+    }
+  ],
+  "lastSold": {
+    "date": "Apr 25, 1995",
+    "price": 53000
+  },
+  "estimates": {
+    "redfin": 2608118
+  },
+  "listingUrl": "https://www.redfin.com/CA/South-Pasadena/1500-Oxley-St-91030/home/7005185",
+  "listingSource": "redfin",
+  "redfinUrl": "https://www.redfin.com/CA/South-Pasadena/1500-Oxley-St-91030/home/7005185",
+  "lat": 34.1140483,
+  "lon": -118.1515247
+}

@@ -24,7 +24,13 @@
       "WebFetch(domain:services.gis.ca.gov)",
       "WebFetch(domain:hazards.fema.gov)",
       "Bash(grep:*)",
-      "Bash(git:*)"
+      "Bash(git:*)",
+      "Bash(gh auth:*)",
+      "Bash(gh repo:*)",
+      "Bash(source .env:*)",
+      "Bash(sqlite3 $DB:*)",
+      "WebFetch(domain:www.homedepot.com)",
+      "Bash(do node:*)"
     ]
   }
 }
