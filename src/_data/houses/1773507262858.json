@@ -1,0 +1,154 @@
+{
+  "id": 1773507262858,
+  "address": "1239 Geneva St",
+  "city": "Glendale, CA 91207",
+  "price": 1995000,
+  "beds": 4,
+  "baths": 3,
+  "sqft": 2402,
+  "lotSize": 24180,
+  "yearBuilt": 1930,
+  "images": [
+    "/images/1773507262858/photo-1.jpg",
+    "/images/1773507262858/photo-2.jpg",
+    "/images/1773507262858/photo-3.jpg",
+    "/images/1773507262858/photo-4.jpg",
+    "/images/1773507262858/photo-5.jpg",
+    "/images/1773507262858/photo-6.jpg",
+    "/images/1773507262858/photo-7.jpg",
+    "/images/1773507262858/photo-8.jpg",
+    "/images/1773507262858/photo-9.jpg",
+    "/images/1773507262858/photo-10.jpg",
+    "/images/1773507262858/photo-11.jpg",
+    "/images/1773507262858/photo-12.jpg",
+    "/images/1773507262858/photo-13.jpg",
+    "/images/1773507262858/photo-14.jpg",
+    "/images/1773507262858/photo-15.jpg",
+    "/images/1773507262858/photo-16.jpg",
+    "/images/1773507262858/photo-17.jpg",
+    "/images/1773507262858/photo-18.jpg",
+    "/images/1773507262858/photo-19.jpg",
+    "/images/1773507262858/photo-20.jpg",
+    "/images/1773507262858/photo-21.jpg",
+    "/images/1773507262858/photo-22.jpg",
+    "/images/1773507262858/photo-23.jpg",
+    "/images/1773507262858/photo-24.jpg",
+    "/images/1773507262858/photo-25.jpg",
+    "/images/1773507262858/photo-26.jpg",
+    "/images/1773507262858/photo-27.jpg",
+    "/images/1773507262858/photo-28.jpg",
+    "/images/1773507262858/photo-29.jpg",
+    "/images/1773507262858/photo-30.jpg",
+    "/images/1773507262858/photo-31.jpg",
+    "/images/1773507262858/photo-32.jpg",
+    "/images/1773507262858/photo-33.jpg",
+    "/images/1773507262858/photo-34.jpg",
+    "/images/1773507262858/photo-35.jpg",
+    "/images/1773507262858/photo-36.jpg",
+    "/images/1773507262858/photo-37.jpg",
+    "/images/1773507262858/photo-38.jpg",
+    "/images/1773507262858/photo-39.jpg",
+    "/images/1773507262858/photo-40.jpg",
+    "/images/1773507262858/photo-41.jpg",
+    "/images/1773507262858/photo-42.jpg",
+    "/images/1773507262858/photo-43.jpg",
+    "/images/1773507262858/photo-44.jpg",
+    "/images/1773507262858/photo-45.jpg",
+    "/images/1773507262858/photo-46.jpg",
+    "/images/1773507262858/photo-47.jpg",
+    "/images/1773507262858/photo-48.jpg",
+    "/images/1773507262858/photo-49.jpg",
+    "/images/1773507262858/photo-50.jpg",
+    "/images/1773507262858/photo-51.jpg",
+    "/images/1773507262858/photo-52.jpg",
+    "/images/1773507262858/photo-53.jpg",
+    "/images/1773507262858/photo-54.jpg",
+    "/images/1773507262858/photo-55.jpg",
+    "/images/1773507262858/photo-56.jpg",
+    "/images/1773507262858/photo-57.jpg",
+    "/images/1773507262858/photo-58.jpg",
+    "/images/1773507262858/photo-59.jpg",
+    "/images/1773507262858/photo-60.jpg"
+  ],
+  "neighborhood": "Located in the quiet Rossmoyne Historic District, this is a peaceful tree-lined community featuring historic Spanish Colonial Revival, Tudor Revival, and French-inspired homes from the 1920s-1950s. The character is exemplified by a slower-paced ambience with very low traffic noise.",
+  "parkProximity": "0.2 miles to Nibley Park (center of Rossmoyne neighborhood)",
+  "floodRisk": "Low — Zone X, minimal flood hazard (FEMA NFHL)",
+  "fireRisk": "Low — not in a fire hazard severity zone (CAL FIRE FHSZ)",
+  "crimeRating": "Very Low — Grade A (91207 zip code has very low/no crime per DoorProfit.com)",
+  "distances": [
+    {
+      "name": "Whole Foods Market",
+      "address": "331 N Glendale Ave, Glendale, CA 91206",
+      "miles": "1.1 mi",
+      "time": "5 min"
+    },
+    {
+      "name": "Trader Joe's",
+      "address": "103 E Glenoaks Blvd, Glendale, CA 91207",
+      "miles": "0.9 mi",
+      "time": "3 min"
+    },
+    {
+      "name": "Costco",
+      "address": "3972 Costco Dr, Arcadia, CA 91006",
+      "miles": "14.2 mi",
+      "time": "18 min"
+    },
+    {
+      "name": "Target",
+      "address": "2195 Glendale Galleria, Glendale, CA 91210",
+      "miles": "2.3 mi",
+      "time": "10 min"
+    },
+    {
+      "name": "Home Depot",
+      "address": "5040 San Fernando Rd, Glendale, CA 91204",
+      "miles": "3.5 mi",
+      "time": "9 min"
+    },
+    {
+      "name": "Republik Coffee",
+      "address": "48 W Green St, Pasadena, CA 91105",
+      "miles": "6.7 mi",
+      "time": "12 min"
+    }
+  ],
+  "agent": {
+    "name": "Colin Davies",
+    "phone": "+16264005414",
+    "email": "—"
+  },
+  "dateListed": "2026-02-17",
+  "priceHistory": [
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Feb 17, 2026",
+      "amount": 1995000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Jun 1, 1990",
+      "amount": 509000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Jun 1, 1990",
+      "amount": 509000
+    }
+  ],
+  "lastSold": {
+    "date": "Jun 1, 1990",
+    "price": 509000
+  },
+  "estimates": {
+    "redfin": 2221795
+  },
+  "listingUrl": "https://www.redfin.com/CA/Glendale/1239-Geneva-St-91207/home/7163625",
+  "listingSource": "redfin",
+  "redfinUrl": "https://www.redfin.com/CA/Glendale/1239-Geneva-St-91207/home/7163625",
+  "lat": 34.1648808,
+  "lon": -118.246347
+}

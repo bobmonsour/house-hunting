@@ -1,0 +1,171 @@
+{
+  "id": 1773244335656,
+  "address": "1450 Arroyo View Dr",
+  "city": "Pasadena, CA 91103",
+  "price": 3395000,
+  "beds": 3,
+  "baths": 2,
+  "sqft": 4003,
+  "lotSize": 25700,
+  "yearBuilt": 1949,
+  "images": [
+    "/images/1773244335656/photo-1.jpg",
+    "/images/1773244335656/photo-2.jpg",
+    "/images/1773244335656/photo-3.jpg",
+    "/images/1773244335656/photo-4.jpg",
+    "/images/1773244335656/photo-5.jpg",
+    "/images/1773244335656/photo-6.jpg",
+    "/images/1773244335656/photo-7.jpg",
+    "/images/1773244335656/photo-8.jpg",
+    "/images/1773244335656/photo-9.jpg",
+    "/images/1773244335656/photo-10.jpg",
+    "/images/1773244335656/photo-11.jpg",
+    "/images/1773244335656/photo-12.jpg",
+    "/images/1773244335656/photo-13.jpg",
+    "/images/1773244335656/photo-14.jpg",
+    "/images/1773244335656/photo-15.jpg",
+    "/images/1773244335656/photo-16.jpg",
+    "/images/1773244335656/photo-17.jpg",
+    "/images/1773244335656/photo-18.jpg",
+    "/images/1773244335656/photo-19.jpg",
+    "/images/1773244335656/photo-20.jpg",
+    "/images/1773244335656/photo-21.jpg",
+    "/images/1773244335656/photo-22.jpg",
+    "/images/1773244335656/photo-23.jpg",
+    "/images/1773244335656/photo-24.jpg",
+    "/images/1773244335656/photo-25.jpg",
+    "/images/1773244335656/photo-26.jpg",
+    "/images/1773244335656/photo-27.jpg",
+    "/images/1773244335656/photo-28.jpg",
+    "/images/1773244335656/photo-29.jpg",
+    "/images/1773244335656/photo-30.jpg",
+    "/images/1773244335656/photo-31.jpg",
+    "/images/1773244335656/photo-32.jpg",
+    "/images/1773244335656/photo-33.jpg",
+    "/images/1773244335656/photo-34.jpg",
+    "/images/1773244335656/photo-35.jpg",
+    "/images/1773244335656/photo-36.jpg",
+    "/images/1773244335656/photo-37.jpg",
+    "/images/1773244335656/photo-38.jpg",
+    "/images/1773244335656/photo-39.jpg",
+    "/images/1773244335656/photo-40.jpg",
+    "/images/1773244335656/photo-41.jpg",
+    "/images/1773244335656/photo-42.jpg",
+    "/images/1773244335656/photo-43.jpg",
+    "/images/1773244335656/photo-44.jpg",
+    "/images/1773244335656/photo-45.jpg",
+    "/images/1773244335656/photo-46.jpg",
+    "/images/1773244335656/photo-47.jpg",
+    "/images/1773244335656/photo-48.jpg",
+    "/images/1773244335656/photo-49.jpg",
+    "/images/1773244335656/photo-50.jpg",
+    "/images/1773244335656/photo-51.jpg",
+    "/images/1773244335656/photo-52.jpg",
+    "/images/1773244335656/photo-53.jpg",
+    "/images/1773244335656/photo-54.jpg",
+    "/images/1773244335656/photo-55.jpg",
+    "/images/1773244335656/photo-56.jpg",
+    "/images/1773244335656/photo-57.jpg",
+    "/images/1773244335656/photo-58.jpg",
+    "/images/1773244335656/photo-59.jpg",
+    "/images/1773244335656/photo-60.jpg",
+    "/images/1773244335656/photo-61.jpg",
+    "/images/1773244335656/photo-62.jpg",
+    "/images/1773244335656/photo-63.jpg",
+    "/images/1773244335656/photo-64.jpg",
+    "/images/1773244335656/photo-65.jpg",
+    "/images/1773244335656/photo-66.jpg",
+    "/images/1773244335656/photo-67.jpg",
+    "/images/1773244335656/photo-68.jpg",
+    "/images/1773244335656/photo-69.jpg",
+    "/images/1773244335656/photo-70.jpg",
+    "/images/1773244335656/photo-71.jpg"
+  ],
+  "neighborhood": "<cite index='6-4,6-5'>W Pasadena (Arroyo-Orange Grove) is a quiet, residential neighborhood in Pasadena, California, known for its historic homes, lush greenery, and proximity to the Rose Bowl Stadium. It's a peaceful area with a strong sense of community.</cite>",
+  "parkProximity": "<cite index='11-1,12-17'>0.1 miles to Lower Arroyo Park Area (accessible from Arroyo Blvd just south of Norwood Drive)</cite>",
+  "floodRisk": "Unknown",
+  "fireRisk": "Very High — very high fire hazard severity zone (CAL FIRE FHSZ)",
+  "crimeRating": "<cite index='21-24,21-25'>High — Grade D (CrimeGrade.org)</cite>",
+  "distances": [
+    {
+      "name": "Whole Foods Market",
+      "address": "465 S Arroyo Pkwy, Pasadena, CA 91105",
+      "miles": "3.7 mi",
+      "time": "12 min"
+    },
+    {
+      "name": "Trader Joe's",
+      "address": "345 S Lake Ave, Pasadena, CA 91101",
+      "miles": "4.4 mi",
+      "time": "14 min"
+    },
+    {
+      "name": "Costco",
+      "address": "3972 Costco Dr, Arcadia, CA 91006",
+      "miles": "10.5 mi",
+      "time": "16 min"
+    },
+    {
+      "name": "Target",
+      "address": "777 E Colorado Blvd, Pasadena, CA 91101",
+      "miles": "4.5 mi",
+      "time": "12 min"
+    },
+    {
+      "name": "Home Depot",
+      "address": "2881 E Walnut St, Pasadena, CA 91107",
+      "miles": "6.7 mi",
+      "time": "13 min"
+    },
+    {
+      "name": "Republik Coffee",
+      "address": "48 W Green St, Pasadena, CA 91105",
+      "miles": "3.0 mi",
+      "time": "9 min"
+    }
+  ],
+  "agent": {
+    "name": "Mark Ogden",
+    "phone": "+16264005414",
+    "email": "—"
+  },
+  "dateListed": "2026-01-29",
+  "priceHistory": [
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Jan 29, 2026",
+      "amount": 3395000
+    },
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Oct 20, 2025",
+      "amount": 3395000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Aug 26, 2005",
+      "amount": 1450000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Jun 12, 1987",
+      "amount": 550000
+    }
+  ],
+  "lastSold": {
+    "date": "Aug 26, 2005",
+    "price": 1450000
+  },
+  "estimates": {
+    "redfin": 3370970
+  },
+  "listingUrl": "https://www.redfin.com/CA/Pasadena/1450-Arroyo-View-Dr-91103/home/7183013",
+  "listingSource": "redfin",
+  "redfinUrl": "https://www.redfin.com/CA/Pasadena/1450-Arroyo-View-Dr-91103/home/7183013",
+  "lat": 34.1726475,
+  "lon": -118.1802391
+}

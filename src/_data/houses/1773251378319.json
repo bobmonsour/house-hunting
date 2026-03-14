@@ -1,0 +1,170 @@
+{
+  "id": 1773251378319,
+  "address": "1030 Adelaine Ave",
+  "city": "South Pasadena, CA 91030",
+  "price": 2695000,
+  "beds": 4,
+  "baths": 3.5,
+  "sqft": 4232,
+  "lotSize": 7154,
+  "yearBuilt": 1948,
+  "images": [
+    "/images/1773251378319/photo-1.jpg",
+    "/images/1773251378319/photo-2.jpg",
+    "/images/1773251378319/photo-3.jpg",
+    "/images/1773251378319/photo-4.jpg",
+    "/images/1773251378319/photo-5.jpg",
+    "/images/1773251378319/photo-6.jpg",
+    "/images/1773251378319/photo-7.jpg",
+    "/images/1773251378319/photo-8.jpg",
+    "/images/1773251378319/photo-9.jpg",
+    "/images/1773251378319/photo-10.jpg",
+    "/images/1773251378319/photo-11.jpg",
+    "/images/1773251378319/photo-12.jpg",
+    "/images/1773251378319/photo-13.jpg",
+    "/images/1773251378319/photo-14.jpg",
+    "/images/1773251378319/photo-15.jpg",
+    "/images/1773251378319/photo-16.jpg",
+    "/images/1773251378319/photo-17.jpg",
+    "/images/1773251378319/photo-18.jpg",
+    "/images/1773251378319/photo-19.jpg",
+    "/images/1773251378319/photo-20.jpg",
+    "/images/1773251378319/photo-21.jpg",
+    "/images/1773251378319/photo-22.jpg",
+    "/images/1773251378319/photo-23.jpg",
+    "/images/1773251378319/photo-24.jpg",
+    "/images/1773251378319/photo-25.jpg",
+    "/images/1773251378319/photo-26.jpg",
+    "/images/1773251378319/photo-27.jpg",
+    "/images/1773251378319/photo-28.jpg",
+    "/images/1773251378319/photo-29.jpg",
+    "/images/1773251378319/photo-30.jpg",
+    "/images/1773251378319/photo-31.jpg",
+    "/images/1773251378319/photo-32.jpg",
+    "/images/1773251378319/photo-33.jpg",
+    "/images/1773251378319/photo-34.jpg"
+  ],
+  "neighborhood": "<cite index=\"5-4,5-5\">South Pasadena Central is a friendly, walkable neighborhood in South Pasadena, CA. Known for its historic homes, top-rated schools, and charming downtown area, it's a peaceful place with a strong sense of community and easy access to LA.</cite>",
+  "parkProximity": "<cite index=\"22-1,22-9\">0.2 miles to Garfield Park at 1000 Park Avenue</cite>",
+  "floodRisk": "Low — Zone X, minimal flood hazard (FEMA NFHL)",
+  "fireRisk": "Low — not in a fire hazard severity zone (CAL FIRE FHSZ)",
+  "crimeRating": "<cite index=\"32-9,32-10\">C- — Grade indicates slightly higher crime than average US city (CrimeGrade.org)</cite>",
+  "distances": [
+    {
+      "name": "Whole Foods Market",
+      "address": "465 S Arroyo Pkwy, Pasadena, CA 91105",
+      "miles": "2.6 mi",
+      "time": "8 min"
+    },
+    {
+      "name": "Trader Joe's",
+      "address": "613 Mission St, South Pasadena, CA 91030",
+      "miles": "0.2 mi",
+      "time": "2 min"
+    },
+    {
+      "name": "Costco",
+      "address": "3972 Costco Dr, Arcadia, CA 91006",
+      "miles": "10.6 mi",
+      "time": "18 min"
+    },
+    {
+      "name": "Target",
+      "address": "777 E Colorado Blvd, Pasadena, CA 91101",
+      "miles": "4.6 mi",
+      "time": "13 min"
+    },
+    {
+      "name": "Home Depot",
+      "address": "2881 E Walnut St, Pasadena, CA 91107",
+      "miles": "6.8 mi",
+      "time": "14 min"
+    },
+    {
+      "name": "Republik Coffee",
+      "address": "48 W Green St, Pasadena, CA 91105",
+      "miles": "2.8 mi",
+      "time": "10 min"
+    }
+  ],
+  "agent": {
+    "name": "Margaret A Nader",
+    "phone": "+16266914793",
+    "email": "—"
+  },
+  "dateListed": "2026-03-11",
+  "priceHistory": [
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Mar 11, 2026",
+      "amount": 2695000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (MLS)",
+      "date": "Jun 11, 2014",
+      "amount": 1740000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Jun 11, 2014",
+      "amount": 1740000
+    },
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Apr 23, 2014",
+      "amount": 1799000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (MLS)",
+      "date": "Sep 22, 2006",
+      "amount": 1600000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Sep 22, 2006",
+      "amount": 1600000
+    },
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Aug 1, 2006",
+      "amount": 1598000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Jun 27, 2001",
+      "amount": 309000
+    },
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Apr 28, 2001",
+      "amount": 299000
+    },
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Apr 27, 2001",
+      "amount": 299000
+    }
+  ],
+  "lastSold": {
+    "date": "Jun 11, 2014",
+    "price": 1740000
+  },
+  "estimates": {
+    "redfin": 2425251
+  },
+  "listingUrl": "https://www.redfin.com/CA/South-Pasadena/1030-Adelaine-Ave-91030/home/7004639",
+  "listingSource": "redfin",
+  "redfinUrl": "https://www.redfin.com/CA/South-Pasadena/1030-Adelaine-Ave-91030/home/7004639",
+  "lat": 34.1132061,
+  "lon": -118.1621086
+}

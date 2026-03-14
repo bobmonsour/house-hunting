@@ -1,0 +1,145 @@
+{
+  "id": 1773507281614,
+  "address": "970 Lehigh St",
+  "city": "Altadena, CA 91001",
+  "price": 1499000,
+  "beds": 3,
+  "baths": 2,
+  "sqft": 1792,
+  "lotSize": 6921,
+  "yearBuilt": 1946,
+  "images": [
+    "/images/1773507281614/photo-1.jpg",
+    "/images/1773507281614/photo-2.jpg",
+    "/images/1773507281614/photo-3.jpg",
+    "/images/1773507281614/photo-4.jpg",
+    "/images/1773507281614/photo-5.jpg",
+    "/images/1773507281614/photo-6.jpg",
+    "/images/1773507281614/photo-7.jpg",
+    "/images/1773507281614/photo-8.jpg",
+    "/images/1773507281614/photo-9.jpg",
+    "/images/1773507281614/photo-10.jpg",
+    "/images/1773507281614/photo-11.jpg",
+    "/images/1773507281614/photo-12.jpg",
+    "/images/1773507281614/photo-13.jpg",
+    "/images/1773507281614/photo-14.jpg",
+    "/images/1773507281614/photo-15.jpg",
+    "/images/1773507281614/photo-16.jpg",
+    "/images/1773507281614/photo-17.jpg",
+    "/images/1773507281614/photo-18.jpg",
+    "/images/1773507281614/photo-19.jpg",
+    "/images/1773507281614/photo-20.jpg",
+    "/images/1773507281614/photo-21.jpg",
+    "/images/1773507281614/photo-22.jpg",
+    "/images/1773507281614/photo-23.jpg",
+    "/images/1773507281614/photo-24.jpg",
+    "/images/1773507281614/photo-25.jpg",
+    "/images/1773507281614/photo-26.jpg",
+    "/images/1773507281614/photo-27.jpg",
+    "/images/1773507281614/photo-28.jpg",
+    "/images/1773507281614/photo-29.jpg",
+    "/images/1773507281614/photo-30.jpg",
+    "/images/1773507281614/photo-31.jpg",
+    "/images/1773507281614/photo-32.jpg",
+    "/images/1773507281614/photo-33.jpg"
+  ],
+  "neighborhood": "Altadena is a secluded, primarily residential foothill community with tree-lined streets, larger lots, and a mix of historic Craftsman homes and mid-century houses that offers a quiet, almost rural feel despite being close to Los Angeles. The area attracts nature lovers and families with its horse-zoned properties, mountain proximity, and peaceful suburban atmosphere featuring limited sidewalks and minimal commercial development.",
+  "parkProximity": "1.0 miles to Loma Alta Park (3330 N Lincoln Ave)",
+  "floodRisk": "Low — Zone X, minimal flood hazard (FEMA NFHL)",
+  "fireRisk": "Low — not in a fire hazard severity zone (CAL FIRE FHSZ)",
+  "crimeRating": "Mixed — Overall Grade D (CrimeGrade.org): Higher than average crime rate but low for Los Angeles County",
+  "distances": [
+    {
+      "name": "Whole Foods Market",
+      "address": "465 S Arroyo Pkwy, Pasadena, CA 91105",
+      "miles": "4.5 mi",
+      "time": "9 min"
+    },
+    {
+      "name": "Trader Joe's",
+      "address": "345 S Lake Ave, Pasadena, CA 91101",
+      "miles": "5.2 mi",
+      "time": "11 min"
+    },
+    {
+      "name": "Costco",
+      "address": "3972 Costco Dr, Arcadia, CA 91006",
+      "miles": "10.9 mi",
+      "time": "15 min"
+    },
+    {
+      "name": "Target",
+      "address": "777 E Colorado Blvd, Pasadena, CA 91101",
+      "miles": "4.9 mi",
+      "time": "10 min"
+    },
+    {
+      "name": "Home Depot",
+      "address": "2881 E Walnut St, Pasadena, CA 91107",
+      "miles": "7.0 mi",
+      "time": "11 min"
+    },
+    {
+      "name": "Republik Coffee",
+      "address": "48 W Green St, Pasadena, CA 91105",
+      "miles": "3.8 mi",
+      "time": "9 min"
+    }
+  ],
+  "agent": {
+    "name": "Heather T. Roy",
+    "phone": "+16266104106",
+    "email": "—"
+  },
+  "dateListed": "2026-03-07",
+  "priceHistory": [
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Mar 6, 2026",
+      "amount": 1499000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (MLS)",
+      "date": "Nov 18, 2020",
+      "amount": 1297500
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Nov 17, 2020",
+      "amount": 1297500
+    },
+    {
+      "type": "reduced",
+      "label": "Price Changed",
+      "date": "Oct 12, 2020",
+      "amount": 1295000
+    },
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Sep 29, 2020",
+      "amount": 1395000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Apr 6, 1990",
+      "amount": 125000
+    }
+  ],
+  "lastSold": {
+    "date": "Nov 18, 2020",
+    "price": 1297500
+  },
+  "estimates": {
+    "redfin": 1599486
+  },
+  "listingUrl": "https://www.redfin.com/CA/Altadena/970-Lehigh-St-91001/home/7250271",
+  "listingSource": "redfin",
+  "redfinUrl": "https://www.redfin.com/CA/Altadena/970-Lehigh-St-91001/home/7250271",
+  "lat": 34.1914508,
+  "lon": -118.1693198
+}

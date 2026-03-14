@@ -1,0 +1,163 @@
+{
+  "id": 1773507296775,
+  "address": "744 New York Dr",
+  "city": "Altadena, CA 91001",
+  "price": 1400000,
+  "beds": 3,
+  "baths": 3,
+  "sqft": 1986,
+  "lotSize": 7492,
+  "yearBuilt": 1990,
+  "images": [
+    "/images/1773507296775/photo-1.jpg",
+    "/images/1773507296775/photo-2.jpg",
+    "/images/1773507296775/photo-3.jpg",
+    "/images/1773507296775/photo-4.jpg",
+    "/images/1773507296775/photo-5.jpg",
+    "/images/1773507296775/photo-6.jpg",
+    "/images/1773507296775/photo-7.jpg",
+    "/images/1773507296775/photo-8.jpg",
+    "/images/1773507296775/photo-9.jpg",
+    "/images/1773507296775/photo-10.jpg",
+    "/images/1773507296775/photo-11.jpg",
+    "/images/1773507296775/photo-12.jpg",
+    "/images/1773507296775/photo-13.jpg",
+    "/images/1773507296775/photo-14.jpg",
+    "/images/1773507296775/photo-15.jpg",
+    "/images/1773507296775/photo-16.jpg",
+    "/images/1773507296775/photo-17.jpg",
+    "/images/1773507296775/photo-18.jpg",
+    "/images/1773507296775/photo-19.jpg",
+    "/images/1773507296775/photo-20.jpg",
+    "/images/1773507296775/photo-21.jpg",
+    "/images/1773507296775/photo-22.jpg",
+    "/images/1773507296775/photo-23.jpg",
+    "/images/1773507296775/photo-24.jpg",
+    "/images/1773507296775/photo-25.jpg",
+    "/images/1773507296775/photo-26.jpg",
+    "/images/1773507296775/photo-27.jpg",
+    "/images/1773507296775/photo-28.jpg",
+    "/images/1773507296775/photo-29.jpg",
+    "/images/1773507296775/photo-30.jpg",
+    "/images/1773507296775/photo-31.jpg",
+    "/images/1773507296775/photo-32.jpg",
+    "/images/1773507296775/photo-33.jpg",
+    "/images/1773507296775/photo-34.jpg",
+    "/images/1773507296775/photo-35.jpg",
+    "/images/1773507296775/photo-36.jpg",
+    "/images/1773507296775/photo-37.jpg",
+    "/images/1773507296775/photo-38.jpg",
+    "/images/1773507296775/photo-39.jpg",
+    "/images/1773507296775/photo-40.jpg",
+    "/images/1773507296775/photo-41.jpg",
+    "/images/1773507296775/photo-42.jpg",
+    "/images/1773507296775/photo-43.jpg",
+    "/images/1773507296775/photo-44.jpg",
+    "/images/1773507296775/photo-45.jpg"
+  ],
+  "neighborhood": "<cite index=\"1-3,1-5\">Altadena offers larger lots and a quieter feel than central Pasadena, with space, low-key streets, and mountain proximity being its defining characteristics.</cite> <cite index=\"1-12,1-13,1-14\">The housing stock features early 1900s Craftsman bungalows, Spanish Colonial Revival homes, larger historic estates, and mid-century ranch houses with personality over cookie-cutter design.</cite>",
+  "parkProximity": "0.3 miles to Farnsworth Park - <cite index=\"24-7\">568 E. Mount Curve Ave</cite> - <cite index=\"23-15,25-1\">a 15-acre park with lush greenery, scenic trails, amphitheater, and sports facilities</cite>",
+  "floodRisk": "Low — Zone X, minimal flood hazard (FEMA NFHL)",
+  "fireRisk": "Low — not in a fire hazard severity zone (CAL FIRE FHSZ)",
+  "crimeRating": "Below Average — Grade D+ (CrimeGrade.org) - <cite index=\"31-11,31-12\">The D+ grade indicates crime is higher than the average US city, ranking in the 29th percentile for safety</cite>",
+  "distances": [
+    {
+      "name": "Whole Foods Market",
+      "address": "465 S Arroyo Pkwy, Pasadena, CA 91105",
+      "miles": "3.6 mi",
+      "time": "12 min"
+    },
+    {
+      "name": "Trader Joe's",
+      "address": "345 S Lake Ave, Pasadena, CA 91101",
+      "miles": "3.5 mi",
+      "time": "12 min"
+    },
+    {
+      "name": "Costco",
+      "address": "3972 Costco Dr, Arcadia, CA 91006",
+      "miles": "8.4 mi",
+      "time": "15 min"
+    },
+    {
+      "name": "Target",
+      "address": "777 E Colorado Blvd, Pasadena, CA 91101",
+      "miles": "2.5 mi",
+      "time": "10 min"
+    },
+    {
+      "name": "Home Depot",
+      "address": "2881 E Walnut St, Pasadena, CA 91107",
+      "miles": "4.5 mi",
+      "time": "13 min"
+    },
+    {
+      "name": "Republik Coffee",
+      "address": "48 W Green St, Pasadena, CA 91105",
+      "miles": "3.8 mi",
+      "time": "12 min"
+    }
+  ],
+  "agent": {
+    "name": "Erica DeBear",
+    "phone": "+16266104106",
+    "email": "—"
+  },
+  "dateListed": "2026-03-03",
+  "priceHistory": [
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Mar 3, 2026",
+      "amount": 1400000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (MLS)",
+      "date": "Apr 26, 2024",
+      "amount": 1350000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Apr 26, 2024",
+      "amount": 1350000
+    },
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Mar 18, 2024",
+      "amount": 1349000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Dec 23, 1998",
+      "amount": 279000
+    },
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Sep 4, 1998",
+      "amount": 279000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Mar 26, 1991",
+      "amount": 342000
+    }
+  ],
+  "lastSold": {
+    "date": "Apr 26, 2024",
+    "price": 1350000
+  },
+  "estimates": {
+    "redfin": 1474824
+  },
+  "listingUrl": "https://www.redfin.com/CA/Altadena/744-New-York-Dr-91001/home/7262172",
+  "listingSource": "redfin",
+  "redfinUrl": "https://www.redfin.com/CA/Altadena/744-New-York-Dr-91001/home/7262172",
+  "lat": 34.1793349,
+  "lon": -118.1354832
+}
