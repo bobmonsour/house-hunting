@@ -56,11 +56,13 @@ export default {
     if (stateMatch && request.method === "PATCH") {
       const id = stateMatch[1];
       const key = `state:${id}`;
-      const allowed = ["notes", "status", "favorite", "sidewalks", "streetTrees", "corner", "roadNoise", "stories", "condition", "workNeeded", "backyard", "studio", "twoSinks", "wallOvens", "pool", "walkInShower", "characterHome", "garage"];
+      const allowed = ["notes", "visited", "offer", "rejected", "deleted", "favorite", "sidewalks", "streetTrees", "corner", "roadNoise", "stories", "condition", "workNeeded", "backyard", "studio", "twoSinks", "wallOvens", "pool", "walkInShower", "characterHome", "garage"];
 
       const existing = (await env.HOUSES.get(key, "json")) || {
         notes: "",
-        status: "new",
+        visited: false,
+        offer: false,
+        rejected: false,
         favorite: false,
         sidewalks: null,
         streetTrees: null,
@@ -124,7 +126,9 @@ export default {
         `state:${id}`,
         JSON.stringify({
           notes: "",
-          status: "new",
+          visited: false,
+          offer: false,
+          rejected: false,
           favorite: false,
           sidewalks: null,
           streetTrees: null,

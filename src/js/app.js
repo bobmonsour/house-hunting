@@ -1,7 +1,7 @@
 import { authenticate, hasToken, fetchMutableState } from "./api.js";
 import { toggleTheme, restoreTheme } from "./utils.js";
-import { renderCards, toggleFav, toggleCompare, toggleFavFilter, setStatusFilter, filterCards, toggleSortDropdown, sortBy } from "./cards.js";
-import { openDetail, closeDetail, updateStatus, saveNotes, deleteProperty, galleryPrev, galleryNext, galleryGo, openLightbox, closeLightbox, lightboxPrev, lightboxNext, openMapOverlay, closeMapOverlay, setSidewalks, toggleSidewalksEdit, setStreetTrees, toggleStreetTreesEdit, setCorner, toggleCornerEdit, setRoadNoise, toggleRoadNoiseEdit, setStories, toggleStoriesEdit, setCondition, toggleConditionEdit, toggleWorkItem, setBackyard, toggleBackyardEdit, setStudio, toggleStudioEdit, setTwoSinks, toggleTwoSinksEdit, setWallOvens, toggleWallOvensEdit, setPool, togglePoolEdit, setWalkInShower, toggleWalkInShowerEdit, setCharacterHome, toggleCharacterHomeEdit, setGarage, toggleGarageEdit } from "./detail.js";
+import { renderCards, toggleFav, toggleCompare, toggleFavFilter, toggleStatusFilter, filterCards, toggleSortDropdown, sortBy } from "./cards.js";
+import { openDetail, closeDetail, toggleStatusFlag, saveNotes, deleteProperty, galleryPrev, galleryNext, galleryGo, openLightbox, closeLightbox, lightboxPrev, lightboxNext, openMapOverlay, closeMapOverlay, setSidewalks, toggleSidewalksEdit, setStreetTrees, toggleStreetTreesEdit, setCorner, toggleCornerEdit, setRoadNoise, toggleRoadNoiseEdit, setStories, toggleStoriesEdit, setCondition, toggleConditionEdit, toggleWorkItem, setBackyard, toggleBackyardEdit, setStudio, toggleStudioEdit, setTwoSinks, toggleTwoSinksEdit, setWallOvens, toggleWallOvensEdit, setPool, togglePoolEdit, setWalkInShower, toggleWalkInShowerEdit, setCharacterHome, toggleCharacterHomeEdit, setGarage, toggleGarageEdit } from "./detail.js";
 import { openComparison, closeComparison } from "./comparison.js";
 import { openMapView, closeMapView } from "./map-view.js";
 import { openAddModal, closeAddModal, addProperty } from "./add-property.js";
@@ -9,10 +9,10 @@ import { openAddModal, closeAddModal, addProperty } from "./add-property.js";
 // Global state shared across modules
 export const state = {
   houses: [],
-  currentSort: "price",
-  currentSortDir: "asc",
+  currentSort: "added",
+  currentSortDir: "desc",
   showFavsOnly: false,
-  statusFilter: "all",
+  statusFilter: new Set(),
   compareSet: new Set(),
   currentDetailId: null,
   cardsDirty: false,
@@ -25,13 +25,13 @@ window.renderCards = renderCards;
 window.toggleFav = toggleFav;
 window.toggleCompare = toggleCompare;
 window.toggleFavFilter = toggleFavFilter;
-window.setStatusFilter = setStatusFilter;
+window.toggleStatusFilter = toggleStatusFilter;
 window.filterCards = filterCards;
 window.toggleSortDropdown = toggleSortDropdown;
 window.sortBy = sortBy;
 window.openDetail = openDetail;
 window.closeDetail = closeDetail;
-window.updateStatus = updateStatus;
+window.toggleStatusFlag = toggleStatusFlag;
 window.saveNotes = saveNotes;
 window.deleteProperty = deleteProperty;
 window.galleryPrev = galleryPrev;
@@ -93,7 +93,9 @@ async function checkPassword() {
 
 const MUTABLE_DEFAULTS = {
   notes: "",
-  status: "new",
+  visited: false,
+  offer: false,
+  rejected: false,
   favorite: false,
   sidewalks: null,
   streetTrees: null,
@@ -109,15 +111,39 @@ const MUTABLE_DEFAULTS = {
   pool: null,
 };
 
+// Convert old status string to boolean flags at read-time
+function migrateStatus(obj) {
+  if (!obj || typeof obj.status !== "string") return obj;
+  const migrated = { ...obj };
+  if (migrated.status === "visited") migrated.visited = true;
+  if (migrated.status === "offer") migrated.offer = true;
+  if (migrated.status === "rejected") migrated.rejected = true;
+  if (migrated.status === "deleted") migrated.deleted = true;
+  delete migrated.status;
+  return migrated;
+}
+
+export function getStatusFlags(h) {
+  const flags = [];
+  if (h.visited) flags.push("visited");
+  if (h.offer) flags.push("offer");
+  if (h.rejected) flags.push("rejected");
+  return flags.length ? flags : ["new"];
+}
+
+export function isNew(h) {
+  return !h.visited && !h.offer && !h.rejected;
+}
+
 function mergeHouses(mutableState) {
   const staticHouses = window.__HOUSES__ || [];
   state.houses = staticHouses
     .map((h) => ({
       ...h,
       ...MUTABLE_DEFAULTS,
-      ...(mutableState[h.id] || {}),
+      ...migrateStatus(mutableState[h.id] || {}),
     }))
-    .filter((h) => h.status !== "deleted");
+    .filter((h) => !h.deleted);
 }
 
 async function loadHouses() {

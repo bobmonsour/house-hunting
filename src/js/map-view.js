@@ -6,7 +6,6 @@ let markers = [];
 
 const STATUS_COLORS = {
   new: "#7B6DAA",
-  interested: "#2D5A3D",
   visited: "#4A6FA5",
   offer: "#C4703E",
   rejected: "#A85454",
@@ -31,8 +30,9 @@ function loadMapsAPI() {
 }
 
 function createPinElement(house) {
-  const status = house.status || "new";
-  const color = STATUS_COLORS[status] || STATUS_COLORS.new;
+  // Determine primary status from boolean flags (priority: rejected > offer > visited > new)
+  const status = house.rejected ? "rejected" : house.offer ? "offer" : house.visited ? "visited" : "new";
+  const color = STATUS_COLORS[status];
 
   const pin = document.createElement("div");
   pin.className = "map-marker-pin";
@@ -48,7 +48,7 @@ function createPinElement(house) {
   const glyph = document.createElement("span");
   glyph.style.cssText = `transform: rotate(45deg); font-size: 14px; line-height: 1;`;
 
-  if (status === "rejected") {
+  if (house.rejected) {
     glyph.textContent = "\u2717";
     glyph.style.color = "white";
     glyph.style.fontWeight = "bold";

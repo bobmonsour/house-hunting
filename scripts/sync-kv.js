@@ -174,7 +174,7 @@ function cleanDeletedProperties() {
       }
     }
 
-    if (stateData && stateData.status === "deleted") {
+    if (stateData && (stateData.deleted === true || stateData.status === "deleted")) {
       const id = key.replace("state:", "");
       const jsonPath = join(dataDir, `${id}.json`);
       const imgPath = join(imagesDir, id);

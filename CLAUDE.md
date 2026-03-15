@@ -82,13 +82,14 @@ scripts/
   "estimates": { "redfin": 1150000 },
   "listingUrl": "https://www.redfin.com/...",
   "listingSource": "redfin",
-  "redfinUrl": "https://www.redfin.com/..."
+  "redfinUrl": "https://www.redfin.com/...",
+  "dateAdded": "2026-03-15T16:00:00.000Z"
 }
 ```
 
 ### Mutable State (KV `state:{id}`)
 ```json
-{ "notes": "", "status": "new", "favorite": false, "sidewalks": null, "streetTrees": null, "corner": null, "roadNoise": null, "stories": null, "condition": null, "backyard": null, "studio": null, "twoSinks": null, "wallOvens": null, "pool": null, "walkInShower": null, "characterHome": null, "garage": null }
+{ "notes": "", "visited": false, "offer": false, "rejected": false, "deleted": false, "favorite": false, "sidewalks": null, "streetTrees": null, "corner": null, "roadNoise": null, "stories": null, "condition": null, "backyard": null, "studio": null, "twoSinks": null, "wallOvens": null, "pool": null, "walkInShower": null, "characterHome": null, "garage": null }
 ```
 
 ### KV Stub Format (KV `stub:{id}`)
@@ -112,7 +113,8 @@ scripts/
 - **Hash routing**: Detail view opens at `#property/{id}`, enabling browser back/forward navigation between grid and detail views. `popstate` listener in `app.js` handles navigation. Direct URLs work after auth.
 - **Full-page detail view**: Detail view is a full-page layout (not a slide-in panel), toggling `#detailPage` / `#cardGrid` visibility. Uses native document scrolling (fixes iOS scroll issues). Sticky topbar with back button and status selector.
 - **Deferred card re-render**: Status/note changes on the detail page set `state.cardsDirty = true` instead of immediately re-rendering. Grid re-renders only when closing the detail view via `closeDetail()`.
-- **Rejected properties**: Cards with status "Rejected" are separated into a distinct section below active cards with reduced opacity and a darker background. Rejected card images show a diagonal red strikethrough. "Rejected" is excluded from the status filter dropdown.
+- **Status flags**: Properties use independent boolean flags (`visited`, `offer`, `rejected`, `deleted`) instead of a single status string. "New" is computed (`!visited && !offer && !rejected`). Multiple flags can coexist. Old `status` strings are migrated to booleans at read-time in `migrateStatus()`.
+- **Rejected properties**: Cards with `rejected: true` are separated into a distinct section below active cards with reduced opacity and a darker background. Rejected card images show a diagonal red strikethrough.
 - **Risk display**: `riskClass()` in `detail.js` maps risk strings to CSS classes (`risk-low`, `risk-medium`, `risk-high`) based on prefix matching
 - **Inline-editable fields**: Sidewalks, street trees, corner lot, road noise, stories, condition, backyard, studio, two sinks, wall ovens, pool, walk-in shower, character home, garage — toggle between display/edit mode, persist to KV. Gallery position preserved during inline edits.
 - **Auth**: Simple shared password, token stored in localStorage as `btp_token`

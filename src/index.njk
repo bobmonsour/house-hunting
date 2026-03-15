@@ -66,10 +66,11 @@
   <div style="position:relative">
     <button class="sort-btn" onclick="toggleSortDropdown()" id="sortBtn">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="14" y2="12"/><line x1="4" y1="18" x2="8" y2="18"/></svg>
-      <span id="sortLabel">Sort: Price</span>
+      <span id="sortLabel">Sort: Date Added</span>
     </button>
     <div class="sort-dropdown" id="sortDropdown">
-      <button class="sort-option active" onclick="sortBy('price')">Price <span class="dir">Low to High</span></button>
+      <button class="sort-option active" onclick="sortBy('added')">Date Added <span class="dir">Most Recent</span></button>
+      <button class="sort-option" onclick="sortBy('price')">Price <span class="dir">Low to High</span></button>
       <button class="sort-option" onclick="sortBy('sqft')">Square Feet <span class="dir">High to Low</span></button>
       <button class="sort-option" onclick="sortBy('beds')">Bedrooms <span class="dir">High to Low</span></button>
       <button class="sort-option" onclick="sortBy('baths')">Bathrooms <span class="dir">High to Low</span></button>
@@ -78,13 +79,11 @@
       <button class="sort-option" onclick="sortBy('dom')">Days on Market <span class="dir">Fewest First</span></button>
     </div>
   </div>
-  <select class="filter-btn" id="statusFilterSelect" onchange="setStatusFilter(this.value)" style="appearance:none;cursor:pointer;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%239C978C' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:right 12px center;padding-right:32px">
-    <option value="all">Status: All</option>
-    <option value="new">Status: New</option>
-    <option value="interested">Status: Interested</option>
-    <option value="visited">Status: Visited</option>
-    <option value="offer">Status: Offer Made</option>
-  </select>
+  <div class="status-filter-group">
+    <button class="status-filter-btn" data-status="new" onclick="toggleStatusFilter('new')">New</button>
+    <button class="status-filter-btn" data-status="visited" onclick="toggleStatusFilter('visited')">Visited</button>
+    <button class="status-filter-btn" data-status="offer" onclick="toggleStatusFilter('offer')">Offer Made</button>
+  </div>
   <div class="filter-tags" id="activeFilters"></div>
 </div>
 
@@ -98,15 +97,10 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
       Back
     </button>
-    <div class="detail-status-select">
-      <label>Status</label>
-      <select id="detailStatusSelect" onchange="updateStatus(this.value)">
-        <option value="new">New</option>
-        <option value="interested">Interested</option>
-        <option value="visited">Visited</option>
-        <option value="offer">Offer Made</option>
-        <option value="rejected">Rejected</option>
-      </select>
+    <div class="detail-status-toggles">
+      <button class="status-toggle-btn" data-status="visited" id="statusVisited" onclick="toggleStatusFlag('visited')">Visited</button>
+      <button class="status-toggle-btn" data-status="offer" id="statusOffer" onclick="toggleStatusFlag('offer')">Offer Made</button>
+      <button class="status-toggle-btn" data-status="rejected" id="statusRejected" onclick="toggleStatusFlag('rejected')">Rejected</button>
     </div>
   </div>
   <div class="detail-page-inner">

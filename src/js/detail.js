@@ -59,7 +59,9 @@ export function openDetail(id, preserveGallery = false) {
 
   if (!preserveGallery) window.scrollTo(0, 0);
 
-  document.getElementById("detailStatusSelect").value = h.status;
+  document.getElementById("statusVisited").classList.toggle("active", !!h.visited);
+  document.getElementById("statusOffer").classList.toggle("active", !!h.offer);
+  document.getElementById("statusRejected").classList.toggle("active", !!h.rejected);
   document.getElementById("galleryMainImg").src = h.images[0];
 
   // Set up gallery controls
@@ -201,12 +203,13 @@ export function closeDetail() {
   window.scrollTo(0, 0);
 }
 
-export async function updateStatus(val) {
+export async function toggleStatusFlag(flag) {
   if (!state.currentDetailId) return;
   const h = state.houses.find((x) => x.id === state.currentDetailId);
-  h.status = val;
+  h[flag] = !h[flag];
   state.cardsDirty = true;
-  patchState(state.currentDetailId, { status: val }).catch(console.error);
+  document.getElementById(`status${flag.charAt(0).toUpperCase() + flag.slice(1)}`).classList.toggle("active", h[flag]);
+  patchState(state.currentDetailId, { [flag]: h[flag] }).catch(console.error);
 }
 
 export async function saveNotes() {
@@ -304,7 +307,7 @@ export async function deleteProperty(id) {
   state.compareSet.delete(id);
   closeDetail();
   renderCards();
-  patchState(id, { status: "deleted" }).catch(console.error);
+  patchState(id, { deleted: true }).catch(console.error);
 }
 
 // Character Home

@@ -1,13 +1,16 @@
 import { formatPrice, formatLotSize, getDaysOnMarket } from "./utils.js";
 import { patchState } from "./api.js";
-import { state } from "./app.js";
+import { state, getStatusFlags } from "./app.js";
 
 export function getFilteredSortedHouses() {
   let h = [...state.houses];
   const q = document.getElementById("searchInput").value.toLowerCase();
   if (q) h = h.filter((x) => (x.address + " " + x.city).toLowerCase().includes(q));
   if (state.showFavsOnly) h = h.filter((x) => x.favorite);
-  if (state.statusFilter !== "all") h = h.filter((x) => x.status === state.statusFilter);
+  if (state.statusFilter.size > 0) h = h.filter((x) => {
+    const flags = getStatusFlags(x);
+    return [...state.statusFilter].some((f) => flags.includes(f));
+  });
 
   h.sort((a, b) => {
     let va, vb;
@@ -17,9 +20,10 @@ export function getFilteredSortedHouses() {
       case "beds": va = a.beds; vb = b.beds; break;
       case "baths": va = a.baths; vb = b.baths; break;
       case "age": va = a.yearBuilt; vb = b.yearBuilt; break;
+      case "added": va = new Date(a.dateAdded); vb = new Date(b.dateAdded); break;
       case "listed": va = new Date(a.dateListed); vb = new Date(b.dateListed); break;
       case "dom": va = getDaysOnMarket(a.dateListed); vb = getDaysOnMarket(b.dateListed); break;
-      default: va = a.price; vb = b.price;
+      default: va = new Date(a.dateAdded); vb = new Date(b.dateAdded);
     }
     return state.currentSortDir === "asc" ? va - vb : vb - va;
   });
@@ -56,7 +60,7 @@ function renderCard(h) {
       </div>
       <div class="card-footer">
         <div class="card-footer-left">
-          <span class="status-badge" data-status="${h.status}">${h.status === "offer" ? "Offer Made" : h.status.charAt(0).toUpperCase() + h.status.slice(1)}</span>
+          ${getStatusFlags(h).map((f) => `<span class="status-badge" data-status="${f}">${f === "offer" ? "Offer Made" : f.charAt(0).toUpperCase() + f.slice(1)}</span>`).join("")}
         </div>
         ${(h.listingUrl && h.listingUrl !== "#") || (h.redfinUrl && h.redfinUrl !== "#") ? `<a href="${h.listingUrl && h.listingUrl !== "#" ? h.listingUrl : h.redfinUrl}" class="card-redfin-link" onclick="event.stopPropagation()">
           View Listing <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
@@ -70,8 +74,8 @@ function renderCard(h) {
 export function renderCards() {
   const grid = document.getElementById("cardGrid");
   const filtered = getFilteredSortedHouses();
-  const active = filtered.filter((h) => h.status !== "rejected");
-  const rejected = filtered.filter((h) => h.status === "rejected");
+  const active = filtered.filter((h) => !h.rejected);
+  const rejected = filtered.filter((h) => h.rejected);
   document.getElementById("houseCount").textContent = filtered.length;
 
   grid.innerHTML = active.map(renderCard).join("");
@@ -120,8 +124,15 @@ export function toggleFavFilter() {
   renderCards();
 }
 
-export function setStatusFilter(val) {
-  state.statusFilter = val;
+export function toggleStatusFilter(val) {
+  if (state.statusFilter.has(val)) {
+    state.statusFilter.delete(val);
+  } else {
+    state.statusFilter.add(val);
+  }
+  document.querySelectorAll(".status-filter-btn").forEach((btn) => {
+    btn.classList.toggle("active", state.statusFilter.has(btn.dataset.status));
+  });
   renderCards();
 }
 
@@ -140,12 +151,12 @@ export function sortBy(field) {
     state.currentSort = field;
     state.currentSortDir = field === "price" ? "asc" : "desc";
   }
-  const labels = { price: "Price", sqft: "Sq Ft", beds: "Beds", baths: "Baths", age: "Year Built", listed: "Date Listed", dom: "DOM" };
+  const labels = { added: "Date Added", price: "Price", sqft: "Sq Ft", beds: "Beds", baths: "Baths", age: "Year Built", listed: "Date Listed", dom: "DOM" };
   document.getElementById("sortLabel").textContent = `Sort: ${labels[field]}`;
   document.querySelectorAll(".sort-option").forEach((el) => el.classList.remove("active"));
   // Mark the clicked option as active
   const options = document.querySelectorAll(".sort-option");
-  const fieldOrder = ["price", "sqft", "beds", "baths", "age", "listed", "dom"];
+  const fieldOrder = ["added", "price", "sqft", "beds", "baths", "age", "listed", "dom"];
   const idx = fieldOrder.indexOf(field);
   if (idx >= 0 && options[idx]) options[idx].classList.add("active");
   document.getElementById("sortDropdown").classList.remove("open");

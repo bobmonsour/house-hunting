@@ -573,6 +573,7 @@ async function main() {
     redfinUrl: redfinUrl || "#",
     lat: coords?.lat || redfinData.lat || 0,
     lon: coords?.lon || redfinData.lon || 0,
+    dateAdded: new Date().toISOString(),
   };
 
   // Write to src/_data/houses/{id}.json

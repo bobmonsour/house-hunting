@@ -48,7 +48,6 @@
 
   --rejected-bg: #EAE7E2;
 
-  --status-interested: #2D5A3D;
   --status-visited: #4A6FA5;
   --status-offer: #C4703E;
   --status-rejected: #A85454;
@@ -89,7 +88,6 @@
   --border-light: #252523;
   --border-hover: #3A3A36;
 
-  --status-interested: #5BA87A;
   --status-visited: #6B8EC4;
   --status-offer: #D4884E;
   --status-rejected: #C46B6B;
@@ -436,6 +434,53 @@ body {
   flex-wrap: wrap;
 }
 
+.status-filter-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.status-filter-btn {
+  padding: 7px 14px;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.status-filter-btn:hover {
+  border-color: var(--border-hover);
+  color: var(--text-secondary);
+}
+
+.status-filter-btn.active[data-status="new"] {
+  background: #EEEBF5;
+  color: var(--status-new);
+  border-color: var(--status-new);
+}
+
+.status-filter-btn.active[data-status="visited"] {
+  background: #E8EEF5;
+  color: var(--status-visited);
+  border-color: var(--status-visited);
+}
+
+.status-filter-btn.active[data-status="offer"] {
+  background: var(--accent-warm-light);
+  color: var(--status-offer);
+  border-color: var(--status-offer);
+}
+
+[data-theme="dark"] .status-filter-btn.active[data-status="new"] { background: #241E30; }
+[data-theme="dark"] .status-filter-btn.active[data-status="visited"] { background: #1E2530; }
+[data-theme="dark"] .status-filter-btn.active[data-status="offer"] { background: #2E2218; }
+
 .filter-tag {
   display: flex;
   align-items: center;
@@ -535,9 +580,6 @@ body {
   flex-shrink: 0;
 }
 
-.status-badge[data-status="interested"] { background: #E8F0EB; color: var(--status-interested); }
-.status-badge[data-status="interested"]::before { background: var(--status-interested); }
-
 .status-badge[data-status="visited"] { background: #E8EEF5; color: var(--status-visited); }
 .status-badge[data-status="visited"]::before { background: var(--status-visited); }
 
@@ -550,7 +592,6 @@ body {
 .status-badge[data-status="new"] { background: #EEEBF5; color: var(--status-new); }
 .status-badge[data-status="new"]::before { background: var(--status-new); }
 
-[data-theme="dark"] .status-badge[data-status="interested"] { background: #1E2E24; }
 [data-theme="dark"] .status-badge[data-status="visited"] { background: #1E2530; }
 [data-theme="dark"] .status-badge[data-status="offer"] { background: #2E2218; }
 [data-theme="dark"] .status-badge[data-status="rejected"] { background: #2E1A1A; }
@@ -734,7 +775,8 @@ body {
 .card-footer-left {
   display: flex;
   align-items: center;
-  gap: 8px;
+  flex-wrap: wrap;
+  gap: 5px;
 }
 
 .card-age {
@@ -858,34 +900,53 @@ body {
 
 .detail-close-btn svg { width: 16px; height: 16px; }
 
-.detail-status-select {
+.detail-status-toggles {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
-.detail-status-select label {
-  font-size: 0.82rem;
-  color: var(--text-tertiary);
-  font-weight: 500;
-}
-
-.detail-status-select select {
-  padding: 6px 28px 6px 12px;
+.status-toggle-btn {
+  padding: 5px 14px;
   font-family: var(--font-body);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   background: var(--bg-secondary);
   border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  color: var(--text-primary);
+  border-radius: 100px;
+  color: var(--text-tertiary);
   cursor: pointer;
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%239C978C' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  outline: none;
+  transition: all 0.15s ease;
 }
+
+.status-toggle-btn:hover {
+  border-color: var(--border-hover);
+  color: var(--text-secondary);
+}
+
+.status-toggle-btn[data-status="visited"].active {
+  background: #E8EEF5;
+  color: var(--status-visited);
+  border-color: var(--status-visited);
+}
+
+.status-toggle-btn[data-status="offer"].active {
+  background: var(--accent-warm-light);
+  color: var(--status-offer);
+  border-color: var(--status-offer);
+}
+
+.status-toggle-btn[data-status="rejected"].active {
+  background: #F5E8E8;
+  color: var(--status-rejected);
+  border-color: var(--status-rejected);
+}
+
+[data-theme="dark"] .status-toggle-btn[data-status="visited"].active { background: #1E2530; }
+[data-theme="dark"] .status-toggle-btn[data-status="offer"].active { background: #2E2218; }
+[data-theme="dark"] .status-toggle-btn[data-status="rejected"].active { background: #2E1A1A; }
 
 /* Gallery */
 .detail-gallery {
@@ -1181,7 +1242,7 @@ body {
 
 .price-event-dot.listed { background: var(--status-new); }
 .price-event-dot.reduced { background: var(--accent-warm); }
-.price-event-dot.sold { background: var(--status-interested); }
+.price-event-dot.sold { background: var(--accent); }
 
 .price-event-info {
   flex: 1;
