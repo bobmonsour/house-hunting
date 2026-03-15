@@ -1,0 +1,182 @@
+{
+  "id": 1773612736898,
+  "address": "1768 Casa Grande St",
+  "city": "Pasadena, CA 91104",
+  "price": 1899000,
+  "beds": 3,
+  "baths": 3,
+  "sqft": 2436,
+  "lotSize": 7492,
+  "yearBuilt": 1923,
+  "images": [
+    "/images/1773612736898/photo-1.jpg",
+    "/images/1773612736898/photo-2.jpg",
+    "/images/1773612736898/photo-3.jpg",
+    "/images/1773612736898/photo-4.jpg",
+    "/images/1773612736898/photo-5.jpg",
+    "/images/1773612736898/photo-6.jpg",
+    "/images/1773612736898/photo-7.jpg",
+    "/images/1773612736898/photo-8.jpg",
+    "/images/1773612736898/photo-9.jpg",
+    "/images/1773612736898/photo-10.jpg",
+    "/images/1773612736898/photo-11.jpg",
+    "/images/1773612736898/photo-12.jpg",
+    "/images/1773612736898/photo-13.jpg",
+    "/images/1773612736898/photo-14.jpg",
+    "/images/1773612736898/photo-15.jpg",
+    "/images/1773612736898/photo-16.jpg",
+    "/images/1773612736898/photo-17.jpg",
+    "/images/1773612736898/photo-18.jpg",
+    "/images/1773612736898/photo-19.jpg",
+    "/images/1773612736898/photo-20.jpg",
+    "/images/1773612736898/photo-21.jpg",
+    "/images/1773612736898/photo-22.jpg",
+    "/images/1773612736898/photo-23.jpg",
+    "/images/1773612736898/photo-24.jpg",
+    "/images/1773612736898/photo-25.jpg",
+    "/images/1773612736898/photo-26.jpg",
+    "/images/1773612736898/photo-27.jpg",
+    "/images/1773612736898/photo-28.jpg",
+    "/images/1773612736898/photo-29.jpg",
+    "/images/1773612736898/photo-30.jpg",
+    "/images/1773612736898/photo-31.jpg",
+    "/images/1773612736898/photo-32.jpg",
+    "/images/1773612736898/photo-33.jpg",
+    "/images/1773612736898/photo-34.jpg",
+    "/images/1773612736898/photo-35.jpg",
+    "/images/1773612736898/photo-36.jpg",
+    "/images/1773612736898/photo-37.jpg",
+    "/images/1773612736898/photo-38.jpg",
+    "/images/1773612736898/photo-39.jpg",
+    "/images/1773612736898/photo-40.jpg",
+    "/images/1773612736898/photo-41.jpg",
+    "/images/1773612736898/photo-42.jpg",
+    "/images/1773612736898/photo-43.jpg",
+    "/images/1773612736898/photo-44.jpg",
+    "/images/1773612736898/photo-45.jpg",
+    "/images/1773612736898/photo-46.jpg",
+    "/images/1773612736898/photo-47.jpg",
+    "/images/1773612736898/photo-48.jpg",
+    "/images/1773612736898/photo-49.jpg",
+    "/images/1773612736898/photo-50.jpg",
+    "/images/1773612736898/photo-51.jpg",
+    "/images/1773612736898/photo-52.jpg",
+    "/images/1773612736898/photo-53.jpg",
+    "/images/1773612736898/photo-54.jpg",
+    "/images/1773612736898/photo-55.jpg",
+    "/images/1773612736898/photo-56.jpg",
+    "/images/1773612736898/photo-57.jpg",
+    "/images/1773612736898/photo-58.jpg",
+    "/images/1773612736898/photo-59.jpg",
+    "/images/1773612736898/photo-60.jpg",
+    "/images/1773612736898/photo-61.jpg",
+    "/images/1773612736898/photo-62.jpg",
+    "/images/1773612736898/photo-63.jpg",
+    "/images/1773612736898/photo-64.jpg"
+  ],
+  "neighborhood": "The North Pasadena Heights Landmark District features wide, quiet residential streets with a mix of historic Craftsman bungalows and character homes from the 1930s-1940s. It's a somewhat walkable area (Walk Score 59) with good public transportation access, known for its pride of ownership and architectural authenticity.",
+  "parkProximity": "0.5 miles to Victory Park (24.6 acres with children's play area, sports fields, and Saturday farmer's market)",
+  "floodRisk": "Low — Zone X, minimal flood hazard (FEMA NFHL)",
+  "fireRisk": "Low — not in a fire hazard severity zone (CAL FIRE FHSZ)",
+  "crimeRating": "Moderate — Grade C (31.93 per 1,000 residents in zip code 91104, CrimeGrade.org)",
+  "distances": [
+    {
+      "name": "Whole Foods Market",
+      "address": "3751 E Foothill Blvd, Pasadena, CA 91107",
+      "miles": "3.1 mi",
+      "time": "9 min"
+    },
+    {
+      "name": "Trader Joe's",
+      "address": "467 N Rosemead Blvd, Pasadena, CA 91107",
+      "miles": "2.6 mi",
+      "time": "7 min"
+    },
+    {
+      "name": "Costco",
+      "address": "3972 Costco Dr, Arcadia, CA 91006",
+      "miles": "6.2 mi",
+      "time": "10 min"
+    },
+    {
+      "name": "Target",
+      "address": "777 E Colorado Blvd, Pasadena, CA 91101",
+      "miles": "2.3 mi",
+      "time": "9 min"
+    },
+    {
+      "name": "Home Depot",
+      "address": "2881 E Walnut St, Pasadena, CA 91107",
+      "miles": "2.4 mi",
+      "time": "7 min"
+    },
+    {
+      "name": "Republik Coffee",
+      "address": "48 W Green St, Pasadena, CA 91105",
+      "miles": "4.2 mi",
+      "time": "10 min"
+    }
+  ],
+  "agent": {
+    "name": "Teresa Piasky",
+    "phone": "+16264005414",
+    "email": "—"
+  },
+  "dateListed": "2026-02-19",
+  "priceHistory": [
+    {
+      "type": "reduced",
+      "label": "Price Changed",
+      "date": "Jan 20, 2026",
+      "amount": 1899000
+    },
+    {
+      "type": "reduced",
+      "label": "Price Changed",
+      "date": "Dec 7, 2025",
+      "amount": 1950000
+    },
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Nov 14, 2025",
+      "amount": 2000000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (MLS)",
+      "date": "Dec 14, 2010",
+      "amount": 775000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Dec 10, 2010",
+      "amount": 775000
+    },
+    {
+      "type": "reduced",
+      "label": "Price Changed",
+      "date": "Aug 4, 2010",
+      "amount": 799000
+    },
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Jul 6, 2010",
+      "amount": 819000
+    }
+  ],
+  "lastSold": {
+    "date": "Dec 14, 2010",
+    "price": 775000
+  },
+  "estimates": {
+    "redfin": 1914061
+  },
+  "listingUrl": "https://www.redfin.com/CA/Pasadena/1768-Casa-Grande-St-91104/home/7200744",
+  "listingSource": "redfin",
+  "redfinUrl": "https://www.redfin.com/CA/Pasadena/1768-Casa-Grande-St-91104/home/7200744",
+  "lat": 34.1629425,
+  "lon": -118.1140081
+}
