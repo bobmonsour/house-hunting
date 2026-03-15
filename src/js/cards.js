@@ -9,7 +9,7 @@ export function getFilteredSortedHouses() {
   if (state.showFavsOnly) h = h.filter((x) => x.favorite);
   if (state.statusFilter.size > 0) h = h.filter((x) => {
     const flags = getStatusFlags(x);
-    return [...state.statusFilter].some((f) => flags.includes(f));
+    return [...state.statusFilter].every((f) => flags.includes(f));
   });
 
   h.sort((a, b) => {
