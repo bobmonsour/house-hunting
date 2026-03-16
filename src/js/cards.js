@@ -130,8 +130,8 @@ export function toggleStatusFilter(val) {
   } else {
     state.statusFilter.add(val);
   }
-  document.querySelectorAll(".status-filter-btn").forEach((btn) => {
-    btn.classList.toggle("active", state.statusFilter.has(btn.dataset.status));
+  document.querySelectorAll(".status-filter-checkbox input").forEach((cb) => {
+    cb.checked = state.statusFilter.has(cb.dataset.status);
   });
   renderCards();
 }

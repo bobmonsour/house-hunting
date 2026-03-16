@@ -80,9 +80,9 @@
     </div>
   </div>
   <div class="status-filter-group">
-    <button class="status-filter-btn" data-status="new" onclick="toggleStatusFilter('new')">New</button>
-    <button class="status-filter-btn" data-status="visited" onclick="toggleStatusFilter('visited')">Visited</button>
-    <button class="status-filter-btn" data-status="offer" onclick="toggleStatusFilter('offer')">Offer Made</button>
+    <label class="status-filter-checkbox" data-status="new"><input type="checkbox" data-status="new" onchange="toggleStatusFilter('new')"> New</label>
+    <label class="status-filter-checkbox" data-status="visited"><input type="checkbox" data-status="visited" onchange="toggleStatusFilter('visited')"> Visited</label>
+    <label class="status-filter-checkbox" data-status="offer"><input type="checkbox" data-status="offer" onchange="toggleStatusFilter('offer')"> Offer Made</label>
   </div>
   <div class="filter-tags" id="activeFilters"></div>
 </div>
@@ -98,9 +98,9 @@
       Back
     </button>
     <div class="detail-status-toggles">
-      <button class="status-toggle-btn" data-status="visited" id="statusVisited" onclick="toggleStatusFlag('visited')">Visited</button>
-      <button class="status-toggle-btn" data-status="offer" id="statusOffer" onclick="toggleStatusFlag('offer')">Offer Made</button>
-      <button class="status-toggle-btn" data-status="rejected" id="statusRejected" onclick="toggleStatusFlag('rejected')">Rejected</button>
+      <label class="status-checkbox" data-status="visited"><input type="checkbox" id="statusVisited" onchange="toggleStatusFlag('visited')"> Visited</label>
+      <label class="status-checkbox" data-status="offer"><input type="checkbox" id="statusOffer" onchange="toggleStatusFlag('offer')"> Offer Made</label>
+      <label class="status-checkbox" data-status="rejected"><input type="checkbox" id="statusRejected" onchange="toggleStatusFlag('rejected')"> Rejected</label>
     </div>
   </div>
   <div class="detail-page-inner">

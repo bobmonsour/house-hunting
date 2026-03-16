@@ -59,9 +59,9 @@ export function openDetail(id, preserveGallery = false) {
 
   if (!preserveGallery) window.scrollTo(0, 0);
 
-  document.getElementById("statusVisited").classList.toggle("active", !!h.visited);
-  document.getElementById("statusOffer").classList.toggle("active", !!h.offer);
-  document.getElementById("statusRejected").classList.toggle("active", !!h.rejected);
+  document.getElementById("statusVisited").checked = !!h.visited;
+  document.getElementById("statusOffer").checked = !!h.offer;
+  document.getElementById("statusRejected").checked = !!h.rejected;
   document.getElementById("galleryMainImg").src = h.images[0];
 
   // Set up gallery controls
@@ -208,7 +208,7 @@ export async function toggleStatusFlag(flag) {
   const h = state.houses.find((x) => x.id === state.currentDetailId);
   h[flag] = !h[flag];
   state.cardsDirty = true;
-  document.getElementById(`status${flag.charAt(0).toUpperCase() + flag.slice(1)}`).classList.toggle("active", h[flag]);
+  document.getElementById(`status${flag.charAt(0).toUpperCase() + flag.slice(1)}`).checked = h[flag];
   patchState(state.currentDetailId, { [flag]: h[flag] }).catch(console.error);
 }
 
