@@ -224,7 +224,25 @@ async function main() {
   const sources = [...new Set([...stubMap.values()].map((e) => e.source))];
   console.log(`Found ${stubMap.size} new address stub(s) from ${sources.join(" + ")} KV.`);
 
-  for (const [, { stub, source }] of stubMap) {
+  // Filter out stubs whose Redfin URL matches an existing property
+  const dataDir = join(process.cwd(), "src", "_data", "houses");
+  const existingFiles = existsSync(dataDir) ? readdirSync(dataDir).filter((f) => f.endsWith(".json")) : [];
+  const existingUrls = new Set();
+  for (const f of existingFiles) {
+    try {
+      const data = JSON.parse(readFileSync(join(dataDir, f), "utf-8"));
+      if (data.redfinUrl) existingUrls.add(data.redfinUrl);
+    } catch { /* skip */ }
+  }
+
+  for (const [id, { stub, source }] of stubMap) {
+    if (stub.url && existingUrls.has(stub.url)) {
+      console.log(`\nSkipping duplicate: ${stub.address} (already researched)`);
+      if (source === "remote") await deleteRemoteStub(stub.id);
+      else deleteLocalStub(stub.id);
+      continue;
+    }
+
     console.log(`\nResearching: ${stub.address}, ${stub.city} (id: ${stub.id})`);
     try {
       const urlArg = stub.url ? `"${stub.url}"` : '""';

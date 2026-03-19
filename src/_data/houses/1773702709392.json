@@ -1,0 +1,166 @@
+{
+  "id": 1773702709392,
+  "address": "358 San Juan Way",
+  "city": "La Canada Flintridge, CA 91011",
+  "price": 2849000,
+  "beds": 4,
+  "baths": 2.5,
+  "sqft": 2640,
+  "lotSize": 6921,
+  "yearBuilt": 1947,
+  "images": [
+    "/images/1773702709392/photo-1.jpg",
+    "/images/1773702709392/photo-2.jpg",
+    "/images/1773702709392/photo-3.jpg",
+    "/images/1773702709392/photo-4.jpg",
+    "/images/1773702709392/photo-5.jpg",
+    "/images/1773702709392/photo-6.jpg",
+    "/images/1773702709392/photo-7.jpg",
+    "/images/1773702709392/photo-8.jpg",
+    "/images/1773702709392/photo-9.jpg",
+    "/images/1773702709392/photo-10.jpg",
+    "/images/1773702709392/photo-11.jpg",
+    "/images/1773702709392/photo-12.jpg",
+    "/images/1773702709392/photo-13.jpg",
+    "/images/1773702709392/photo-14.jpg",
+    "/images/1773702709392/photo-15.jpg",
+    "/images/1773702709392/photo-16.jpg",
+    "/images/1773702709392/photo-17.jpg",
+    "/images/1773702709392/photo-18.jpg",
+    "/images/1773702709392/photo-19.jpg",
+    "/images/1773702709392/photo-20.jpg",
+    "/images/1773702709392/photo-21.jpg",
+    "/images/1773702709392/photo-22.jpg",
+    "/images/1773702709392/photo-23.jpg",
+    "/images/1773702709392/photo-24.jpg",
+    "/images/1773702709392/photo-25.jpg",
+    "/images/1773702709392/photo-26.jpg",
+    "/images/1773702709392/photo-27.jpg",
+    "/images/1773702709392/photo-28.jpg",
+    "/images/1773702709392/photo-29.jpg",
+    "/images/1773702709392/photo-30.jpg",
+    "/images/1773702709392/photo-31.jpg",
+    "/images/1773702709392/photo-32.jpg",
+    "/images/1773702709392/photo-33.jpg",
+    "/images/1773702709392/photo-34.jpg",
+    "/images/1773702709392/photo-35.jpg",
+    "/images/1773702709392/photo-36.jpg",
+    "/images/1773702709392/photo-37.jpg",
+    "/images/1773702709392/photo-38.jpg",
+    "/images/1773702709392/photo-39.jpg",
+    "/images/1773702709392/photo-40.jpg",
+    "/images/1773702709392/photo-41.jpg"
+  ],
+  "neighborhood": "<cite index=\"4-8,4-9,8-5,8-6\">La Cañada Flintridge is an affluent, family-oriented city nestled in the foothills of the San Gabriel Mountains featuring large, custom homes, spacious lots, and a tranquil, residential character.</cite> <cite index=\"2-1,6-16,6-17\">The area is considered somewhat walkable with most errands requiring driving, and walkability varies by neighborhood throughout the city.</cite>",
+  "parkProximity": "<cite index=\"12-2,13-2,20-4,20-5\">Memorial Park is approximately 0.8 miles away, serving as the town's 15-acre central gathering place with sports fields, tennis courts, picnic areas, and a playground.</cite>",
+  "floodRisk": "Low — Zone X, minimal flood hazard (FEMA NFHL)",
+  "fireRisk": "Very High — very high fire hazard severity zone (CAL FIRE FHSZ)",
+  "crimeRating": "<cite index=\"21-11,21-12\">Below Average — Grade C- (CrimeGrade.org) - safer than 37% of cities but less safe than 63%</cite>",
+  "distances": [
+    {
+      "name": "Whole Foods Market",
+      "address": "465 S Arroyo Pkwy, Pasadena, CA 91105",
+      "miles": "5.7 mi",
+      "time": "9 min"
+    },
+    {
+      "name": "Trader Joe's",
+      "address": "2462 Honolulu Ave, Montrose, CA 91020",
+      "miles": "3.7 mi",
+      "time": "7 min"
+    },
+    {
+      "name": "Costco",
+      "address": "3972 Costco Dr, Arcadia, CA 91006",
+      "miles": "12.0 mi",
+      "time": "15 min"
+    },
+    {
+      "name": "Target",
+      "address": "777 E Colorado Blvd, Pasadena, CA 91101",
+      "miles": "6.0 mi",
+      "time": "10 min"
+    },
+    {
+      "name": "Home Depot",
+      "address": "2881 E Walnut St, Pasadena, CA 91107",
+      "miles": "8.2 mi",
+      "time": "11 min"
+    },
+    {
+      "name": "Republik Coffee",
+      "address": "48 W Green St, Pasadena, CA 91105",
+      "miles": "5.0 mi",
+      "time": "9 min"
+    }
+  ],
+  "agent": {
+    "name": "Benjamin Kelly",
+    "phone": "+16264005414",
+    "email": "—"
+  },
+  "dateListed": "2026-03-16",
+  "priceHistory": [
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Mar 16, 2026",
+      "amount": 2849000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (MLS)",
+      "date": "Sep 9, 2020",
+      "amount": 2010000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Sep 9, 2020",
+      "amount": 2010000
+    },
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Jul 31, 2020",
+      "amount": 1895000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (MLS)",
+      "date": "Jun 3, 2016",
+      "amount": 1615000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Jun 3, 2016",
+      "amount": 1615000
+    },
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Apr 29, 2016",
+      "amount": 1595000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Oct 6, 1975",
+      "amount": 57500
+    }
+  ],
+  "lastSold": {
+    "date": "Sep 9, 2020",
+    "price": 2010000
+  },
+  "estimates": {
+    "redfin": 2836014
+  },
+  "listingUrl": "https://www.redfin.com/CA/La-Canada-Flintridge/358-San-Juan-Way-91011/home/7249141",
+  "listingSource": "redfin",
+  "redfinUrl": "https://www.redfin.com/CA/La-Canada-Flintridge/358-San-Juan-Way-91011/home/7249141",
+  "lat": 34.2011699,
+  "lon": -118.1858841,
+  "dateAdded": "2026-03-19T17:57:35.780Z"
+}

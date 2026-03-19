@@ -1,0 +1,211 @@
+{
+  "id": 1773942848364,
+  "address": "1354 Green Ln",
+  "city": "La Canada Flintridge, CA 91011",
+  "price": 2995000,
+  "beds": 4,
+  "baths": 3,
+  "sqft": 2693,
+  "lotSize": 19629,
+  "yearBuilt": 1951,
+  "images": [
+    "/images/1773942848364/photo-1.jpg",
+    "/images/1773942848364/photo-2.jpg",
+    "/images/1773942848364/photo-3.jpg",
+    "/images/1773942848364/photo-4.jpg",
+    "/images/1773942848364/photo-5.jpg",
+    "/images/1773942848364/photo-6.jpg",
+    "/images/1773942848364/photo-7.jpg",
+    "/images/1773942848364/photo-8.jpg",
+    "/images/1773942848364/photo-9.jpg",
+    "/images/1773942848364/photo-10.jpg",
+    "/images/1773942848364/photo-11.jpg",
+    "/images/1773942848364/photo-12.jpg",
+    "/images/1773942848364/photo-13.jpg",
+    "/images/1773942848364/photo-14.jpg",
+    "/images/1773942848364/photo-15.jpg",
+    "/images/1773942848364/photo-16.jpg",
+    "/images/1773942848364/photo-17.jpg",
+    "/images/1773942848364/photo-18.jpg",
+    "/images/1773942848364/photo-19.jpg",
+    "/images/1773942848364/photo-20.jpg",
+    "/images/1773942848364/photo-21.jpg",
+    "/images/1773942848364/photo-22.jpg",
+    "/images/1773942848364/photo-23.jpg",
+    "/images/1773942848364/photo-24.jpg",
+    "/images/1773942848364/photo-25.jpg",
+    "/images/1773942848364/photo-26.jpg",
+    "/images/1773942848364/photo-27.jpg",
+    "/images/1773942848364/photo-28.jpg",
+    "/images/1773942848364/photo-29.jpg",
+    "/images/1773942848364/photo-30.jpg",
+    "/images/1773942848364/photo-31.jpg",
+    "/images/1773942848364/photo-32.jpg",
+    "/images/1773942848364/photo-33.jpg",
+    "/images/1773942848364/photo-34.jpg",
+    "/images/1773942848364/photo-35.jpg",
+    "/images/1773942848364/photo-36.jpg",
+    "/images/1773942848364/photo-37.jpg",
+    "/images/1773942848364/photo-38.jpg",
+    "/images/1773942848364/photo-39.jpg",
+    "/images/1773942848364/photo-40.jpg",
+    "/images/1773942848364/photo-41.jpg",
+    "/images/1773942848364/photo-42.jpg",
+    "/images/1773942848364/photo-43.jpg",
+    "/images/1773942848364/photo-44.jpg",
+    "/images/1773942848364/photo-45.jpg",
+    "/images/1773942848364/photo-46.jpg",
+    "/images/1773942848364/photo-47.jpg",
+    "/images/1773942848364/photo-48.jpg",
+    "/images/1773942848364/photo-49.jpg",
+    "/images/1773942848364/photo-50.jpg",
+    "/images/1773942848364/photo-51.jpg",
+    "/images/1773942848364/photo-52.jpg",
+    "/images/1773942848364/photo-53.jpg",
+    "/images/1773942848364/photo-54.jpg",
+    "/images/1773942848364/photo-55.jpg",
+    "/images/1773942848364/photo-56.jpg",
+    "/images/1773942848364/photo-57.jpg",
+    "/images/1773942848364/photo-58.jpg",
+    "/images/1773942848364/photo-59.jpg",
+    "/images/1773942848364/photo-60.jpg",
+    "/images/1773942848364/photo-61.jpg",
+    "/images/1773942848364/photo-62.jpg",
+    "/images/1773942848364/photo-63.jpg",
+    "/images/1773942848364/photo-64.jpg",
+    "/images/1773942848364/photo-65.jpg",
+    "/images/1773942848364/photo-66.jpg",
+    "/images/1773942848364/photo-67.jpg",
+    "/images/1773942848364/photo-68.jpg",
+    "/images/1773942848364/photo-69.jpg",
+    "/images/1773942848364/photo-70.jpg",
+    "/images/1773942848364/photo-71.jpg",
+    "/images/1773942848364/photo-72.jpg",
+    "/images/1773942848364/photo-73.jpg",
+    "/images/1773942848364/photo-74.jpg"
+  ],
+  "neighborhood": "<cite index=\"8-5,8-6,5-21,5-22\">La Canada Flintridge is a peaceful, tree-filled town known for its clean, safe neighborhoods and family-friendly community with beautiful hiking trails. Winding residential streets feel secluded, lined by mature trees and beautiful homes with most builds being post-World War II houses and midcentury ranch-style homes.</cite>",
+  "parkProximity": "<cite index=\"11-2,27-11\">1.4 miles to Descanso Gardens (within 13.2 miles of the property)</cite>",
+  "floodRisk": "Low — Zone X, minimal flood hazard (FEMA NFHL)",
+  "fireRisk": "Very High — very high fire hazard severity zone (CAL FIRE FHSZ)",
+  "crimeRating": "<cite index=\"31-11,31-12\">Below Average — Grade C- (CrimeGrade.org) — safer than 37% of cities but less safe than 63%</cite>",
+  "distances": [
+    {
+      "name": "Whole Foods Market",
+      "address": "465 S Arroyo Pkwy, Pasadena, CA 91105",
+      "miles": "7.7 mi",
+      "time": "12 min"
+    },
+    {
+      "name": "Trader Joe's",
+      "address": "2462 Honolulu Ave, Montrose, CA 91020",
+      "miles": "3.4 mi",
+      "time": "8 min"
+    },
+    {
+      "name": "Costco",
+      "address": "3972 Costco Dr, Arcadia, CA 91006",
+      "miles": "14.0 mi",
+      "time": "18 min"
+    },
+    {
+      "name": "Target",
+      "address": "777 E Colorado Blvd, Pasadena, CA 91101",
+      "miles": "8.0 mi",
+      "time": "13 min"
+    },
+    {
+      "name": "Home Depot",
+      "address": "5040 San Fernando Rd, Glendale, CA 91204",
+      "miles": "10.1 mi",
+      "time": "15 min"
+    },
+    {
+      "name": "Republik Coffee",
+      "address": "48 W Green St, Pasadena, CA 91105",
+      "miles": "7.0 mi",
+      "time": "12 min"
+    }
+  ],
+  "agent": {
+    "name": "Reid C. Kaplan",
+    "phone": "+16264005414",
+    "email": "—"
+  },
+  "dateListed": "2026-03-14",
+  "priceHistory": [
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Mar 13, 2026",
+      "amount": 2995000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (MLS)",
+      "date": "Dec 8, 2021",
+      "amount": 2135000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Dec 8, 2021",
+      "amount": 2135000
+    },
+    {
+      "type": "reduced",
+      "label": "Price Changed",
+      "date": "Oct 14, 2021",
+      "amount": 1995000
+    },
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Oct 1, 2021",
+      "amount": 2249000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (MLS)",
+      "date": "May 14, 2003",
+      "amount": 825000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "May 14, 2003",
+      "amount": 825000
+    },
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Mar 21, 2003",
+      "amount": 839000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "May 26, 1993",
+      "amount": 469000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Jun 23, 1971",
+      "amount": 40000
+    }
+  ],
+  "lastSold": {
+    "date": "Dec 8, 2021",
+    "price": 2135000
+  },
+  "estimates": {
+    "redfin": 2975868
+  },
+  "listingUrl": "https://www.redfin.com/CA/La-Canada-Flintridge/1354-Green-Ln-91011/home/7245784",
+  "listingSource": "redfin",
+  "redfinUrl": "https://www.redfin.com/CA/La-Canada-Flintridge/1354-Green-Ln-91011/home/7245784",
+  "lat": 34.2171725,
+  "lon": -118.2078166,
+  "dateAdded": "2026-03-19T17:58:15.915Z"
+}

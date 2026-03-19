@@ -102,6 +102,15 @@ export default {
       const urlMatch = body.url.match(/redfin\.com\/([A-Z]{2})\/([^/]+)\/([^/]+)\/home\/(\d+)/);
       if (!urlMatch) return json({ error: "Invalid Redfin URL" }, 400);
 
+      // Check for duplicate Redfin URL in existing stubs
+      const existingStubs = await env.HOUSES.list({ prefix: "stub:" });
+      for (const key of existingStubs.keys) {
+        const existing = await env.HOUSES.get(key.name, "json");
+        if (existing && existing.url === body.url) {
+          return json({ error: "Property already added", existing }, 409);
+        }
+      }
+
       const [, state, rawCity, rawStreet] = urlMatch;
       const cityName = rawCity.replace(/-/g, " ");
       // Street: last segment is zip code, rest is the address

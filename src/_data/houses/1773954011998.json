@@ -1,0 +1,142 @@
+{
+  "id": 1773954011998,
+  "address": "131 Rancho Rd",
+  "city": "Carmel Valley, CA 93924",
+  "price": 3200000,
+  "beds": 3,
+  "baths": 2.5,
+  "sqft": 3410,
+  "lotSize": 10129,
+  "yearBuilt": 1999,
+  "images": [
+    "/images/1773954011998/photo-1.jpg",
+    "/images/1773954011998/photo-2.jpg",
+    "/images/1773954011998/photo-3.jpg",
+    "/images/1773954011998/photo-4.jpg",
+    "/images/1773954011998/photo-5.jpg",
+    "/images/1773954011998/photo-6.jpg",
+    "/images/1773954011998/photo-7.jpg",
+    "/images/1773954011998/photo-8.jpg",
+    "/images/1773954011998/photo-9.jpg",
+    "/images/1773954011998/photo-10.jpg",
+    "/images/1773954011998/photo-11.jpg",
+    "/images/1773954011998/photo-12.jpg",
+    "/images/1773954011998/photo-13.jpg",
+    "/images/1773954011998/photo-14.jpg",
+    "/images/1773954011998/photo-15.jpg",
+    "/images/1773954011998/photo-16.jpg",
+    "/images/1773954011998/photo-17.jpg",
+    "/images/1773954011998/photo-18.jpg",
+    "/images/1773954011998/photo-19.jpg",
+    "/images/1773954011998/photo-20.jpg",
+    "/images/1773954011998/photo-21.jpg",
+    "/images/1773954011998/photo-22.jpg",
+    "/images/1773954011998/photo-23.jpg",
+    "/images/1773954011998/photo-24.jpg",
+    "/images/1773954011998/photo-25.jpg",
+    "/images/1773954011998/photo-26.jpg",
+    "/images/1773954011998/photo-27.jpg",
+    "/images/1773954011998/photo-28.jpg",
+    "/images/1773954011998/photo-29.jpg",
+    "/images/1773954011998/photo-30.jpg",
+    "/images/1773954011998/photo-31.jpg",
+    "/images/1773954011998/photo-32.jpg",
+    "/images/1773954011998/photo-33.jpg",
+    "/images/1773954011998/photo-34.jpg",
+    "/images/1773954011998/photo-35.jpg"
+  ],
+  "neighborhood": "Carmel Valley is a peaceful, family-friendly neighborhood with scenic views, known for its vineyards, art galleries and walkable character. It's a charming upscale area with beautiful homes, scenic trails, and a rural vibe that attracts families seeking top-rated schools and a relaxed pace of life.",
+  "parkProximity": "0.3 miles to Carmel Valley Community Park (25 Ford Rd), 8.6 miles to Garland Ranch Regional Park",
+  "floodRisk": "Low — Zone X, minimal flood hazard (FEMA NFHL)",
+  "fireRisk": "Very High — very high fire hazard severity zone (CAL FIRE FHSZ)",
+  "crimeRating": "Good — Grade B (CrimeGrade.org)",
+  "distances": [
+    {
+      "name": "Whole Foods Market",
+      "address": "331 N Glendale Ave, Glendale, CA 91206",
+      "miles": "311.3 mi",
+      "time": "4 hours 58 min"
+    },
+    {
+      "name": "Trader Joe's",
+      "address": "2462 Honolulu Ave, Montrose, CA 91020",
+      "miles": "309.8 mi",
+      "time": "4 hours 57 min"
+    },
+    {
+      "name": "Costco",
+      "address": "3972 Costco Dr, Arcadia, CA 91006",
+      "miles": "324.0 mi",
+      "time": "5 hours 9 min"
+    },
+    {
+      "name": "Target",
+      "address": "2195 Glendale Galleria, Glendale, CA 91210",
+      "miles": "310.6 mi",
+      "time": "4 hours 58 min"
+    },
+    {
+      "name": "Home Depot",
+      "address": "5040 San Fernando Rd, Glendale, CA 91204",
+      "miles": "310.0 mi",
+      "time": "4 hours 57 min"
+    },
+    {
+      "name": "Republik Coffee",
+      "address": "48 W Green St, Pasadena, CA 91105",
+      "miles": "316.7 mi",
+      "time": "5 hours 3 min"
+    }
+  ],
+  "agent": {
+    "name": "Cheryl Heyermann",
+    "phone": "1-844-759-7732",
+    "email": "—"
+  },
+  "dateListed": "2026-03-18",
+  "priceHistory": [
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Mar 18, 2026",
+      "amount": 3200000
+    },
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Mar 18, 2026",
+      "amount": 3200000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Jul 9, 1993",
+      "amount": 640000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Jul 9, 1993",
+      "amount": 640000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Nov 1, 1967",
+      "amount": 17500
+    }
+  ],
+  "lastSold": {
+    "date": "Jul 9, 1993",
+    "price": 640000
+  },
+  "estimates": {
+    "redfin": 3198426
+  },
+  "listingUrl": "https://www.redfin.com/CA/Carmel-Valley/131-Rancho-Rd-93924/home/14894479",
+  "listingSource": "redfin",
+  "redfinUrl": "https://www.redfin.com/CA/Carmel-Valley/131-Rancho-Rd-93924/home/14894479",
+  "lat": 36.4972466,
+  "lon": -121.7460802,
+  "dateAdded": "2026-03-19T21:03:29.589Z"
+}
