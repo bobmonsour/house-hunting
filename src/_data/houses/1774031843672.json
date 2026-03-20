@@ -1,0 +1,160 @@
+{
+  "id": 1774031843672,
+  "address": "1275 New York Dr",
+  "city": "Altadena, CA 91001",
+  "price": 2695000,
+  "beds": 4,
+  "baths": 4,
+  "sqft": 2875,
+  "lotSize": 7492,
+  "yearBuilt": 1921,
+  "images": [
+    "/images/1774031843672/photo-1.jpg",
+    "/images/1774031843672/photo-2.jpg",
+    "/images/1774031843672/photo-3.jpg",
+    "/images/1774031843672/photo-4.jpg",
+    "/images/1774031843672/photo-5.jpg",
+    "/images/1774031843672/photo-6.jpg",
+    "/images/1774031843672/photo-7.jpg",
+    "/images/1774031843672/photo-8.jpg",
+    "/images/1774031843672/photo-9.jpg",
+    "/images/1774031843672/photo-10.jpg",
+    "/images/1774031843672/photo-11.jpg",
+    "/images/1774031843672/photo-12.jpg",
+    "/images/1774031843672/photo-13.jpg",
+    "/images/1774031843672/photo-14.jpg",
+    "/images/1774031843672/photo-15.jpg",
+    "/images/1774031843672/photo-16.jpg",
+    "/images/1774031843672/photo-17.jpg",
+    "/images/1774031843672/photo-18.jpg",
+    "/images/1774031843672/photo-19.jpg",
+    "/images/1774031843672/photo-20.jpg",
+    "/images/1774031843672/photo-21.jpg",
+    "/images/1774031843672/photo-22.jpg",
+    "/images/1774031843672/photo-23.jpg",
+    "/images/1774031843672/photo-24.jpg",
+    "/images/1774031843672/photo-25.jpg",
+    "/images/1774031843672/photo-26.jpg",
+    "/images/1774031843672/photo-27.jpg",
+    "/images/1774031843672/photo-28.jpg",
+    "/images/1774031843672/photo-29.jpg",
+    "/images/1774031843672/photo-30.jpg",
+    "/images/1774031843672/photo-31.jpg",
+    "/images/1774031843672/photo-32.jpg",
+    "/images/1774031843672/photo-33.jpg",
+    "/images/1774031843672/photo-34.jpg",
+    "/images/1774031843672/photo-35.jpg",
+    "/images/1774031843672/photo-36.jpg",
+    "/images/1774031843672/photo-37.jpg",
+    "/images/1774031843672/photo-38.jpg",
+    "/images/1774031843672/photo-39.jpg",
+    "/images/1774031843672/photo-40.jpg",
+    "/images/1774031843672/photo-41.jpg",
+    "/images/1774031843672/photo-42.jpg",
+    "/images/1774031843672/photo-43.jpg",
+    "/images/1774031843672/photo-44.jpg",
+    "/images/1774031843672/photo-45.jpg",
+    "/images/1774031843672/photo-46.jpg",
+    "/images/1774031843672/photo-47.jpg",
+    "/images/1774031843672/photo-48.jpg",
+    "/images/1774031843672/photo-49.jpg",
+    "/images/1774031843672/photo-50.jpg",
+    "/images/1774031843672/photo-51.jpg",
+    "/images/1774031843672/photo-52.jpg",
+    "/images/1774031843672/photo-53.jpg"
+  ],
+  "neighborhood": "Altadena is a quiet, residential foothill community with larger lots, mature trees, and a mix of historic Craftsman bungalows, Spanish Colonial Revival homes, and mid-century houses. The area offers a peaceful, suburban feel with mountain views and easy access to hiking trails but has limited walkable retail and relies on nearby Pasadena for dining and shopping.",
+  "parkProximity": "5.7 to 6.9 miles to Eaton Canyon Nature Center and other parks",
+  "floodRisk": "Low — Zone X, minimal flood hazard (FEMA NFHL)",
+  "fireRisk": "Low — not in a fire hazard severity zone (CAL FIRE FHSZ)",
+  "crimeRating": "Below Average — Grade D+ (CrimeGrade.org)",
+  "distances": [
+    {
+      "name": "Whole Foods Market",
+      "address": "3751 E Foothill Blvd, Pasadena, CA 91107",
+      "miles": "4.1 mi",
+      "time": "11 min"
+    },
+    {
+      "name": "Trader Joe's",
+      "address": "345 S Lake Ave, Pasadena, CA 91101",
+      "miles": "3.4 mi",
+      "time": "12 min"
+    },
+    {
+      "name": "Costco",
+      "address": "3972 Costco Dr, Arcadia, CA 91006",
+      "miles": "7.8 mi",
+      "time": "13 min"
+    },
+    {
+      "name": "Target",
+      "address": "777 E Colorado Blvd, Pasadena, CA 91101",
+      "miles": "2.7 mi",
+      "time": "10 min"
+    },
+    {
+      "name": "Home Depot",
+      "address": "2881 E Walnut St, Pasadena, CA 91107",
+      "miles": "3.8 mi",
+      "time": "11 min"
+    },
+    {
+      "name": "Republik Coffee",
+      "address": "48 W Green St, Pasadena, CA 91105",
+      "miles": "5.0 mi",
+      "time": "12 min"
+    }
+  ],
+  "agent": {
+    "name": "Teresa Fuller",
+    "phone": "+16264005414",
+    "email": "—"
+  },
+  "dateListed": "2026-03-20",
+  "priceHistory": [
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Mar 20, 2026",
+      "amount": 2695000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (MLS)",
+      "date": "Jun 11, 2018",
+      "amount": 1508000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Jun 11, 2018",
+      "amount": 1508000
+    },
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Apr 17, 2018",
+      "amount": 1498000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Oct 17, 1967",
+      "amount": 40000
+    }
+  ],
+  "lastSold": {
+    "date": "Jun 11, 2018",
+    "price": 1508000
+  },
+  "estimates": {
+    "redfin": 2680670
+  },
+  "listingUrl": "https://www.redfin.com/CA/Altadena/1275-New-York-Dr-91001/home/7261720",
+  "listingSource": "redfin",
+  "redfinUrl": "https://www.redfin.com/CA/Altadena/1275-New-York-Dr-91001/home/7261720",
+  "lat": 34.1788227,
+  "lon": -118.1243758,
+  "dateAdded": "2026-03-20T18:38:19.731Z"
+}
