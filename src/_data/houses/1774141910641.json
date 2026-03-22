@@ -1,0 +1,212 @@
+{
+  "id": 1774141910641,
+  "address": "1614 Las Lunas St",
+  "city": "Pasadena, CA 91106",
+  "price": 1895000,
+  "beds": 5,
+  "baths": 3,
+  "sqft": 2905,
+  "lotSize": 8128,
+  "yearBuilt": 1911,
+  "images": [
+    "/images/1774141910641/photo-1.jpg",
+    "/images/1774141910641/photo-2.jpg",
+    "/images/1774141910641/photo-3.jpg",
+    "/images/1774141910641/photo-4.jpg",
+    "/images/1774141910641/photo-5.jpg",
+    "/images/1774141910641/photo-6.jpg",
+    "/images/1774141910641/photo-7.jpg",
+    "/images/1774141910641/photo-8.jpg",
+    "/images/1774141910641/photo-9.jpg",
+    "/images/1774141910641/photo-10.jpg",
+    "/images/1774141910641/photo-11.jpg",
+    "/images/1774141910641/photo-12.jpg",
+    "/images/1774141910641/photo-13.jpg",
+    "/images/1774141910641/photo-14.jpg",
+    "/images/1774141910641/photo-15.jpg",
+    "/images/1774141910641/photo-16.jpg",
+    "/images/1774141910641/photo-17.jpg",
+    "/images/1774141910641/photo-18.jpg",
+    "/images/1774141910641/photo-19.jpg",
+    "/images/1774141910641/photo-20.jpg",
+    "/images/1774141910641/photo-21.jpg",
+    "/images/1774141910641/photo-22.jpg",
+    "/images/1774141910641/photo-23.jpg",
+    "/images/1774141910641/photo-24.jpg",
+    "/images/1774141910641/photo-25.jpg",
+    "/images/1774141910641/photo-26.jpg",
+    "/images/1774141910641/photo-27.jpg",
+    "/images/1774141910641/photo-28.jpg",
+    "/images/1774141910641/photo-29.jpg",
+    "/images/1774141910641/photo-30.jpg",
+    "/images/1774141910641/photo-31.jpg",
+    "/images/1774141910641/photo-32.jpg",
+    "/images/1774141910641/photo-33.jpg",
+    "/images/1774141910641/photo-34.jpg",
+    "/images/1774141910641/photo-35.jpg",
+    "/images/1774141910641/photo-36.jpg",
+    "/images/1774141910641/photo-37.jpg",
+    "/images/1774141910641/photo-38.jpg",
+    "/images/1774141910641/photo-39.jpg",
+    "/images/1774141910641/photo-40.jpg",
+    "/images/1774141910641/photo-41.jpg",
+    "/images/1774141910641/photo-42.jpg",
+    "/images/1774141910641/photo-43.jpg",
+    "/images/1774141910641/photo-44.jpg",
+    "/images/1774141910641/photo-45.jpg",
+    "/images/1774141910641/photo-46.jpg",
+    "/images/1774141910641/photo-47.jpg",
+    "/images/1774141910641/photo-48.jpg",
+    "/images/1774141910641/photo-49.jpg",
+    "/images/1774141910641/photo-50.jpg",
+    "/images/1774141910641/photo-51.jpg",
+    "/images/1774141910641/photo-52.jpg",
+    "/images/1774141910641/photo-53.jpg",
+    "/images/1774141910641/photo-54.jpg",
+    "/images/1774141910641/photo-55.jpg",
+    "/images/1774141910641/photo-56.jpg",
+    "/images/1774141910641/photo-57.jpg"
+  ],
+  "neighborhood": "The Las Lunas Street area is located in a quiet tree-lined northeast Pasadena neighborhood with Craftsman-style homes and a very walkable character. It features preserved historic architecture with charming residential streets and good access to transit, including proximity to the Gold/A line station and Old Pasadena's walkable shopping and dining areas.",
+  "parkProximity": "Within 5.6 miles to several parks including Huntington Botanical Gardens, Eaton Canyon Nature Center, and Victory Park",
+  "floodRisk": "Low — Zone X, minimal flood hazard (FEMA NFHL)",
+  "fireRisk": "Low — not in a fire hazard severity zone (CAL FIRE FHSZ)",
+  "crimeRating": "Moderate — The area is in the northeast section which CrimeGrade.org identifies as the safest part of Pasadena, though the city overall receives a D- crime grade with higher property crime rates than national average",
+  "distances": [
+    {
+      "name": "Whole Foods Market",
+      "address": "3751 E Foothill Blvd, Pasadena, CA 91107",
+      "miles": "3.0 mi",
+      "time": "9 min"
+    },
+    {
+      "name": "Trader Joe's",
+      "address": "345 S Lake Ave, Pasadena, CA 91101",
+      "miles": "2.3 mi",
+      "time": "10 min"
+    },
+    {
+      "name": "Costco",
+      "address": "3972 Costco Dr, Arcadia, CA 91006",
+      "miles": "5.9 mi",
+      "time": "10 min"
+    },
+    {
+      "name": "Target",
+      "address": "777 E Colorado Blvd, Pasadena, CA 91101",
+      "miles": "1.7 mi",
+      "time": "8 min"
+    },
+    {
+      "name": "Home Depot",
+      "address": "2881 E Walnut St, Pasadena, CA 91107",
+      "miles": "2.1 mi",
+      "time": "7 min"
+    },
+    {
+      "name": "Republik Coffee",
+      "address": "48 W Green St, Pasadena, CA 91105",
+      "miles": "3.6 mi",
+      "time": "9 min"
+    }
+  ],
+  "agent": {
+    "name": "Jordan A Nedeff",
+    "phone": "+16264005414",
+    "email": "—"
+  },
+  "dateListed": "2026-03-18",
+  "priceHistory": [
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Mar 18, 2026",
+      "amount": 1895000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (MLS)",
+      "date": "Jun 1, 2017",
+      "amount": 906000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Jun 1, 2017",
+      "amount": 906000
+    },
+    {
+      "type": "reduced",
+      "label": "Price Changed",
+      "date": "Apr 18, 2017",
+      "amount": 959000
+    },
+    {
+      "type": "reduced",
+      "label": "Price Changed",
+      "date": "Mar 21, 2017",
+      "amount": 999995
+    },
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Mar 7, 2017",
+      "amount": 1100000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Dec 21, 2001",
+      "amount": 539000
+    },
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Nov 27, 2001",
+      "amount": 539000
+    },
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Oct 29, 2001",
+      "amount": 539000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Feb 26, 1993",
+      "amount": 267000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Oct 25, 1991",
+      "amount": 222500
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Apr 13, 1990",
+      "amount": 249000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Feb 1, 1985",
+      "amount": 132500
+    }
+  ],
+  "lastSold": {
+    "date": "Jun 1, 2017",
+    "price": 906000
+  },
+  "estimates": {
+    "redfin": 1998986
+  },
+  "listingUrl": "https://www.redfin.com/CA/Pasadena/1614-Las-Lunas-St-91106/home/7215242",
+  "listingSource": "redfin",
+  "redfinUrl": "https://www.redfin.com/CA/Pasadena/1614-Las-Lunas-St-91106/home/7215242",
+  "lat": 34.1562881,
+  "lon": -118.1169557,
+  "dateAdded": "2026-03-22T01:13:38.701Z"
+}

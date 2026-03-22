@@ -1,0 +1,138 @@
+{
+  "id": 1774141884526,
+  "address": "1525 Oak Meadow Ln",
+  "city": "South Pasadena, CA 91030",
+  "price": 2098000,
+  "beds": 3,
+  "baths": 2,
+  "sqft": 2384,
+  "lotSize": 23690,
+  "yearBuilt": 1955,
+  "images": [
+    "/images/1774141884526/photo-1.jpg",
+    "/images/1774141884526/photo-2.jpg",
+    "/images/1774141884526/photo-3.jpg",
+    "/images/1774141884526/photo-4.jpg",
+    "/images/1774141884526/photo-5.jpg",
+    "/images/1774141884526/photo-6.jpg",
+    "/images/1774141884526/photo-7.jpg",
+    "/images/1774141884526/photo-8.jpg",
+    "/images/1774141884526/photo-9.jpg",
+    "/images/1774141884526/photo-10.jpg",
+    "/images/1774141884526/photo-11.jpg",
+    "/images/1774141884526/photo-12.jpg",
+    "/images/1774141884526/photo-13.jpg",
+    "/images/1774141884526/photo-14.jpg",
+    "/images/1774141884526/photo-15.jpg",
+    "/images/1774141884526/photo-16.jpg",
+    "/images/1774141884526/photo-17.jpg",
+    "/images/1774141884526/photo-18.jpg",
+    "/images/1774141884526/photo-19.jpg",
+    "/images/1774141884526/photo-20.jpg",
+    "/images/1774141884526/photo-21.jpg",
+    "/images/1774141884526/photo-22.jpg",
+    "/images/1774141884526/photo-23.jpg",
+    "/images/1774141884526/photo-24.jpg",
+    "/images/1774141884526/photo-25.jpg",
+    "/images/1774141884526/photo-26.jpg",
+    "/images/1774141884526/photo-27.jpg",
+    "/images/1774141884526/photo-28.jpg",
+    "/images/1774141884526/photo-29.jpg",
+    "/images/1774141884526/photo-30.jpg",
+    "/images/1774141884526/photo-31.jpg",
+    "/images/1774141884526/photo-32.jpg",
+    "/images/1774141884526/photo-33.jpg",
+    "/images/1774141884526/photo-34.jpg",
+    "/images/1774141884526/photo-35.jpg",
+    "/images/1774141884526/photo-36.jpg",
+    "/images/1774141884526/photo-37.jpg",
+    "/images/1774141884526/photo-38.jpg",
+    "/images/1774141884526/photo-39.jpg",
+    "/images/1774141884526/photo-40.jpg",
+    "/images/1774141884526/photo-41.jpg",
+    "/images/1774141884526/photo-42.jpg",
+    "/images/1774141884526/photo-43.jpg",
+    "/images/1774141884526/photo-44.jpg",
+    "/images/1774141884526/photo-45.jpg",
+    "/images/1774141884526/photo-46.jpg",
+    "/images/1774141884526/photo-47.jpg",
+    "/images/1774141884526/photo-48.jpg",
+    "/images/1774141884526/photo-49.jpg"
+  ],
+  "neighborhood": "<cite index=\"1-16,1-18,1-31,1-37\">South Pasadena is a friendly, walkable, and well-maintained neighborhood with tree-lined streets, excellent schools, and a strong sense of community. The area offers safe, dog-friendly streets with excellent public transportation access via the Gold Line.</cite>",
+  "parkProximity": "<cite index=\"22-1,30-13,30-14,30-15,30-16\">0.6 miles to Garfield Park (1000 Park Ave) - a 7.5-acre community park with playgrounds, tennis courts, and picnic areas, centrally located and easily walkable from most residential areas.</cite>",
+  "floodRisk": "Low — Zone X, minimal flood hazard (FEMA NFHL)",
+  "fireRisk": "Low — not in a fire hazard severity zone (CAL FIRE FHSZ)",
+  "crimeRating": "<cite index=\"31-1,31-3\">Average Safety — Grade C- (CrimeGrade.org): Ranks in 35th percentile for safety, meaning safer than 35% of cities but less safe than 65%.</cite>",
+  "distances": [
+    {
+      "name": "Whole Foods Market",
+      "address": "465 S Arroyo Pkwy, Pasadena, CA 91105",
+      "miles": "2.9 mi",
+      "time": "10 min"
+    },
+    {
+      "name": "Trader Joe's",
+      "address": "613 Mission St, South Pasadena, CA 91030",
+      "miles": "1.7 mi",
+      "time": "7 min"
+    },
+    {
+      "name": "Costco",
+      "address": "3972 Costco Dr, Arcadia, CA 91006",
+      "miles": "7.4 mi",
+      "time": "19 min"
+    },
+    {
+      "name": "Target",
+      "address": "777 E Colorado Blvd, Pasadena, CA 91101",
+      "miles": "3.6 mi",
+      "time": "14 min"
+    },
+    {
+      "name": "Home Depot",
+      "address": "2881 E Walnut St, Pasadena, CA 91107",
+      "miles": "5.1 mi",
+      "time": "14 min"
+    },
+    {
+      "name": "Republik Coffee",
+      "address": "48 W Green St, Pasadena, CA 91105",
+      "miles": "3.1 mi",
+      "time": "13 min"
+    }
+  ],
+  "agent": {
+    "name": "Diane L Lasell",
+    "phone": "+16264005414",
+    "email": "—"
+  },
+  "dateListed": "2026-03-20",
+  "priceHistory": [
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Mar 20, 2026",
+      "amount": 2098000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Oct 23, 1998",
+      "amount": 370000
+    }
+  ],
+  "lastSold": {
+    "date": "Oct 23, 1998",
+    "price": 370000
+  },
+  "estimates": {
+    "redfin": 2097460
+  },
+  "listingUrl": "https://www.redfin.com/CA/South-Pasadena/1525-Oak-Meadow-Ln-91030/home/7008296",
+  "listingSource": "redfin",
+  "redfinUrl": "https://www.redfin.com/CA/South-Pasadena/1525-Oak-Meadow-Ln-91030/home/7008296",
+  "lat": 34.1080061,
+  "lon": -118.1434994,
+  "dateAdded": "2026-03-22T01:12:59.723Z"
+}
