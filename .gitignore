@@ -3,3 +3,4 @@ _site/
 .wrangler/
 .env
 src/_data/mutableState.json
+.DS_Store
