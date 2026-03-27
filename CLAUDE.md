@@ -31,14 +31,16 @@ A password-protected house hunting web app for comparing properties in the Pasad
 4. **Flood risk**: Query FEMA NFHL ArcGIS REST API (layer 28) with lat/lon → interpret FEMA zone codes (X=Low, A/AE=High, V/VE=High coastal)
 5. **Claude research**: Web search for neighborhood description, park proximity, crime rating only (not property details)
 6. **Google Maps**: Distance matrix to preset destinations
-7. **Images**: Download up to 20 listing photos from Redfin JSON-LD image array
-8. **Merge all**: Write combined JSON to `src/_data/houses/{id}.json`
+7. **Peep Rating**: Parse friend/family locations from `src/_data/peep-map.kml` (supports CDATA names) → parallel driving + walking Distance Matrix API calls → average driving distance/time + per-peep breakdown with coordinates
+8. **Images**: Download up to 20 listing photos from Redfin JSON-LD image array
+9. **Merge all**: Write combined JSON to `src/_data/houses/{id}.json`
 
 ### Key Directories
 ```
 src/
   _data/houses.js       — Eleventy data file, reads src/_data/houses/*.json
   _data/houses/         — Per-property JSON files (immutable research data)
+  _data/peep-map.kml    — Google My Maps KML export with friend/family locations for peep rating
   images/{id}/          — Downloaded property photos (up to 20 per listing)
   js/                   — Client-side modules (ES modules, no bundler)
     app.js              — Entry point, auth, state, global event wiring
@@ -52,7 +54,8 @@ src/
   index.njk             — Single-page app template
 worker/index.js         — Cloudflare Worker (auth, KV state, Redfin URL stubs)
 scripts/
-  research.js           — Redfin scraping + Claude neighborhood research + risk APIs + distances
+  research.js           — Redfin scraping + Claude neighborhood research + risk APIs + distances + peep rating
+  peep-rating.js        — Backfill peep rating (driving + walking distances) for all properties from KML
   sync-kv.js            — Prebuild: process KV stubs → run research → write data files
   migrate-kv.js         — One-time migration from old KV format
 ```
@@ -75,6 +78,10 @@ scripts/
   "fireRisk": "Low — not in a fire hazard severity zone (CAL FIRE FHSZ)",
   "crimeRating": "Very Low — Grade A (CrimeGrade.org)",
   "distances": [{ "name": "Whole Foods Market", "miles": "2.1 mi", "time": "7 min" }],
+  "peepRating": {
+    "avgMiles": "7.4 mi", "avgTime": "14 min",
+    "distances": [{ "name": "Joan & David", "lat": 34.15, "lon": -118.16, "driving": { "miles": "3.2 mi", "time": "8 min" }, "walking": { "miles": "2.8 mi", "time": "52 min" } }]
+  },
   "agent": { "name": "...", "phone": "...", "email": "..." },
   "dateListed": "2026-01-15",
   "priceHistory": [{ "type": "listed", "label": "Listed", "date": "Jan 15, 2026", "amount": 1200000 }],
@@ -104,6 +111,7 @@ scripts/
 - `npm run deploy` — Build + deploy to Cloudflare Workers
 - `npm run research` — Manual research: `node scripts/research.js "<address>" "<city>" <id> "<redfinUrl>"`
 - `npm run sync` — Process pending address stubs from KV
+- `npm run peep-rating` — Backfill peep rating (driving + walking distances from KML) for all properties
 
 ## Key Patterns
 
@@ -120,6 +128,7 @@ scripts/
 - **Auth**: Simple shared password, token stored in localStorage as `btp_token`
 - **Redfin URL parsing**: Worker extracts address/city from URL path pattern `/CA/City-Name/123-Street-Name-91030/home/12345`
 - **Image gallery**: Detail view shows prev/next nav + counter for multi-image listings (dots shown for ≤10 images). Arrow key navigation in both gallery and lightbox. Touch swipe support for gallery and lightbox.
+- **Peep Rating**: Average driving distance/time to friends & family from `src/_data/peep-map.kml`. Detail header shows summary line + expandable `<details>` dropdown with per-peep driving/walking Google Maps direction links (sorted by driving distance ascending). KML parsing handles both `<name>Text</name>` and `<name><![CDATA[Text]]></name>`. Backfill script `scripts/peep-rating.js` updates all house JSONs; also computed during initial research.
 - **Native fetch()**: research.js uses Node's built-in `fetch()` instead of `https.get` to avoid interference from the Anthropic SDK's HTTP stack
 
 ## External APIs (no keys required)
