@@ -207,5 +207,102 @@
   "redfinUrl": "https://www.redfin.com/CA/La-Canada-Flintridge/1354-Green-Ln-91011/home/7245784",
   "lat": 34.2171725,
   "lon": -118.2078166,
-  "dateAdded": "2026-03-19T17:58:15.915Z"
+  "dateAdded": "2026-03-19T17:58:15.915Z",
+  "peepRating": {
+    "avgMiles": "6.8 mi",
+    "avgTime": "12 min",
+    "distances": [
+      {
+        "name": "Joan & David",
+        "lat": 34.1569436,
+        "lon": -118.1613219,
+        "driving": {
+          "miles": "6.1 mi",
+          "time": "10 min"
+        },
+        "walking": {
+          "miles": "5.8 mi",
+          "time": "2 hours 2 min"
+        }
+      },
+      {
+        "name": "Helen Becich",
+        "lat": 34.1578015,
+        "lon": -118.231412,
+        "driving": {
+          "miles": "7.0 mi",
+          "time": "11 min"
+        },
+        "walking": {
+          "miles": "5.8 mi",
+          "time": "2 hours 1 min"
+        }
+      },
+      {
+        "name": "Dan & Eileen Collins",
+        "lat": 34.1896915,
+        "lon": -118.1388309,
+        "driving": {
+          "miles": "6.2 mi",
+          "time": "13 min"
+        },
+        "walking": {
+          "miles": "5.9 mi",
+          "time": "2 hours 9 min"
+        }
+      },
+      {
+        "name": "Tom & Jan Selinske",
+        "lat": 34.1742915,
+        "lon": -118.1303586,
+        "driving": {
+          "miles": "6.6 mi",
+          "time": "14 min"
+        },
+        "walking": {
+          "miles": "6.4 mi",
+          "time": "2 hours 17 min"
+        }
+      },
+      {
+        "name": "Mike & Mary Veselich",
+        "lat": 34.2004099,
+        "lon": -118.1410491,
+        "driving": {
+          "miles": "6.7 mi",
+          "time": "14 min"
+        },
+        "walking": {
+          "miles": "6.1 mi",
+          "time": "2 hours 17 min"
+        }
+      },
+      {
+        "name": "Chris & Hana Veselich",
+        "lat": 34.2168295,
+        "lon": -118.2386256,
+        "driving": {
+          "miles": "3.8 mi",
+          "time": "7 min"
+        },
+        "walking": {
+          "miles": "3.2 mi",
+          "time": "1 hour 11 min"
+        }
+      },
+      {
+        "name": "Dave & Jane Rumph",
+        "lat": 34.1656763,
+        "lon": -118.0748669,
+        "driving": {
+          "miles": "11.6 mi",
+          "time": "18 min"
+        },
+        "walking": {
+          "miles": "10.4 mi",
+          "time": "3 hours 46 min"
+        }
+      }
+    ]
+  }
 }

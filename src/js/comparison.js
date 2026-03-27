@@ -19,6 +19,7 @@ export function openComparison() {
     ["Corner Lot", (h) => h.corner === true ? "Yes" : h.corner === false ? "No" : "Unknown"],
     ["Road Noise", (h) => h.roadNoise === true ? "Yes" : h.roadNoise === false ? "No" : "Unknown"],
     ["Stories", (h) => h.stories === 1 ? "1-Story" : h.stories === 2 ? "2-Story" : "Unknown"],
+    ["Peep Rating", (h) => h.peepRating ? `${h.peepRating.avgMiles} / ${h.peepRating.avgTime} avg` : "—"],
     ["Park Proximity", (h) => h.parkProximity],
     ["Flood Risk", (h) => h.floodRisk],
     ["Fire Risk", (h) => h.fireRisk],

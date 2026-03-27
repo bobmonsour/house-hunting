@@ -139,5 +139,102 @@
   "listingSource": "redfin",
   "redfinUrl": "https://www.redfin.com/CA/Glendale/1217-Moncado-Dr-91207/home/7162315",
   "lotSize": 0,
-  "dateAdded": "2026-03-05T16:00:00.000Z"
+  "dateAdded": "2026-03-05T16:00:00.000Z",
+  "peepRating": {
+    "avgMiles": "8.0 mi",
+    "avgTime": "13 min",
+    "distances": [
+      {
+        "name": "Joan & David",
+        "lat": 34.1569436,
+        "lon": -118.1613219,
+        "driving": {
+          "miles": "6.8 mi",
+          "time": "11 min"
+        },
+        "walking": {
+          "miles": "6.9 mi",
+          "time": "2 hours 39 min"
+        }
+      },
+      {
+        "name": "Helen Becich",
+        "lat": 34.1578015,
+        "lon": -118.231412,
+        "driving": {
+          "miles": "0.9 mi",
+          "time": "4 min"
+        },
+        "walking": {
+          "miles": "0.9 mi",
+          "time": "23 min"
+        }
+      },
+      {
+        "name": "Dan & Eileen Collins",
+        "lat": 34.1896915,
+        "lon": -118.1388309,
+        "driving": {
+          "miles": "10.3 mi",
+          "time": "16 min"
+        },
+        "walking": {
+          "miles": "9.9 mi",
+          "time": "3 hours 52 min"
+        }
+      },
+      {
+        "name": "Tom & Jan Selinske",
+        "lat": 34.1742915,
+        "lon": -118.1303586,
+        "driving": {
+          "miles": "9.4 mi",
+          "time": "16 min"
+        },
+        "walking": {
+          "miles": "9.4 mi",
+          "time": "3 hours 38 min"
+        }
+      },
+      {
+        "name": "Mike & Mary Veselich",
+        "lat": 34.2004099,
+        "lon": -118.1410491,
+        "driving": {
+          "miles": "10.7 mi",
+          "time": "18 min"
+        },
+        "walking": {
+          "miles": "10.6 mi",
+          "time": "4 hours 11 min"
+        }
+      },
+      {
+        "name": "Chris & Hana Veselich",
+        "lat": 34.2168295,
+        "lon": -118.2386256,
+        "driving": {
+          "miles": "5.9 mi",
+          "time": "10 min"
+        },
+        "walking": {
+          "miles": "4.5 mi",
+          "time": "1 hour 50 min"
+        }
+      },
+      {
+        "name": "Dave & Jane Rumph",
+        "lat": 34.1656763,
+        "lon": -118.0748669,
+        "driving": {
+          "miles": "11.7 mi",
+          "time": "18 min"
+        },
+        "walking": {
+          "miles": "11.8 mi",
+          "time": "4 hours 30 min"
+        }
+      }
+    ]
+  }
 }

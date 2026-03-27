@@ -138,5 +138,102 @@
   "redfinUrl": "https://www.redfin.com/CA/Carmel-Valley/131-Rancho-Rd-93924/home/14894479",
   "lat": 36.4972466,
   "lon": -121.7460802,
-  "dateAdded": "2026-03-19T21:03:29.589Z"
+  "dateAdded": "2026-03-19T21:03:29.589Z",
+  "peepRating": {
+    "avgMiles": "315.5 mi",
+    "avgTime": "303 min",
+    "distances": [
+      {
+        "name": "Joan & David",
+        "lat": 34.1569436,
+        "lon": -118.1613219,
+        "driving": {
+          "miles": "316.1 mi",
+          "time": "5 hours 2 min"
+        },
+        "walking": {
+          "miles": "338.6 mi",
+          "time": "5 days 5 hours"
+        }
+      },
+      {
+        "name": "Helen Becich",
+        "lat": 34.1578015,
+        "lon": -118.231412,
+        "driving": {
+          "miles": "311.8 mi",
+          "time": "4 hours 59 min"
+        },
+        "walking": {
+          "miles": "332.9 mi",
+          "time": "5 days 3 hours"
+        }
+      },
+      {
+        "name": "Dan & Eileen Collins",
+        "lat": 34.1896915,
+        "lon": -118.1388309,
+        "driving": {
+          "miles": "316.2 mi",
+          "time": "5 hours 5 min"
+        },
+        "walking": {
+          "miles": "349.8 mi",
+          "time": "5 days 10 hours"
+        }
+      },
+      {
+        "name": "Tom & Jan Selinske",
+        "lat": 34.1742915,
+        "lon": -118.1303586,
+        "driving": {
+          "miles": "316.6 mi",
+          "time": "5 hours 6 min"
+        },
+        "walking": {
+          "miles": "350.5 mi",
+          "time": "5 days 10 hours"
+        }
+      },
+      {
+        "name": "Mike & Mary Veselich",
+        "lat": 34.2004099,
+        "lon": -118.1410491,
+        "driving": {
+          "miles": "316.7 mi",
+          "time": "5 hours 6 min"
+        },
+        "walking": {
+          "miles": "349.8 mi",
+          "time": "5 days 10 hours"
+        }
+      },
+      {
+        "name": "Chris & Hana Veselich",
+        "lat": 34.2168295,
+        "lon": -118.2386256,
+        "driving": {
+          "miles": "309.2 mi",
+          "time": "4 hours 56 min"
+        },
+        "walking": {
+          "miles": "345.6 mi",
+          "time": "5 days 8 hours"
+        }
+      },
+      {
+        "name": "Dave & Jane Rumph",
+        "lat": 34.1656763,
+        "lon": -118.0748669,
+        "driving": {
+          "miles": "321.7 mi",
+          "time": "5 hours 10 min"
+        },
+        "walking": {
+          "miles": "343.5 mi",
+          "time": "5 days 7 hours"
+        }
+      }
+    ]
+  }
 }

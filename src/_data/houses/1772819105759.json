@@ -103,5 +103,102 @@
   "listingSource": "redfin",
   "redfinUrl": "https://www.redfin.com/CA/San-Marino/2270-Melville-Dr-91108/home/7016248",
   "lotSize": 7895,
-  "dateAdded": "2026-03-03T14:00:00.000Z"
+  "dateAdded": "2026-03-03T14:00:00.000Z",
+  "peepRating": {
+    "avgMiles": "8.2 mi",
+    "avgTime": "17 min",
+    "distances": [
+      {
+        "name": "Joan & David",
+        "lat": 34.1569436,
+        "lon": -118.1613219,
+        "driving": {
+          "miles": "7.0 mi",
+          "time": "15 min"
+        },
+        "walking": {
+          "miles": "5.7 mi",
+          "time": "2 hours 12 min"
+        }
+      },
+      {
+        "name": "Helen Becich",
+        "lat": 34.1578015,
+        "lon": -118.231412,
+        "driving": {
+          "miles": "11.4 mi",
+          "time": "20 min"
+        },
+        "walking": {
+          "miles": "9.9 mi",
+          "time": "3 hours 46 min"
+        }
+      },
+      {
+        "name": "Dan & Eileen Collins",
+        "lat": 34.1896915,
+        "lon": -118.1388309,
+        "driving": {
+          "miles": "7.3 mi",
+          "time": "18 min"
+        },
+        "walking": {
+          "miles": "6.5 mi",
+          "time": "2 hours 37 min"
+        }
+      },
+      {
+        "name": "Tom & Jan Selinske",
+        "lat": 34.1742915,
+        "lon": -118.1303586,
+        "driving": {
+          "miles": "5.7 mi",
+          "time": "16 min"
+        },
+        "walking": {
+          "miles": "5.1 mi",
+          "time": "2 hours 1 min"
+        }
+      },
+      {
+        "name": "Mike & Mary Veselich",
+        "lat": 34.2004099,
+        "lon": -118.1410491,
+        "driving": {
+          "miles": "8.1 mi",
+          "time": "21 min"
+        },
+        "walking": {
+          "miles": "7.3 mi",
+          "time": "2 hours 57 min"
+        }
+      },
+      {
+        "name": "Chris & Hana Veselich",
+        "lat": 34.2168295,
+        "lon": -118.2386256,
+        "driving": {
+          "miles": "13.5 mi",
+          "time": "20 min"
+        },
+        "walking": {
+          "miles": "14.5 mi",
+          "time": "5 hours 38 min"
+        }
+      },
+      {
+        "name": "Dave & Jane Rumph",
+        "lat": 34.1656763,
+        "lon": -118.0748669,
+        "driving": {
+          "miles": "4.6 mi",
+          "time": "13 min"
+        },
+        "walking": {
+          "miles": "4.6 mi",
+          "time": "1 hour 50 min"
+        }
+      }
+    ]
+  }
 }

@@ -175,5 +175,102 @@
   "listingSource": "redfin",
   "redfinUrl": "https://www.redfin.com/CA/Pasadena/3364-Yorkshire-Rd-91107/home/7221438",
   "lotSize": 15474,
-  "dateAdded": "2026-03-01T12:00:00.000Z"
+  "dateAdded": "2026-03-01T12:00:00.000Z",
+  "peepRating": {
+    "avgMiles": "7.4 mi",
+    "avgTime": "14 min",
+    "distances": [
+      {
+        "name": "Joan & David",
+        "lat": 34.1569436,
+        "lon": -118.1613219,
+        "driving": {
+          "miles": "6.1 mi",
+          "time": "11 min"
+        },
+        "walking": {
+          "miles": "5.7 mi",
+          "time": "2 hours 11 min"
+        }
+      },
+      {
+        "name": "Helen Becich",
+        "lat": 34.1578015,
+        "lon": -118.231412,
+        "driving": {
+          "miles": "10.5 mi",
+          "time": "16 min"
+        },
+        "walking": {
+          "miles": "10.3 mi",
+          "time": "3 hours 56 min"
+        }
+      },
+      {
+        "name": "Dan & Eileen Collins",
+        "lat": 34.1896915,
+        "lon": -118.1388309,
+        "driving": {
+          "miles": "6.2 mi",
+          "time": "15 min"
+        },
+        "walking": {
+          "miles": "6.3 mi",
+          "time": "2 hours 29 min"
+        }
+      },
+      {
+        "name": "Tom & Jan Selinske",
+        "lat": 34.1742915,
+        "lon": -118.1303586,
+        "driving": {
+          "miles": "5.0 mi",
+          "time": "12 min"
+        },
+        "walking": {
+          "miles": "5.0 mi",
+          "time": "1 hour 58 min"
+        }
+      },
+      {
+        "name": "Mike & Mary Veselich",
+        "lat": 34.2004099,
+        "lon": -118.1410491,
+        "driving": {
+          "miles": "9.2 mi",
+          "time": "17 min"
+        },
+        "walking": {
+          "miles": "7.1 mi",
+          "time": "2 hours 50 min"
+        }
+      },
+      {
+        "name": "Chris & Hana Veselich",
+        "lat": 34.2168295,
+        "lon": -118.2386256,
+        "driving": {
+          "miles": "12.6 mi",
+          "time": "16 min"
+        },
+        "walking": {
+          "miles": "14.9 mi",
+          "time": "5 hours 48 min"
+        }
+      },
+      {
+        "name": "Dave & Jane Rumph",
+        "lat": 34.1656763,
+        "lon": -118.0748669,
+        "driving": {
+          "miles": "2.2 mi",
+          "time": "9 min"
+        },
+        "walking": {
+          "miles": "2.2 mi",
+          "time": "55 min"
+        }
+      }
+    ]
+  }
 }

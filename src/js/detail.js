@@ -88,6 +88,25 @@ export function openDetail(id, preserveGallery = false) {
       </div>
       <div class="detail-address-line"><a href="https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(h.address + ", " + h.city)}" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1px dashed var(--text-tertiary);transition:border-color 0.2s ease" onmouseover="this.style.borderBottomColor='var(--accent)'" onmouseout="this.style.borderBottomColor='var(--text-tertiary)'">${h.address}</a></div>
       <div class="detail-city-line">${h.city}</div>
+      ${h.peepRating ? `<div class="detail-peep-rating">Peep Rating: ${h.peepRating.avgMiles} / ${h.peepRating.avgTime} avg</div>
+      <details class="peep-dropdown">
+        <summary>Show distances to peeps</summary>
+        <div class="peep-list">
+          ${[...h.peepRating.distances].sort((a, b) => parseFloat(a.driving?.miles || a.miles || "999") - parseFloat(b.driving?.miles || b.miles || "999")).map((p) => {
+            const origin = encodeURIComponent(h.address + ", " + h.city);
+            const dest = `${p.lat},${p.lon}`;
+            const driving = p.driving || { miles: p.miles || "—", time: p.time || "—" };
+            const walking = p.walking || { miles: "—", time: "—" };
+            return `<div class="peep-row">
+              <span class="peep-name">${p.name}</span>
+              <span class="peep-distances">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${dest}&travelmode=driving" target="_blank" class="peep-link" title="Driving directions">\u{1F697} ${driving.miles} / ${driving.time}</a>
+                <a href="https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${dest}&travelmode=walking" target="_blank" class="peep-link" title="Walking directions">\u{1F6B6} ${walking.miles} / ${walking.time}</a>
+              </span>
+            </div>`;
+          }).join("")}
+        </div>
+      </details>` : ""}
       <div class="detail-listing-links">
         ${(h.listingUrl && h.listingUrl !== "#") || (h.redfinUrl && h.redfinUrl !== "#") ? `<a href="${h.listingUrl && h.listingUrl !== "#" ? h.listingUrl : h.redfinUrl}" class="detail-redfin-link" target="_blank">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
@@ -127,6 +146,7 @@ export function openDetail(id, preserveGallery = false) {
         <div class="info-item"><span class="info-item-label">Wall Ovens</span><span class="info-item-value">${renderWallOvens(h)}</span></div>
         <div class="info-item"><span class="info-item-label">Pool</span><span class="info-item-value">${renderPool(h)}</span></div>
         <div class="info-item"><span class="info-item-label">Garage</span><span class="info-item-value">${renderGarage(h)}</span></div>
+        ${h.peepRating ? `<div class="info-item"><span class="info-item-label">Peep Rating</span><span class="info-item-value">${h.peepRating.avgMiles} / ${h.peepRating.avgTime} avg driving</span></div>` : ""}
         <div class="info-item"><span class="info-item-label">Parks Nearby</span><span class="info-item-value">${h.parkProximity}</span></div>
         <div class="info-item"><span class="info-item-label">Flood Risk</span><span class="info-item-value ${riskClass(h.floodRisk)}">${h.floodRisk}</span></div>
         <div class="info-item"><span class="info-item-label">Fire Risk</span><span class="info-item-value ${riskClass(h.fireRisk)}">${h.fireRisk} <a href="https://egis.fire.ca.gov/FHSZ/" target="_blank" style="color:var(--accent);text-decoration:underline;font-size:0.82rem;margin-left:4px">CAL FIRE Map</a></span></div>

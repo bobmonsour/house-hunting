@@ -179,5 +179,102 @@
   "redfinUrl": "https://www.redfin.com/CA/Pasadena/1768-Casa-Grande-St-91104/home/7200744",
   "lat": 34.1629425,
   "lon": -118.1140081,
-  "dateAdded": "2026-03-15T16:00:00.000Z"
+  "dateAdded": "2026-03-15T16:00:00.000Z",
+  "peepRating": {
+    "avgMiles": "5.2 mi",
+    "avgTime": "10 min",
+    "distances": [
+      {
+        "name": "Joan & David",
+        "lat": 34.1569436,
+        "lon": -118.1613219,
+        "driving": {
+          "miles": "4.3 mi",
+          "time": "9 min"
+        },
+        "walking": {
+          "miles": "3.3 mi",
+          "time": "1 hour 12 min"
+        }
+      },
+      {
+        "name": "Helen Becich",
+        "lat": 34.1578015,
+        "lon": -118.231412,
+        "driving": {
+          "miles": "8.6 mi",
+          "time": "14 min"
+        },
+        "walking": {
+          "miles": "9.0 mi",
+          "time": "3 hours 22 min"
+        }
+      },
+      {
+        "name": "Dan & Eileen Collins",
+        "lat": 34.1896915,
+        "lon": -118.1388309,
+        "driving": {
+          "miles": "3.6 mi",
+          "time": "8 min"
+        },
+        "walking": {
+          "miles": "3.1 mi",
+          "time": "1 hour 15 min"
+        }
+      },
+      {
+        "name": "Tom & Jan Selinske",
+        "lat": 34.1742915,
+        "lon": -118.1303586,
+        "driving": {
+          "miles": "1.7 mi",
+          "time": "5 min"
+        },
+        "walking": {
+          "miles": "1.7 mi",
+          "time": "40 min"
+        }
+      },
+      {
+        "name": "Mike & Mary Veselich",
+        "lat": 34.2004099,
+        "lon": -118.1410491,
+        "driving": {
+          "miles": "4.4 mi",
+          "time": "11 min"
+        },
+        "walking": {
+          "miles": "3.9 mi",
+          "time": "1 hour 35 min"
+        }
+      },
+      {
+        "name": "Chris & Hana Veselich",
+        "lat": 34.2168295,
+        "lon": -118.2386256,
+        "driving": {
+          "miles": "10.7 mi",
+          "time": "14 min"
+        },
+        "walking": {
+          "miles": "9.6 mi",
+          "time": "3 hours 42 min"
+        }
+      },
+      {
+        "name": "Dave & Jane Rumph",
+        "lat": 34.1656763,
+        "lon": -118.0748669,
+        "driving": {
+          "miles": "3.0 mi",
+          "time": "8 min"
+        },
+        "walking": {
+          "miles": "2.7 mi",
+          "time": "1 hour 1 min"
+        }
+      }
+    ]
+  }
 }

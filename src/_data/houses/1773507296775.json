@@ -160,5 +160,102 @@
   "redfinUrl": "https://www.redfin.com/CA/Altadena/744-New-York-Dr-91001/home/7262172",
   "lat": 34.1793349,
   "lon": -118.1354832,
-  "dateAdded": "2026-03-14T15:00:00.000Z"
+  "dateAdded": "2026-03-14T15:00:00.000Z",
+  "peepRating": {
+    "avgMiles": "3.9 mi",
+    "avgTime": "9 min",
+    "distances": [
+      {
+        "name": "Joan & David",
+        "lat": 34.1569436,
+        "lon": -118.1613219,
+        "driving": {
+          "miles": "3.1 mi",
+          "time": "9 min"
+        },
+        "walking": {
+          "miles": "3.0 mi",
+          "time": "1 hour 4 min"
+        }
+      },
+      {
+        "name": "Helen Becich",
+        "lat": 34.1578015,
+        "lon": -118.231412,
+        "driving": {
+          "miles": "8.9 mi",
+          "time": "17 min"
+        },
+        "walking": {
+          "miles": "8.9 mi",
+          "time": "3 hours 18 min"
+        }
+      },
+      {
+        "name": "Dan & Eileen Collins",
+        "lat": 34.1896915,
+        "lon": -118.1388309,
+        "driving": {
+          "miles": "1.1 mi",
+          "time": "3 min"
+        },
+        "walking": {
+          "miles": "1.0 mi",
+          "time": "25 min"
+        }
+      },
+      {
+        "name": "Tom & Jan Selinske",
+        "lat": 34.1742915,
+        "lon": -118.1303586,
+        "driving": {
+          "miles": "0.6 mi",
+          "time": "2 min"
+        },
+        "walking": {
+          "miles": "0.6 mi",
+          "time": "12 min"
+        }
+      },
+      {
+        "name": "Mike & Mary Veselich",
+        "lat": 34.2004099,
+        "lon": -118.1410491,
+        "driving": {
+          "miles": "2.3 mi",
+          "time": "7 min"
+        },
+        "walking": {
+          "miles": "2.0 mi",
+          "time": "51 min"
+        }
+      },
+      {
+        "name": "Chris & Hana Veselich",
+        "lat": 34.2168295,
+        "lon": -118.2386256,
+        "driving": {
+          "miles": "7.5 mi",
+          "time": "12 min"
+        },
+        "walking": {
+          "miles": "7.5 mi",
+          "time": "2 hours 52 min"
+        }
+      },
+      {
+        "name": "Dave & Jane Rumph",
+        "lat": 34.1656763,
+        "lon": -118.0748669,
+        "driving": {
+          "miles": "4.2 mi",
+          "time": "10 min"
+        },
+        "walking": {
+          "miles": "4.5 mi",
+          "time": "1 hour 38 min"
+        }
+      }
+    ]
+  }
 }

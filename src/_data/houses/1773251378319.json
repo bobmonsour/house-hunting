@@ -167,5 +167,102 @@
   "redfinUrl": "https://www.redfin.com/CA/South-Pasadena/1030-Adelaine-Ave-91030/home/7004639",
   "lat": 34.1132061,
   "lon": -118.1621086,
-  "dateAdded": "2026-03-11T12:00:00.000Z"
+  "dateAdded": "2026-03-11T12:00:00.000Z",
+  "peepRating": {
+    "avgMiles": "7.1 mi",
+    "avgTime": "16 min",
+    "distances": [
+      {
+        "name": "Joan & David",
+        "lat": 34.1569436,
+        "lon": -118.1613219,
+        "driving": {
+          "miles": "3.3 mi",
+          "time": "11 min"
+        },
+        "walking": {
+          "miles": "3.3 mi",
+          "time": "1 hour 17 min"
+        }
+      },
+      {
+        "name": "Helen Becich",
+        "lat": 34.1578015,
+        "lon": -118.231412,
+        "driving": {
+          "miles": "7.6 mi",
+          "time": "16 min"
+        },
+        "walking": {
+          "miles": "6.3 mi",
+          "time": "2 hours 25 min"
+        }
+      },
+      {
+        "name": "Dan & Eileen Collins",
+        "lat": 34.1896915,
+        "lon": -118.1388309,
+        "driving": {
+          "miles": "6.8 mi",
+          "time": "16 min"
+        },
+        "walking": {
+          "miles": "6.3 mi",
+          "time": "2 hours 31 min"
+        }
+      },
+      {
+        "name": "Tom & Jan Selinske",
+        "lat": 34.1742915,
+        "lon": -118.1303586,
+        "driving": {
+          "miles": "5.9 mi",
+          "time": "16 min"
+        },
+        "walking": {
+          "miles": "5.8 mi",
+          "time": "2 hours 16 min"
+        }
+      },
+      {
+        "name": "Mike & Mary Veselich",
+        "lat": 34.2004099,
+        "lon": -118.1410491,
+        "driving": {
+          "miles": "7.3 mi",
+          "time": "17 min"
+        },
+        "walking": {
+          "miles": "7.0 mi",
+          "time": "2 hours 49 min"
+        }
+      },
+      {
+        "name": "Chris & Hana Veselich",
+        "lat": 34.2168295,
+        "lon": -118.2386256,
+        "driving": {
+          "miles": "10.7 mi",
+          "time": "16 min"
+        },
+        "walking": {
+          "miles": "10.9 mi",
+          "time": "4 hours 17 min"
+        }
+      },
+      {
+        "name": "Dave & Jane Rumph",
+        "lat": 34.1656763,
+        "lon": -118.0748669,
+        "driving": {
+          "miles": "8.2 mi",
+          "time": "18 min"
+        },
+        "walking": {
+          "miles": "7.8 mi",
+          "time": "3 hours 1 min"
+        }
+      }
+    ]
+  }
 }
