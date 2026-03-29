@@ -1,0 +1,293 @@
+{
+  "id": 1774753165460,
+  "address": "1578 Morada Pl",
+  "city": "Altadena, CA 91001",
+  "price": 1995000,
+  "beds": 4,
+  "baths": 3,
+  "sqft": 2450,
+  "lotSize": 9016,
+  "yearBuilt": 1928,
+  "images": [
+    "/images/1774753165460/photo-1.jpg",
+    "/images/1774753165460/photo-2.jpg",
+    "/images/1774753165460/photo-3.jpg",
+    "/images/1774753165460/photo-4.jpg",
+    "/images/1774753165460/photo-5.jpg",
+    "/images/1774753165460/photo-6.jpg",
+    "/images/1774753165460/photo-7.jpg",
+    "/images/1774753165460/photo-8.jpg",
+    "/images/1774753165460/photo-9.jpg",
+    "/images/1774753165460/photo-10.jpg",
+    "/images/1774753165460/photo-11.jpg",
+    "/images/1774753165460/photo-12.jpg",
+    "/images/1774753165460/photo-13.jpg",
+    "/images/1774753165460/photo-14.jpg",
+    "/images/1774753165460/photo-15.jpg",
+    "/images/1774753165460/photo-16.jpg",
+    "/images/1774753165460/photo-17.jpg",
+    "/images/1774753165460/photo-18.jpg",
+    "/images/1774753165460/photo-19.jpg",
+    "/images/1774753165460/photo-20.jpg",
+    "/images/1774753165460/photo-21.jpg",
+    "/images/1774753165460/photo-22.jpg",
+    "/images/1774753165460/photo-23.jpg",
+    "/images/1774753165460/photo-24.jpg",
+    "/images/1774753165460/photo-25.jpg",
+    "/images/1774753165460/photo-26.jpg",
+    "/images/1774753165460/photo-27.jpg",
+    "/images/1774753165460/photo-28.jpg",
+    "/images/1774753165460/photo-29.jpg",
+    "/images/1774753165460/photo-30.jpg",
+    "/images/1774753165460/photo-31.jpg",
+    "/images/1774753165460/photo-32.jpg",
+    "/images/1774753165460/photo-33.jpg",
+    "/images/1774753165460/photo-34.jpg",
+    "/images/1774753165460/photo-35.jpg",
+    "/images/1774753165460/photo-36.jpg",
+    "/images/1774753165460/photo-37.jpg",
+    "/images/1774753165460/photo-38.jpg",
+    "/images/1774753165460/photo-39.jpg",
+    "/images/1774753165460/photo-40.jpg",
+    "/images/1774753165460/photo-41.jpg",
+    "/images/1774753165460/photo-42.jpg",
+    "/images/1774753165460/photo-43.jpg",
+    "/images/1774753165460/photo-44.jpg",
+    "/images/1774753165460/photo-45.jpg",
+    "/images/1774753165460/photo-46.jpg",
+    "/images/1774753165460/photo-47.jpg",
+    "/images/1774753165460/photo-48.jpg",
+    "/images/1774753165460/photo-49.jpg",
+    "/images/1774753165460/photo-50.jpg",
+    "/images/1774753165460/photo-51.jpg",
+    "/images/1774753165460/photo-52.jpg",
+    "/images/1774753165460/photo-53.jpg",
+    "/images/1774753165460/photo-54.jpg",
+    "/images/1774753165460/photo-55.jpg",
+    "/images/1774753165460/photo-56.jpg",
+    "/images/1774753165460/photo-57.jpg",
+    "/images/1774753165460/photo-58.jpg",
+    "/images/1774753165460/photo-59.jpg"
+  ],
+  "neighborhood": "<cite index=\"2-5,7-18\">Located on a classic NE Altadena tree lined street surrounded by architecturally beautiful homes and estates</cite>, this area offers <cite index=\"3-12,3-13\">early 1900s Craftsman bungalows, Spanish Colonial Revival homes, and larger historic estates along tree-lined avenues</cite> with <cite index=\"2-1,2-15\">a moderately walkable environment (Walk Score of 51)</cite>.",
+  "parkProximity": "<cite index=\"11-2,11-12\">Within 6.2 miles to Eaton Canyon Nature Center</cite> (closest major park facility)",
+  "floodRisk": "Low — Zone X, minimal flood hazard (FEMA NFHL)",
+  "fireRisk": "Low — not in a fire hazard severity zone (CAL FIRE FHSZ)",
+  "crimeRating": "<cite index=\"21-3,21-4\">Below Average — Grade D+ (CrimeGrade.org)</cite>",
+  "distances": [
+    {
+      "name": "Whole Foods Market",
+      "address": "3751 E Foothill Blvd, Pasadena, CA 91107",
+      "miles": "3.8 mi",
+      "time": "11 min"
+    },
+    {
+      "name": "Trader Joe's",
+      "address": "467 N Rosemead Blvd, Pasadena, CA 91107",
+      "miles": "3.3 mi",
+      "time": "9 min"
+    },
+    {
+      "name": "Costco",
+      "address": "3972 Costco Dr, Arcadia, CA 91006",
+      "miles": "7.6 mi",
+      "time": "14 min"
+    },
+    {
+      "name": "Target",
+      "address": "777 E Colorado Blvd, Pasadena, CA 91101",
+      "miles": "3.2 mi",
+      "time": "12 min"
+    },
+    {
+      "name": "Home Depot",
+      "address": "2881 E Walnut St, Pasadena, CA 91107",
+      "miles": "3.5 mi",
+      "time": "11 min"
+    },
+    {
+      "name": "Republik Coffee",
+      "address": "48 W Green St, Pasadena, CA 91105",
+      "miles": "5.1 mi",
+      "time": "13 min"
+    }
+  ],
+  "peepRating": {
+    "avgMiles": "4.5 mi",
+    "avgTime": "10 min",
+    "distances": [
+      {
+        "name": "Joan & David",
+        "lat": 34.1569436,
+        "lon": -118.1613219,
+        "driving": {
+          "miles": "4.0 mi",
+          "time": "12 min"
+        },
+        "walking": {
+          "miles": "4.0 mi",
+          "time": "1 hour 24 min"
+        }
+      },
+      {
+        "name": "Helen Becich",
+        "lat": 34.1578015,
+        "lon": -118.231412,
+        "driving": {
+          "miles": "9.5 mi",
+          "time": "17 min"
+        },
+        "walking": {
+          "miles": "9.8 mi",
+          "time": "3 hours 37 min"
+        }
+      },
+      {
+        "name": "Dan & Eileen Collins",
+        "lat": 34.1896915,
+        "lon": -118.1388309,
+        "driving": {
+          "miles": "2.0 mi",
+          "time": "6 min"
+        },
+        "walking": {
+          "miles": "1.8 mi",
+          "time": "42 min"
+        }
+      },
+      {
+        "name": "Tom & Jan Selinske",
+        "lat": 34.1742915,
+        "lon": -118.1303586,
+        "driving": {
+          "miles": "1.0 mi",
+          "time": "4 min"
+        },
+        "walking": {
+          "miles": "1.0 mi",
+          "time": "22 min"
+        }
+      },
+      {
+        "name": "Mike & Mary Veselich",
+        "lat": 34.2004099,
+        "lon": -118.1410491,
+        "driving": {
+          "miles": "2.9 mi",
+          "time": "9 min"
+        },
+        "walking": {
+          "miles": "2.6 mi",
+          "time": "1 hour 3 min"
+        }
+      },
+      {
+        "name": "Chris & Hana Veselich",
+        "lat": 34.2168295,
+        "lon": -118.2386256,
+        "driving": {
+          "miles": "8.6 mi",
+          "time": "16 min"
+        },
+        "walking": {
+          "miles": "8.6 mi",
+          "time": "3 hours 15 min"
+        }
+      },
+      {
+        "name": "Dave & Jane Rumph",
+        "lat": 34.1656763,
+        "lon": -118.0748669,
+        "driving": {
+          "miles": "3.3 mi",
+          "time": "9 min"
+        },
+        "walking": {
+          "miles": "3.6 mi",
+          "time": "1 hour 17 min"
+        }
+      }
+    ]
+  },
+  "agent": {
+    "name": "Jessica Romero",
+    "phone": "+16264005414",
+    "email": "—"
+  },
+  "dateListed": "2026-03-12",
+  "priceHistory": [
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Mar 12, 2026",
+      "amount": 1995000
+    },
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Jan 6, 2026",
+      "amount": 2150000
+    },
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Nov 10, 2025",
+      "amount": 2295000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (MLS)",
+      "date": "May 5, 2025",
+      "amount": 1375000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (MLS)",
+      "date": "May 5, 2025",
+      "amount": 1375000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "May 5, 2025",
+      "amount": 1375000
+    },
+    {
+      "type": "reduced",
+      "label": "Price Changed",
+      "date": "Mar 4, 2025",
+      "amount": 1199999
+    },
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Mar 4, 2025",
+      "amount": 1199999
+    },
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Mar 4, 2025",
+      "amount": 1999999
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "Nov 15, 1974",
+      "amount": 20000
+    }
+  ],
+  "lastSold": {
+    "date": "May 5, 2025",
+    "price": 1375000
+  },
+  "estimates": {
+    "redfin": 2000912
+  },
+  "listingUrl": "https://www.redfin.com/CA/Altadena/1578-Morada-Pl-91001/home/7261909",
+  "listingSource": "redfin",
+  "redfinUrl": "https://www.redfin.com/CA/Altadena/1578-Morada-Pl-91001/home/7261909",
+  "lat": 34.1792703,
+  "lon": -118.1180503,
+  "dateAdded": "2026-03-29T03:00:24.696Z"
+}
