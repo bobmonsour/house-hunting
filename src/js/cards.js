@@ -49,6 +49,7 @@ function renderCard(h) {
       </div>
       <div class="card-body">
         <div class="card-address"><a href="https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(h.address + ", " + h.city)}" target="_blank" onclick="event.stopPropagation()" style="color:inherit;text-decoration:none;border-bottom:1px dashed var(--text-tertiary)">${h.address}</a></div>
+        ${h.peepRating?.avgMiles ? `<div class="card-peep-rating">Peep Rating: ${h.peepRating.avgMiles} avg</div>` : ""}
         <div class="card-city">${h.city}</div>
         <div class="card-stats">
           <div class="card-stat"><span class="card-stat-value">${h.beds}</span><span class="card-stat-label">Beds</span></div>

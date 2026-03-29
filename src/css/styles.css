@@ -714,6 +714,13 @@ body {
   line-height: 1.3;
 }
 
+.card-peep-rating {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-bottom: 2px;
+}
+
 .card-city {
   font-size: 0.82rem;
   color: var(--text-tertiary);
