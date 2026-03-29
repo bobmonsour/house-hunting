@@ -23,6 +23,7 @@ export function getFilteredSortedHouses() {
       case "added": va = new Date(a.dateAdded); vb = new Date(b.dateAdded); break;
       case "listed": va = new Date(a.dateListed); vb = new Date(b.dateListed); break;
       case "dom": va = getDaysOnMarket(a.dateListed); vb = getDaysOnMarket(b.dateListed); break;
+      case "peep": va = parseFloat(a.peepRating?.avgMiles) || 999; vb = parseFloat(b.peepRating?.avgMiles) || 999; break;
       default: va = new Date(a.dateAdded); vb = new Date(b.dateAdded);
     }
     return state.currentSortDir === "asc" ? va - vb : vb - va;
@@ -149,14 +150,14 @@ export function sortBy(field) {
     state.currentSortDir = state.currentSortDir === "asc" ? "desc" : "asc";
   } else {
     state.currentSort = field;
-    state.currentSortDir = field === "price" ? "asc" : "desc";
+    state.currentSortDir = (field === "price" || field === "peep") ? "asc" : "desc";
   }
-  const labels = { added: "Date Added", price: "Price", sqft: "Sq Ft", beds: "Beds", baths: "Baths", age: "Year Built", listed: "Date Listed", dom: "DOM" };
+  const labels = { added: "Date Added", price: "Price", sqft: "Sq Ft", beds: "Beds", baths: "Baths", age: "Year Built", listed: "Date Listed", dom: "DOM", peep: "Peep Rating" };
   document.getElementById("sortLabel").textContent = `Sort: ${labels[field]}`;
   document.querySelectorAll(".sort-option").forEach((el) => el.classList.remove("active"));
   // Mark the clicked option as active
   const options = document.querySelectorAll(".sort-option");
-  const fieldOrder = ["added", "price", "sqft", "beds", "baths", "age", "listed", "dom"];
+  const fieldOrder = ["peep", "added", "price", "sqft", "beds", "baths", "age", "listed", "dom"];
   const idx = fieldOrder.indexOf(field);
   if (idx >= 0 && options[idx]) options[idx].classList.add("active");
   document.getElementById("sortDropdown").classList.remove("open");

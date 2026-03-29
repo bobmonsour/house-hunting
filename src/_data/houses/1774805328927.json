@@ -1,0 +1,244 @@
+{
+  "id": 1774805328927,
+  "address": "1920 Maiden Ln",
+  "city": "Altadena, CA 91001",
+  "price": 1738000,
+  "beds": 4,
+  "baths": 3,
+  "sqft": 1837,
+  "lotSize": 21871,
+  "yearBuilt": 1967,
+  "images": [
+    "/images/1774805328927/photo-1.jpg",
+    "/images/1774805328927/photo-2.jpg",
+    "/images/1774805328927/photo-3.jpg",
+    "/images/1774805328927/photo-4.jpg",
+    "/images/1774805328927/photo-5.jpg",
+    "/images/1774805328927/photo-6.jpg",
+    "/images/1774805328927/photo-7.jpg",
+    "/images/1774805328927/photo-8.jpg",
+    "/images/1774805328927/photo-9.jpg",
+    "/images/1774805328927/photo-10.jpg",
+    "/images/1774805328927/photo-11.jpg",
+    "/images/1774805328927/photo-12.jpg",
+    "/images/1774805328927/photo-13.jpg",
+    "/images/1774805328927/photo-14.jpg",
+    "/images/1774805328927/photo-15.jpg",
+    "/images/1774805328927/photo-16.jpg",
+    "/images/1774805328927/photo-17.jpg",
+    "/images/1774805328927/photo-18.jpg",
+    "/images/1774805328927/photo-19.jpg",
+    "/images/1774805328927/photo-20.jpg",
+    "/images/1774805328927/photo-21.jpg",
+    "/images/1774805328927/photo-22.jpg",
+    "/images/1774805328927/photo-23.jpg",
+    "/images/1774805328927/photo-24.jpg",
+    "/images/1774805328927/photo-25.jpg",
+    "/images/1774805328927/photo-26.jpg",
+    "/images/1774805328927/photo-27.jpg",
+    "/images/1774805328927/photo-28.jpg"
+  ],
+  "neighborhood": "Altadena is a peaceful, family-friendly foothill community with Spanish Colonial Revival and Craftsman homes, mature trees, and beautiful mountain views. The area features low-density suburban living with larger lots, historic charm, and limited walkability requiring a car for most errands.",
+  "parkProximity": "0.7 miles to Farnsworth Park (10.7 acres with trails, playground, and mountain views)",
+  "floodRisk": "Low — Zone X, minimal flood hazard (FEMA NFHL)",
+  "fireRisk": "Low — not in a fire hazard severity zone (CAL FIRE FHSZ)",
+  "crimeRating": "Moderate to Low — Grade D for overall crime but low violent crime (CrimeGrade.org)",
+  "distances": [
+    {
+      "name": "Whole Foods Market",
+      "address": "465 S Arroyo Pkwy, Pasadena, CA 91105",
+      "miles": "3.9 mi",
+      "time": "14 min"
+    },
+    {
+      "name": "Trader Joe's",
+      "address": "345 S Lake Ave, Pasadena, CA 91101",
+      "miles": "2.9 mi",
+      "time": "11 min"
+    },
+    {
+      "name": "Costco",
+      "address": "3972 Costco Dr, Arcadia, CA 91006",
+      "miles": "8.1 mi",
+      "time": "14 min"
+    },
+    {
+      "name": "Target",
+      "address": "777 E Colorado Blvd, Pasadena, CA 91101",
+      "miles": "2.5 mi",
+      "time": "10 min"
+    },
+    {
+      "name": "Home Depot",
+      "address": "2881 E Walnut St, Pasadena, CA 91107",
+      "miles": "4.1 mi",
+      "time": "12 min"
+    },
+    {
+      "name": "Republik Coffee",
+      "address": "48 W Green St, Pasadena, CA 91105",
+      "miles": "5.3 mi",
+      "time": "13 min"
+    }
+  ],
+  "peepRating": {
+    "avgMiles": "4.2 mi",
+    "avgTime": "9 min",
+    "distances": [
+      {
+        "name": "Joan & David",
+        "lat": 34.1569436,
+        "lon": -118.1613219,
+        "driving": {
+          "miles": "3.4 mi",
+          "time": "10 min"
+        },
+        "walking": {
+          "miles": "3.4 mi",
+          "time": "1 hour 11 min"
+        }
+      },
+      {
+        "name": "Helen Becich",
+        "lat": 34.1578015,
+        "lon": -118.231412,
+        "driving": {
+          "miles": "9.7 mi",
+          "time": "16 min"
+        },
+        "walking": {
+          "miles": "9.2 mi",
+          "time": "3 hours 24 min"
+        }
+      },
+      {
+        "name": "Dan & Eileen Collins",
+        "lat": 34.1896915,
+        "lon": -118.1388309,
+        "driving": {
+          "miles": "1.4 mi",
+          "time": "4 min"
+        },
+        "walking": {
+          "miles": "1.3 mi",
+          "time": "30 min"
+        }
+      },
+      {
+        "name": "Tom & Jan Selinske",
+        "lat": 34.1742915,
+        "lon": -118.1303586,
+        "driving": {
+          "miles": "0.6 mi",
+          "time": "2 min"
+        },
+        "walking": {
+          "miles": "0.5 mi",
+          "time": "11 min"
+        }
+      },
+      {
+        "name": "Mike & Mary Veselich",
+        "lat": 34.2004099,
+        "lon": -118.1410491,
+        "driving": {
+          "miles": "2.3 mi",
+          "time": "7 min"
+        },
+        "walking": {
+          "miles": "2.1 mi",
+          "time": "51 min"
+        }
+      },
+      {
+        "name": "Chris & Hana Veselich",
+        "lat": 34.2168295,
+        "lon": -118.2386256,
+        "driving": {
+          "miles": "8.0 mi",
+          "time": "14 min"
+        },
+        "walking": {
+          "miles": "8.0 mi",
+          "time": "3 hours 2 min"
+        }
+      },
+      {
+        "name": "Dave & Jane Rumph",
+        "lat": 34.1656763,
+        "lon": -118.0748669,
+        "driving": {
+          "miles": "3.8 mi",
+          "time": "9 min"
+        },
+        "walking": {
+          "miles": "4.1 mi",
+          "time": "1 hour 30 min"
+        }
+      }
+    ]
+  },
+  "agent": {
+    "name": "Gerard Current",
+    "phone": "+16264005414",
+    "email": "—"
+  },
+  "dateListed": "2026-01-14",
+  "priceHistory": [
+    {
+      "type": "reduced",
+      "label": "Price Changed",
+      "date": "Mar 11, 2026",
+      "amount": 1738000
+    },
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Jan 14, 2026",
+      "amount": 1788000
+    },
+    {
+      "type": "reduced",
+      "label": "Price Changed",
+      "date": "Nov 4, 2025",
+      "amount": 1788000
+    },
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Sep 16, 2025",
+      "amount": 1888000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (MLS)",
+      "date": "May 27, 2025",
+      "amount": 1450000
+    },
+    {
+      "type": "sold",
+      "label": "Sold (Public Records)",
+      "date": "May 27, 2025",
+      "amount": 1450000
+    },
+    {
+      "type": "listed",
+      "label": "Listed",
+      "date": "Apr 29, 2025",
+      "amount": 1400000
+    }
+  ],
+  "lastSold": {
+    "date": "May 27, 2025",
+    "price": 1450000
+  },
+  "estimates": {
+    "redfin": 1642735
+  },
+  "listingUrl": "https://www.redfin.com/CA/Altadena/1920-Maiden-Ln-91001/home/7261424",
+  "listingSource": "redfin",
+  "redfinUrl": "https://www.redfin.com/CA/Altadena/1920-Maiden-Ln-91001/home/7261424",
+  "lat": 34.1790355,
+  "lon": -118.1283252,
+  "dateAdded": "2026-03-29T17:30:23.848Z"
+}
