@@ -30,7 +30,8 @@
       "Bash(source .env:*)",
       "Bash(sqlite3 $DB:*)",
       "WebFetch(domain:www.homedepot.com)",
-      "Bash(do node:*)"
+      "Bash(do node:*)",
+      "WebFetch(domain:www.redfin.com)"
     ]
   }
 }

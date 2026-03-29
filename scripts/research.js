@@ -159,7 +159,15 @@ function scrapeRedfinListing(html) {
         if (prop.numberOfBathroomsTotal) data.baths = Number(prop.numberOfBathroomsTotal);
         if (prop.floorSize?.value) data.sqft = Number(prop.floorSize.value);
         if (prop.yearBuilt) data.yearBuilt = Number(prop.yearBuilt);
-        if (prop.lotSize?.value) data.lotSize = Number(prop.lotSize.value);
+        if (prop.lotSize?.value) {
+          const lotVal = Number(prop.lotSize.value);
+          const unit = (prop.lotSize.unitCode || prop.lotSize.unitText || "").toUpperCase();
+          if (unit.includes("SQM") || unit === "MTK") {
+            data.lotSize = Math.round(lotVal * 10.7639); // sqm to sqft
+          } else {
+            data.lotSize = lotVal;
+          }
+        }
 
         // All listing images
         if (prop.image && Array.isArray(prop.image)) {
@@ -201,10 +209,14 @@ function scrapeRedfinListing(html) {
     const m = html.match(/(?:Year Built|Built in)[:\s]*(\d{4})/i);
     if (m) data.yearBuilt = Number(m[1]);
   }
+  // Prefer "lotSqFt" from embedded JSON (reliably in sqft) over JSON-LD lotSize
+  const lotSqFtMatch = html.match(/"lotSqFt"\s*:\s*(\d+)/);
+  if (lotSqFtMatch) {
+    data.lotSize = Number(lotSqFtMatch[1]);
+  }
   if (!data.lotSize) {
-    // Try embedded JSON first (more reliable than regex on page text)
-    const lotJsonMatch = html.match(/"lotSize"\s*:\s*(\d+)/)
-      || html.match(/"lotSqFt"\s*:\s*(\d+)/);
+    // Try embedded JSON lotSize
+    const lotJsonMatch = html.match(/"lotSize"\s*:\s*(\d+)/);
     if (lotJsonMatch) {
       data.lotSize = Number(lotJsonMatch[1]);
     } else {
