@@ -79,6 +79,14 @@ export function renderCards() {
   const active = filtered.filter((h) => !h.rejected);
   const rejected = filtered.filter((h) => h.rejected);
   document.getElementById("houseCount").textContent = filtered.length;
+  const countEl = document.getElementById("statusFilterCount");
+  if (state.statusFilter.size > 0) {
+    countEl.textContent = `${active.length} match${active.length !== 1 ? "es" : ""}`;
+    countEl.style.display = "";
+  } else {
+    countEl.textContent = "";
+    countEl.style.display = "none";
+  }
 
   grid.innerHTML = active.map(renderCard).join("");
 

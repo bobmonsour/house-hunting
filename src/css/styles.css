@@ -459,9 +459,16 @@ body {
   height: 18px;
 }
 
-.status-filter-checkbox[data-status="new"] input:checked { accent-color: var(--status-new); }
 .status-filter-checkbox[data-status="visited"] input:checked { accent-color: var(--status-visited); }
 .status-filter-checkbox[data-status="offer"] input:checked { accent-color: var(--status-offer); }
+
+.status-filter-count {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent);
+  display: none;
+}
 
 .filter-tag {
   display: flex;
